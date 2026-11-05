@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Kopírovat stránku jako Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Zkopírujte stránku nebo výběr jako čistý GitHub Markdown jedním kliknutím, s režimem vkládání do AI pro ChatGPT a Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: zkopírovat tuto stránku jako Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopírovat stránku jako Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopírovat výběr jako Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopírovat stránku pro vložení do AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Zkopírováno $COUNT$ slov jako Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Na této stránce se nepodařilo najít čitelný obsah. Zkuste nejprve označit text.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nic není vybráno. Označte text a zkuste to znovu.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopírování do schránky se nezdařilo. Klikněte kamkoli na stránku a zkuste to znovu.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Denní limit 15 bezplatných zachycení stránek byl vyčerpán. Kopírování výběru zůstává neomezené.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopírovat stránku jako Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopírovat pro AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Přidá titulek + hlavičku zdroje pro ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Stáhnout .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ z $CAP$ bezplatných zachycení stránek dnes",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Vyčerpali jste všech 15 bezplatných zachycení pro dnešek. Verze Pro limit odstraňuje.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Získat Pro · $$99 navždy",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Navždy zdarma · Bez účtu · Bez sledování",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome na této stránce rozšíření nepovoluje. Otevřete libovolný web a zkuste to znovu.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Nastavení",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Stránku se nepodařilo zachytit. Znovu načtěte kartu a zkuste to znovu.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Nastavení",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Nastavení",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Šablona AI hlavičky",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Přidává se na začátek v režimu Kopírovat pro AI. Tokeny: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nZdroj: {url}\nZachyceno: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Zpracování obrázků",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Přeskočit obrázky",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Vložené Markdown obrázky",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absolutní URL obrázků",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Přidá k zachycení stránky blok front-matter s titulkem, zdrojem a datem.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Nastavení Pro. Odemknete ho licenčním klíčem.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Uloženo",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licence",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licenční klíč",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktivovat",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Ověřování...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licence aktivována. Funkce Pro jsou odemčeny.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Klíč se nepodařilo ověřit. Zkontrolujte ho a zkuste to znovu.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro je aktivní. Děkujeme, že podporujete MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Neomezená zachycení celých stránek",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Vlastní šablona AI hlavičky a YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Režimy zpracování obrázků a šablony názvů .md souborů",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 navždy. Jedna platba, žádné předplatné.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14denní záruka vrácení peněz.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Prohlédnout Pro na zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "O rozšíření",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Verze",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Zásady ochrany soukromí",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Přeskočit",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Další",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Krok $NUM$ ze 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Krok jedna",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Krok dva",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Krok tři",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Zkopírujte jakoukoli stránku jako čistý Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klikněte na ikonu MarkGrab na panelu nástrojů a čitelná část stránky se ocitne ve schránce jako GitHub Markdown. Nadpisy, seznamy, bloky kódu, tabulky i odkazy zůstanou zachovány.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Otevřete libovolný článek nebo dokumentaci",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klikněte na ikonu MarkGrab na panelu nástrojů",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Vložte čistý Markdown kamkoli",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tip: připněte si MarkGrab z nabídky s dílkem puzzle, ať je vždy na jedno kliknutí.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Stvořeno pro AI chaty",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopírovat pro AI přidá před článek titulek a hlavičku zdroje, takže ChatGPT nebo Claude přesně ví, co čte a odkud to pochází.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Porozumění transformerům\n\nZdroj: https://arxiv.org/abs/1706.03762\nZachyceno: 2026-07-27\n\n---\n\nDominantní modely transdukce sekvencí jsou založeny na složitých\nrekurentních nebo konvolučních neuronových sítích...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Navždy zdarma",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 zachycení celé stránky denně, zdarma. Zachycení výběru jsou neomezená. Žádný účet, žádné sledování, vše běží na vašem počítači.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "zachycení stránek / den, zdarma",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Neomezeně",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "zachycení výběru",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "účtů nebo sledovačů",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Zobrazit Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Začít kopírovat",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

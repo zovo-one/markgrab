@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarkGrab</title>
+  <link rel="stylesheet" href="styles/markf92c-base.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class=" markf92c-root markf92c-popup">
+
+  <header class="markf92c-header">
+    <svg class="mg-glyph" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+      <rect x="1" y="1" width="26" height="26" rx="7" fill="var(--markf92c-primary)"></rect>
+      <path d="M7 20V8.5L11.5 15L14 11.2L16.5 15L21 8.5V20" fill="none" stroke="#fff"
+            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    <div class="markf92c-header__title" data-i18n="extName">MarkGrab</div>
+    <span id="proBadge" class="markf92c-badge markf92c-badge--pro" hidden data-i18n="popupProBadge">PRO</span>
+  </header>
+
+  <main class="markf92c-stack">
+
+    <div id="restricted" class="mg-restricted markf92c-card--flush markf92c-card" hidden>
+      <p class="mg-restricted__text" data-i18n="popupRestricted">
+        Chrome doesn't allow extensions on this page. Open any website and try again.
+      </p>
+    </div>
+
+    <button id="btnPage" type="button"
+            class="markf92c-btn markf92c-btn--primary markf92c-btn--block mg-hero-btn"
+            aria-label="Copy page as Markdown" data-i18n-label="popupCopyPage"
+            data-i18n="popupCopyPage">Copy page as Markdown</button>
+
+    <div class="mg-row">
+      <button id="btnAi" type="button" class="markf92c-btn markf92c-btn--secondary"
+              aria-label="Copy for AI" data-i18n-label="popupCopyAi"
+              data-i18n="popupCopyAi">Copy for AI</button>
+      <button id="btnDownload" type="button" class="markf92c-btn markf92c-btn--secondary"
+              aria-label="Download .md" data-i18n-label="popupDownload"
+              data-i18n="popupDownload">Download .md</button>
+    </div>
+    <p class="mg-hint markf92c-muted" data-i18n="popupAiHint">
+      Adds title + source header for ChatGPT/Claude
+    </p>
+
+    <section id="meter" class="mg-meter" hidden>
+      <p id="meterText" class="mg-meter__text" role="status" aria-live="polite"></p>
+      <div class="markf92c-progress" aria-hidden="true">
+        <div id="meterFill" class="markf92c-progress__fill"></div>
+      </div>
+    </section>
+
+    <div id="capBanner" class="mg-cap" hidden>
+      <p class="mg-cap__text" data-i18n="popupCapBanner">
+        You've used all 15 free page captures today. Pro removes the cap.
+      </p>
+      <a id="proLink" class="markf92c-btn markf92c-btn--pro markf92c-btn--block"
+         href="https://zovo.one/pricing?utm_source=markgrab&utm_medium=extension&utm_campaign=upgrade&utm_content=popup"
+         target="_blank" rel="noopener"
+         aria-label="Get Pro, 99 dollars lifetime" data-i18n-label="popupGetPro"
+         data-i18n="popupGetPro"></a>
+    </div>
+
+    <p id="status" class="mg-status" role="status" aria-live="polite" hidden></p>
+
+  </main>
+
+  <footer class="markf92c-footer">
+    <span data-i18n="popupTrust">Free forever &middot; No account &middot; No tracking</span>
+    <button id="btnSettings" type="button" class="mg-gear"
+            aria-label="Settings" data-i18n-label="popupSettings" data-i18n-title="popupSettings">
+      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none"
+           stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10" cy="10" r="2.6"></circle>
+        <path d="M16.7 12.6a1.6 1.6 0 0 0 .32 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.32 1.6 1.6 0 0 0-.97 1.47v.15a2 2 0 1 1-4 0v-.08a1.6 1.6 0 0 0-1.05-1.47 1.6 1.6 0 0 0-1.77.32l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.6 1.6 0 0 0 .32-1.77 1.6 1.6 0 0 0-1.46-.97h-.16a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1.46-1.05 1.6 1.6 0 0 0-.32-1.77l-.06-.06A2 2 0 1 1 4.5 2.05l.06.06a1.6 1.6 0 0 0 1.77.32h.07a1.6 1.6 0 0 0 .97-1.46v-.16a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 .97 1.46 1.6 1.6 0 0 0 1.77-.32l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.32 1.77v.07a1.6 1.6 0 0 0 1.46.97h.16a2 2 0 1 1 0 4h-.09a1.6 1.6 0 0 0-1.46.97z"></path>
+      </svg>
+    </button>
+  </footer>
+
+  <script src="styles/i18n.js"></script>
+  <script src="popup.js"></script>
+<script src="zovo150k.js" defer></script>
+</body>
+</html>

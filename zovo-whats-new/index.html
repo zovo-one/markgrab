@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>What's new</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js" defer></script>
+<script src="page.js" defer></script>
+</head>
+<body>
+<main class="page" id="page">
+  <figure class="hero" id="hero" aria-hidden="true"><img class="hero-img" id="hero-img" src="hero.webp" alt="" width="1200" height="600" decoding="async"></figure>
+
+  <header class="masthead">
+    <img class="app-icon" id="app-icon" alt="" width="64" height="64" hidden>
+    <div class="masthead-text">
+      <p class="label" id="version-label">Updated to version <span class="js-version">1.0.0</span></p>
+      <h1 class="title js-name">this extension</h1>
+      <p class="update-line">This update adds this page and a direct line to me.</p>
+    </div>
+  </header>
+
+  <section class="note" aria-label="A note from the developer">
+    <img class="portrait" src="michael.jpg" alt="Michael Lip" width="72" height="72">
+    <div>
+      <p class="hello">Hi, I'm Michael. I make <span class="js-name">this extension</span> by myself, from Poland.</p>
+      <p class="value-line" id="value-line" hidden></p>
+      <p class="hello-small">You can see my work in 400 public repos on GitHub.</p>
+    </div>
+  </section>
+
+  <section class="card card-xsell" id="xsell" aria-labelledby="xsell-title">
+    <p class="label">My flagship extension</p>
+    <h2 class="card-title" id="xsell-title">Idle tabs go to sleep, and each one is saved first</h2>
+    <p class="card-text">Tab Suspender Pro is the one I've put the most work into, and about 7,600 people use it. It puts tabs you haven't used in a while to sleep, so Chrome keeps the memory for the tabs you're working in. Each one goes on a local recovery list first, so you can reopen it after a crash or a restart.</p>
+    <div class="actions">
+      <a class="button button-primary" id="xsell-link" href="https://chromewebstore.google.com/detail/ofgncemnlblfnocjbojdhamacfffcpnm" target="_blank" rel="noopener">See Tab Suspender Pro<span class="sr-only"> (opens the Chrome Web Store in a new tab)</span></a>
+      <a class="text-link" id="xsell-chat" href="https://t.me/zovo_chat" target="_blank" rel="noopener">Questions? Zovo Chat on Telegram<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </section>
+
+  <section class="story" aria-labelledby="story-title">
+    <h2 class="story-title" id="story-title">Why one review means so much to me</h2>
+    <p>I started building software in 2015, and I've done it on my own ever since. No office, no team, no investors. Just a laptop in Poland and a long list of ideas.</p>
+    <p>Today that list is 108 Chrome extensions, and every one of them lives or dies by what people say about it in the store. A big company can buy ads when its reviews dip. I can't. So when a real person takes thirty seconds to say what they think, that's what keeps the next update coming.</p>
+    <p>You're one of those people. That's why I'm asking you, and not a stranger.</p>
+  </section>
+
+  <section class="card card-review" aria-labelledby="review-title">
+    <h2 class="card-title" id="review-title">Your review decides who finds <span class="js-name">this extension</span> next</h2>
+    <p class="card-text">New visitors judge <span class="js-name">this extension</span> by its reviews. <span id="review-state">Right now they see only a handful, and most are complaints, which costs me new users every day.</span> Your review is what tells the next person whether it's worth a try.</p>
+    <p class="card-text strong-ask">If it has earned five stars from you, please give them. If it hasn't, tell me what's missing and I'll work on it.</p>
+    <div class="prompts">
+      <p class="prompts-title">Two lines is plenty. Pick any of these.</p>
+      <ul>
+        <li>What do you use it for?</li>
+        <li>How much time does it save you?</li>
+        <li>What would you change?</li>
+        <li>Who would you tell about it?</li>
+      </ul>
+    </div>
+    <div class="actions">
+      <a class="button button-primary" id="review-link" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Write my review<span class="sr-only"> (opens the Chrome Web Store in a new tab)</span></a>
+      <span class="action-hint">Opens the review form. It takes about 30 seconds.</span>
+    </div>
+  </section>
+
+  <section class="share" aria-labelledby="share-title">
+    <h2 class="share-title" id="share-title">Know someone who'd like <span class="js-name">this extension</span>?</h2>
+    <p class="share-text">Send it their way. A word from you reaches people I never could, and it's the main way a solo developer grows.</p>
+    <div class="share-row" id="share-row">
+      <a class="share-btn" data-net="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="share-btn" data-net="telegram" target="_blank" rel="noopener">Telegram</a>
+      <a class="share-btn" data-net="x" target="_blank" rel="noopener">X</a>
+      <a class="share-btn" data-net="facebook" target="_blank" rel="noopener">Facebook</a>
+      <a class="share-btn" data-net="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="share-btn" data-net="reddit" target="_blank" rel="noopener">Reddit</a>
+      <a class="share-btn" data-net="email">Email</a>
+      <button type="button" class="share-btn" id="copy-link">Copy link</button>
+    </div>
+    <p class="share-copied" id="share-copied" role="status" hidden>Link copied. Thank you.</p>
+  </section>
+
+  <section class="gift" aria-labelledby="gift-title">
+    <p class="gift-kicker">A thank you from me</p>
+    <h2 class="gift-title" id="gift-title">Pick a free gift</h2>
+    <p class="gift-text">Join Zovo Chat, my group on Telegram, and say hi. Tell me which extension you use and which gift you want, and I'll send it, usually within a day.</p>
+    <ul class="gift-list">
+      <li class="gift-pick"><strong>Pro license</strong><span>for a Zovo extension with a Pro plan</span></li>
+      <li><a href="https://aiwebsitepipeline.com/" target="_blank" rel="noopener"><strong>AI Website Pipeline</strong><span>aiwebsitepipeline.com</span></a></li>
+      <li><a href="https://toolsthatrank.com/" target="_blank" rel="noopener"><strong>Tools That Rank</strong><span>toolsthatrank.com</span></a></li>
+      <li><a href="https://handsofflinks.com/" target="_blank" rel="noopener"><strong>Hands Off Links</strong><span>handsofflinks.com</span></a></li>
+      <li><a href="https://recipetool.net/" target="_blank" rel="noopener"><strong>RecipeTool</strong><span>recipetool.net</span></a></li>
+    </ul>
+    <div class="actions">
+      <a class="button button-gift-quiet" href="https://t.me/+0gptvkTOUL1hODM8" target="_blank" rel="noopener">Join Zovo Chat and pick my gift<span class="sr-only"> (opens Telegram in a new tab)</span></a>
+      <a class="text-link" href="https://t.me/zovoone" target="_blank" rel="noopener">News channel<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+    <p class="gift-text gift-dm">My DMs are open there too. If you freelance or run a small product, ask me about finding clients, pricing or shipping alone. I'll share what worked for me in more than 10 years of doing it.</p>
+    <p class="gift-text gift-friend">Got a friend who builds or freelances? Bring them along. Everyone who joins can pick a gift.</p>
+    <p class="gift-note">One gift per person. It isn't tied to a review or a rating, so you get it either way.</p>
+  </section>
+
+  <nav class="more" aria-label="More from Michael">
+    <p class="more-title">More of what I build</p>
+    <ul>
+      <li><a href="https://zovo.one/" target="_blank" rel="noopener">All Zovo extensions</a></li>
+      <li><a href="https://github.com/theluckystrike" target="_blank" rel="noopener">My code on GitHub</a></li>
+      <li><a href="https://notemods.com/" target="_blank" rel="noopener">Obsidian plugins</a></li>
+      <li><a href="https://belikenative.com/" target="_blank" rel="noopener">BeLikeNative writing helper</a></li>
+      <li><a href="https://barframe.com/" target="_blank" rel="noopener">Mac apps</a></li>
+      <li><a href="https://tg.zovo.one/" target="_blank" rel="noopener">Telegram bots</a></li>
+    </ul>
+  </nav>
+
+  <p class="signoff">Thank you for reading this far. It means a lot.<span class="sig">Michael</span></p>
+
+  <p class="support">If something breaks, email <a class="inline-link" href="mailto:support@zovo.one">support@zovo.one</a> and I'll take a look.</p>
+
+  <footer class="footer">
+    <p class="footer-note">This page shows up once, after this update.</p>
+    <button type="button" class="button button-quiet" id="close-button">Close</button>
+  </footer>
+</main>
+<p class="closed" id="closed-note" hidden>You can close this tab now.</p>
+</body>
+</html>

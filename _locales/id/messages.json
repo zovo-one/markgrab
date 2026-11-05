@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Salin Halaman sebagai Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Salin halaman atau seleksi sebagai Markdown GFM bersih dalam sekali klik, dengan mode tempel siap-AI untuk ChatGPT dan Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: salin halaman ini sebagai Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Salin halaman sebagai Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Salin seleksi sebagai Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Salin halaman untuk ditempel ke AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ kata disalin sebagai Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Tidak menemukan konten yang bisa dibaca di halaman ini. Coba pilih teks dulu.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Tidak ada yang dipilih. Sorot teks, lalu coba lagi.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Gagal menyalin ke papan klip. Klik di mana saja pada halaman, lalu coba lagi.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Batas harian 15 tangkapan halaman gratis tercapai. Salinan seleksi tetap tanpa batas.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Salin halaman sebagai Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Salin untuk AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Menambahkan judul + sumber untuk ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Unduh .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ dari $CAP$ tangkapan halaman gratis hari ini",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Anda sudah memakai semua 15 tangkapan halaman gratis hari ini. Pro menghapus batasnya.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Dapatkan Pro · $$99 seumur hidup",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Gratis selamanya · Tanpa akun · Tanpa pelacakan",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome tidak mengizinkan ekstensi di halaman ini. Buka situs web mana pun dan coba lagi.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Pengaturan",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Tidak bisa menangkap halaman ini. Muat ulang tab dan coba lagi.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Pengaturan",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Pengaturan",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Templat header AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Ditambahkan di awal pada mode Salin untuk AI. Token: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nSumber: {url}\nDitangkap: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Penanganan gambar",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Lewati gambar",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Gambar Markdown inline",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "URL gambar absolut",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "Front-matter YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Menambahkan blok front-matter berisi judul, sumber, dan tanggal pada tangkapan halaman.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pengaturan Pro. Buka dengan kunci lisensi.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Tersimpan",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Lisensi",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Kunci lisensi",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktifkan",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Memeriksa...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Lisensi aktif. Fitur Pro sudah terbuka.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Kunci itu tidak terverifikasi. Periksa lagi dan coba ulang.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro aktif. Terima kasih telah mendukung MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Tangkapan halaman penuh tanpa batas",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Templat header AI kustom dan front-matter YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Mode penanganan gambar dan templat nama file .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 seumur hidup. Sekali bayar, tanpa langganan.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Garansi uang kembali 14 hari.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Lihat Pro di zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Tentang",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versi",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Kebijakan privasi",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Lewati",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Berikutnya",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Langkah $NUM$ dari 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Langkah satu",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Langkah dua",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Langkah tiga",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Salin halaman apa pun sebagai Markdown bersih",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klik ikon MarkGrab di bilah alat, dan isi halaman yang terbaca masuk ke papan klip sebagai Markdown gaya GitHub. Judul, daftar, blok kode, tabel, dan tautan semuanya tetap utuh.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Buka artikel atau halaman dokumentasi apa pun",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klik ikon MarkGrab di bilah alat",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Tempel Markdown bersih di mana saja",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tips: sematkan MarkGrab dari menu potongan puzzle agar selalu sekali klik saja.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Dibuat untuk chat AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Salin untuk AI menambahkan judul dan header sumber sebelum artikel, sehingga ChatGPT atau Claude tahu persis apa yang dibaca dan dari mana asalnya.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\nSumber: https://arxiv.org/abs/1706.03762\nDitangkap: 2026-07-27\n\n---\n\nModel transduksi sekuens yang dominan didasarkan pada jaringan saraf\nrekuren atau konvolusional yang kompleks...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Gratis selamanya",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 tangkapan halaman penuh per hari, gratis. Tangkapan seleksi tanpa batas. Tanpa akun, tanpa pelacakan, semuanya berjalan di perangkat Anda.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "tangkapan halaman / hari, gratis",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Tanpa batas",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "tangkapan seleksi",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "akun atau pelacak",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Lihat Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Mulai",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

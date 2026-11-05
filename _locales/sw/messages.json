@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Nakili ukurasa kama Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Nakili ukurasa au maandishi uliyochagua kama Markdown safi kwa mbofyo mmoja, na hali ya kubandika tayari kwa ChatGPT na Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: nakili ukurasa huu kama Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Nakili ukurasa kama Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Nakili sehemu uliyochagua kama Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Nakili ukurasa kwa kubandika kwenye AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Maneno $COUNT$ yamenakiliwa kama Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Hakuna maudhui yanayosomeka yaliyopatikana kwenye ukurasa huu. Jaribu kuchagua maandishi kwanza.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Hakuna kilichochaguliwa. Chagua maandishi, kisha ujaribu tena.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kunakili kwenye ubao wa kunakili kumeshindikana. Bofya popote kwenye ukurasa, kisha ujaribu tena.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Kikomo cha kila siku cha unasaji 15 wa kurasa bila malipo kimefikiwa. Kunakili sehemu ulizochagua bado hakuna kikomo.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Nakili ukurasa kama Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Nakili kwa AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Huongeza kichwa + chanzo kwa ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Pakua .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ kati ya $CAP$ za unasaji wa kurasa bila malipo leo",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Umetumia unasaji wote 15 wa kurasa bila malipo leo. Pro huondoa kikomo.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pata Pro · $$99 maisha yote",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Bure milele · Hakuna akaunti · Hakuna ufuatiliaji",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome hairuhusu programu-jalizi kwenye ukurasa huu. Fungua tovuti yoyote kisha ujaribu tena.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Mipangilio",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Imeshindikana kunasa ukurasa huu. Pakia upya kichupo kisha ujaribu tena.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Mipangilio",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Mipangilio",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Kiolezo cha kichwa cha AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Huwekwa mwanzoni katika hali ya Nakili kwa AI. Tokeni: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nChanzo: {url}\nIlinaswa: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Ushughulikiaji wa picha",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Ruka picha",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Picha za Markdown ndani ya maandishi",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "URL kamili za picha",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "Front-matter ya YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Huongeza kizuizi cha front-matter chenye kichwa, chanzo na tarehe kwenye unasaji wa kurasa.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Mpangilio wa Pro. Fungua kwa ufunguo wa leseni.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Imehifadhiwa",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Leseni",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Ufunguo wa leseni",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Wezesha",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Inakagua...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Leseni imewezeshwa. Vipengele vya Pro vimefunguliwa.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Ufunguo huo haukuthibitika. Ukague kisha ujaribu tena.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro inatumika. Asante kwa kuunga mkono MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Unasaji wa kurasa nzima bila kikomo",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Kiolezo maalum cha kichwa cha AI na front-matter ya YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Hali za ushughulikiaji wa picha na violezo vya majina ya faili za .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 maisha yote. Malipo mara moja, hakuna usajili.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Dhamana ya kurejeshewa pesa ndani ya siku 14.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Ona Pro kwenye zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Kuhusu",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Toleo",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Sera ya faragha",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Ruka",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Endelea",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Hatua ya $NUM$ kati ya 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Hatua ya kwanza",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Hatua ya pili",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Hatua ya tatu",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Nakili ukurasa wowote kama Markdown safi",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Bofya aikoni ya MarkGrab kwenye upau wa vidhibiti na ukurasa unaosomeka utafika kwenye ubao wako wa kunakili kama Markdown ya mtindo wa GitHub. Vichwa, orodha, vizuizi vya msimbo, majedwali na viungo vyote vinabaki salama.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Fungua makala yoyote au ukurasa wa nyaraka",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Bofya aikoni ya MarkGrab kwenye upau wa vidhibiti",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Bandika Markdown safi popote",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Kidokezo: bandika MarkGrab kutoka kwenye menyu ya kipande cha fumbo ili kila wakati iwe umbali wa mbofyo mmoja.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Imetengenezwa kwa mazungumzo ya AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Nakili kwa AI huongeza kichwa na chanzo kabla ya makala, ili ChatGPT au Claude ijue hasa inasoma nini na kimetoka wapi.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Kuelewa Transformers\n\nChanzo: https://arxiv.org/abs/1706.03762\nIlinaswa: 2026-07-27\n\n---\n\nMifano mikuu ya ubadilishaji wa mfuatano inategemea mitandao tata ya neva\nya kurudiarudia au ya konvolusheni...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Bure milele",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "Unasaji 15 wa kurasa nzima kwa siku, bila malipo. Unasaji wa sehemu ulizochagua hauna kikomo. Hakuna akaunti, hakuna ufuatiliaji, kila kitu kinafanyika kwenye kifaa chako.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "unasaji wa kurasa / siku, bure",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Bila kikomo",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "unasaji wa sehemu zilizochaguliwa",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "akaunti au vifuatiliaji",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Ona Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Anza kunasa",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

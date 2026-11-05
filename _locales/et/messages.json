@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Kopeeri leht Markdown-vormingus",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopeeri mis tahes leht või valik ühe klõpsuga puhtas GitHub Markdown-vormingus, AI-kleepimise režiimiga ChatGPT ja Claude jaoks.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopeeri see leht Markdown-vormingus",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopeeri leht Markdown-vormingus",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopeeri valik Markdown-vormingus",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopeeri leht AI-sse kleepimiseks",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Kopeeritud $COUNT$ sõna Markdown-vormingus",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Sellelt lehelt ei leitud loetavat sisu. Proovi kõigepealt tekst valida.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Midagi pole valitud. Märgista tekst ja proovi uuesti.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Lõikelauale kopeerimine ebaõnnestus. Klõpsa kuskil lehel ja proovi uuesti.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Päevane limiit 15 tasuta lehesalvestust on täis. Valiku kopeerimine jääb piiramatuks.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopeeri leht Markdown-vormingus",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopeeri AI jaoks",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Lisab pealkirja + allika päise ChatGPT/Claude jaoks",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Laadi alla .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ / $CAP$ tasuta lehesalvestust täna",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Oled tänased 15 tasuta lehesalvestust ära kasutanud. Pro eemaldab limiidi.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Hangi Pro · $$99 eluaegne",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Igavesti tasuta · Kontot pole vaja · Jälgimist pole",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome ei luba sellel lehel laiendusi. Ava mõni veebisait ja proovi uuesti.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Seaded",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Lehte ei õnnestunud salvestada. Laadi vaheleht uuesti ja proovi uuesti.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Seaded",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Seaded",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI päise mall",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Lisatakse algusesse režiimis „Kopeeri AI jaoks“. Märgendid: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nAllikas: {url}\nSalvestatud: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Piltide käsitlemine",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Jäta pildid vahele",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Manusta Markdown-pildid",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absoluutsed pildi-URL-id",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Lisab lehesalvestustele front-matter ploki pealkirja, allika ja kuupäevaga.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro seade. Ava litsentsivõtmega.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Salvestatud",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Litsents",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Litsentsivõti",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktiveeri",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Kontrollin...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Litsents on aktiveeritud. Pro funktsioonid on avatud.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Võtit ei õnnestunud kinnitada. Kontrolli seda ja proovi uuesti.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro on aktiivne. Aitäh, et toetad MarkGrab-i.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Piiramatud terve lehe salvestused",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Kohandatav AI päise mall ja YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Piltide käsitlemise režiimid ja .md failinime mallid",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 eluaegne. Üks makse, ilma tellimuseta.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14-päevane raha tagasi garantii.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Vaata Pro-d lehel zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Teave",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versioon",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Privaatsuspoliitika",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Jäta vahele",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Edasi",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Samm $NUM$/3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Esimene samm",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Teine samm",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Kolmas samm",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopeeri iga leht puhta Markdown-tekstina",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klõpsa tööriistaribal MarkGrab-i ikooni ja lehe loetav osa jõuab lõikelauale GitHub Markdown-vormingus. Pealkirjad, loendid, koodiplokid, tabelid ja lingid säilivad kõik.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Ava mis tahes artikkel või dokumentatsioonileht",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klõpsa tööriistaribal MarkGrab-i ikooni",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Kleebi puhas Markdown kuhu iganes",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Vihje: kinnita MarkGrab pusletüki menüüst, et see oleks alati ühe klõpsu kaugusel.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Loodud AI-vestluste jaoks",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "„Kopeeri AI jaoks“ lisab artikli ette pealkirja ja allika päise, nii et ChatGPT või Claude teab täpselt, mida ta loeb ja kust see pärineb.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Transformerite mõistmine\n\nAllikas: https://arxiv.org/abs/1706.03762\nSalvestatud: 2026-07-27\n\n---\n\nValdavad jadateisenduse mudelid põhinevad keerukatel\nrekurrentsetel või konvolutsioonilistel närvivõrkudel...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Igavesti tasuta",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 terve lehe salvestust päevas, tasuta. Valiku salvestused on piiramatud. Kontot pole, jälgimist pole, kõik töötab sinu arvutis.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "lehesalvestust / päevas, tasuta",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Piiramatult",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "valiku salvestusi",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "kontosid või jälgijaid",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Vaata Pro-d",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Alusta",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to MarkGrab</title>
+  <link rel="stylesheet" href="../styles/markf92c-base.css">
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body class=" markf92c-root ob">
+
+  <div class="ob-bg" aria-hidden="true"></div>
+  <div class="ob-grid" aria-hidden="true"></div>
+
+  <header class="ob-top">
+    <div class="ob-brand">
+      <svg class="ob-glyph" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+        <rect x="1" y="1" width="26" height="26" rx="7" fill="#7c6cf0"></rect>
+        <path d="M7 20V8.5L11.5 15L14 11.2L16.5 15L21 8.5V20" fill="none" stroke="#fff"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span data-i18n="extName">MarkGrab</span>
+    </div>
+    <button id="skipLink" type="button" class="ob-skip"
+            aria-label="Skip onboarding" data-i18n-label="obSkip"
+            data-i18n="obSkip">Skip</button>
+  </header>
+
+  <main class="ob-main">
+
+    <!-- Step 1 -->
+    <section class="ob-step is-active" id="step1" aria-labelledby="s1Title">
+      <p class="ob-kicker"><span class="ob-kicker__dot" aria-hidden="true"></span><span data-i18n="obKicker1">Step one</span></p>
+      <h1 id="s1Title" class="ob-h1" data-i18n="obStep1Title">Copy any page as clean Markdown</h1>
+      <p class="ob-lede" data-i18n="obStep1Body">
+        Click the MarkGrab icon in your toolbar and the readable page lands on your
+        clipboard as GitHub-flavored Markdown. Headings, lists, code blocks, tables
+        and links all survive the trip.
+      </p>
+      <div class="ob-card ob-howcard">
+        <div class="ob-howrow">
+          <span class="ob-hownum" aria-hidden="true">1</span>
+          <span data-i18n="obHow1">Open any article or docs page</span>
+        </div>
+        <div class="ob-howrow">
+          <span class="ob-hownum" aria-hidden="true">2</span>
+          <span data-i18n="obHow2">Click the MarkGrab icon in the toolbar</span>
+        </div>
+        <div class="ob-howrow">
+          <span class="ob-hownum" aria-hidden="true">3</span>
+          <span data-i18n="obHow3">Paste clean Markdown anywhere</span>
+        </div>
+      </div>
+      <p class="ob-note" data-i18n="obStep1Pin">
+        Tip: pin MarkGrab from the puzzle-piece menu so it's always one click away.
+      </p>
+      <button type="button" class="ob-cta" data-next
+              aria-label="Next step" data-i18n-label="obNext" data-i18n="obNext">Next</button>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="ob-step" id="step2" aria-labelledby="s2Title" hidden>
+      <p class="ob-kicker"><span class="ob-kicker__dot" aria-hidden="true"></span><span data-i18n="obKicker2">Step two</span></p>
+      <h1 id="s2Title" class="ob-h1" data-i18n="obStep2Title">Built for AI chats</h1>
+      <p class="ob-lede" data-i18n="obStep2Body">
+        Copy for AI adds a title and source header before the article, so ChatGPT
+        or Claude knows exactly what it's reading and where it came from.
+      </p>
+      <div class="ob-card ob-mock">
+        <div class="ob-mock__bar" aria-hidden="true">
+          <span class="ob-mock__dot"></span><span class="ob-mock__dot"></span><span class="ob-mock__dot"></span>
+          <span class="ob-mock__file markf92c-mono">capture.md</span>
+        </div>
+        <pre class="ob-mock__pre markf92c-mono" data-i18n="obMock"># Understanding Transformers
+
+Source: https://arxiv.org/abs/1706.03762
+Captured: 2026-07-27
+
+---
+
+The dominant sequence transduction models are based on complex
+recurrent or convolutional neural networks...</pre>
+      </div>
+      <button type="button" class="ob-cta" data-next
+              aria-label="Next step" data-i18n-label="obNext" data-i18n="obNext">Next</button>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="ob-step" id="step3" aria-labelledby="s3Title" hidden>
+      <p class="ob-kicker"><span class="ob-kicker__dot" aria-hidden="true"></span><span data-i18n="obKicker3">Step three</span></p>
+      <h1 id="s3Title" class="ob-h1" data-i18n="obStep3Title">Free forever</h1>
+      <p class="ob-lede" data-i18n="obStep3Body">
+        15 whole-page captures a day, free. Selection captures are unlimited.
+        No account, no tracking, everything runs on your machine.
+      </p>
+      <div class="ob-facts">
+        <div class="ob-fact">
+          <span class="ob-fact__num markf92c-mono">15</span>
+          <span class="ob-fact__label" data-i18n="obFactPages">page captures / day, free</span>
+        </div>
+        <div class="ob-fact">
+          <span class="ob-fact__num markf92c-mono" data-i18n="obFactUnlimited">Unlimited</span>
+          <span class="ob-fact__label" data-i18n="obFactSelections">selection captures</span>
+        </div>
+        <div class="ob-fact">
+          <span class="ob-fact__num markf92c-mono">0</span>
+          <span class="ob-fact__label" data-i18n="obFactTracking">accounts or trackers</span>
+        </div>
+      </div>
+      <button type="button" id="btnStart" class="ob-cta ob-cta--big"
+              aria-label="Start grabbing" data-i18n-label="obStart"
+              data-i18n="obStart">Start grabbing</button>
+      <p class="ob-note">
+        <a id="seeProLink" class="ob-prolink"
+           href="https://zovo.one/pricing?utm_source=markgrab&utm_medium=extension&utm_campaign=upgrade&utm_content=onboarding"
+           target="_blank" rel="noopener"
+           aria-label="See Pro" data-i18n-label="obSeePro" data-i18n="obSeePro">See Pro</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="ob-nav">
+    <div class="ob-dots" role="tablist" aria-label="Onboarding progress">
+      <button type="button" class="ob-dot is-active" data-goto="0" role="tab" aria-selected="true" aria-label="Step 1 of 3"></button>
+      <button type="button" class="ob-dot" data-goto="1" role="tab" aria-selected="false" aria-label="Step 2 of 3"></button>
+      <button type="button" class="ob-dot" data-goto="2" role="tab" aria-selected="false" aria-label="Step 3 of 3"></button>
+    </div>
+    <span id="stepCounter" class="ob-counter markf92c-mono" role="status" aria-live="polite"></span>
+  </footer>
+
+  <script src="../styles/i18n.js"></script>
+  <script src="onboarding.js"></script>
+</body>
+</html>

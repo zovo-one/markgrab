@@ -1,0 +1,93 @@
+/* MarkGrab popup - dark premium, sits on markf92c-base tokens. */
+
+html, body { width: var(--markf92c-popup-w); }
+body { background: var(--markf92c-surface); }
+
+.markf92c-header { background: var(--markf92c-bg); }
+.mg-glyph { width: 28px; height: 28px; border-radius: 8px; flex: none; }
+
+.markf92c-stack { gap: var(--markf92c-space-3); }
+
+/* Hero action - the one dominant thing on the screen */
+.mg-hero-btn {
+  min-height: 52px;
+  font-size: 15px;
+  font-weight: var(--markf92c-fw-heading);
+  letter-spacing: -0.01em;
+  box-shadow: var(--markf92c-shadow);
+}
+
+/* Secondary actions */
+.mg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--markf92c-space-2);
+}
+.mg-row .markf92c-btn { min-height: 40px; }
+
+.mg-hint {
+  margin: 0;
+  font-size: var(--markf92c-fs-caption);
+  text-align: center;
+}
+
+/* Meter - free page-capture counter */
+.mg-meter { padding: var(--markf92c-space-1) var(--markf92c-space-1) 0; }
+.mg-meter__text {
+  margin: 0 0 var(--markf92c-space-2);
+  font-size: var(--markf92c-fs-caption);
+  color: var(--markf92c-text-secondary);
+}
+.mg-meter__text b { color: var(--markf92c-text); font-weight: var(--markf92c-fw-heading); }
+.markf92c-progress__fill { width: 0%; transition: width var(--markf92c-transition); }
+
+/* Cap banner - honest, one gold CTA */
+.mg-cap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--markf92c-space-3);
+  padding: var(--markf92c-space-4);
+  background: var(--markf92c-bg);
+  border: 1px solid var(--markf92c-border);
+  border-left: 3px solid var(--markf92c-pro);
+  border-radius: var(--markf92c-radius-card);
+}
+.mg-cap__text { margin: 0; font-size: var(--markf92c-fs-body); }
+
+/* Restricted-page notice */
+.mg-restricted { padding: var(--markf92c-space-4); }
+.mg-restricted__text { margin: 0; color: var(--markf92c-text-secondary); }
+
+/* Inline status (errors) */
+.mg-status {
+  margin: 0;
+  font-size: var(--markf92c-fs-caption);
+  color: var(--markf92c-error);
+  text-align: center;
+}
+
+/* Footer gear - icon-only button with a real focus ring */
+.markf92c-footer { background: var(--markf92c-bg); }
+.mg-gear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--markf92c-radius-btn);
+  background: transparent;
+  color: var(--markf92c-text-secondary);
+  cursor: pointer;
+  transition: background var(--markf92c-transition), color var(--markf92c-transition);
+}
+.mg-gear svg { width: 18px; height: 18px; }
+.mg-gear:hover { background: var(--markf92c-surface-2); color: var(--markf92c-text); }
+.mg-gear:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--markf92c-bg), 0 0 0 4px var(--markf92c-primary);
+}
+
+/* AA contrast: PRO badge dark text on cyan */
+#proBadge, .mg-pro-badge, [data-i18n="popupProBadge"]{ color:#062b24 !important; }

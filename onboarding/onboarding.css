@@ -1,0 +1,336 @@
+/* MarkGrab onboarding - dark editorial premium (Zovo Serif taste, self-contained,
+ * no external fonts: Georgia serif display, system sans body, system mono labels). */
+
+:root {
+  --ob-bg: #0f0703;
+  --ob-surface: #1d1212;
+  --ob-surface-2: #261818;
+  --ob-border: rgba(255, 255, 255, 0.08);
+  --ob-border-2: rgba(255, 255, 255, 0.14);
+  --ob-border-accent: rgba(124, 108, 240, 0.4);
+  --ob-text: #ffffff;
+  --ob-text-1: #f6eeee;
+  --ob-text-2: #bea6a8;
+  --ob-text-3: #a78b8d;
+  --ob-accent: #f0966c;
+  --ob-accent-2: #ffb18c;
+  --ob-accent-soft: rgba(124, 108, 240, 0.14);
+  --ob-accent-glow: rgba(124, 108, 240, 0.4);
+  --ob-grad: linear-gradient(135deg, #f0966c, #f17c63);
+  --ob-shadow: 0 24px 70px -20px rgba(0, 0, 0, 0.7);
+  --ob-shadow-accent: 0 20px 60px -18px var(--ob-accent-glow);
+  --ob-serif: Georgia, 'Times New Roman', serif;
+  --ob-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ob-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  --ob-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html, body { min-height: 100%; }
+body.ob {
+  margin: 0;
+  background: var(--ob-bg);
+  color: var(--ob-text-2);
+  font-family: var(--ob-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Layered glow ground + dotted grid */
+.ob-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(560px 380px at 50% -80px, rgba(124, 108, 240, 0.22), transparent 70%),
+    radial-gradient(480px 360px at 85% 0%, rgba(99, 102, 241, 0.12), transparent 70%);
+}
+.ob-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(600px 420px at 50% 0%, #000, transparent 85%);
+  mask-image: radial-gradient(600px 420px at 50% 0%, #000, transparent 85%);
+}
+
+/* Top bar */
+.ob-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+}
+.ob-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ob-text-1);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.ob-glyph { width: 26px; height: 26px; border-radius: 7px; }
+.ob-skip {
+  border: none;
+  background: transparent;
+  color: var(--ob-text-3);
+  font-family: var(--ob-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.15s var(--ob-ease), background 0.15s var(--ob-ease);
+}
+.ob-skip:hover { color: var(--ob-text-1); background: var(--ob-surface-2); }
+.ob-skip:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ob-bg), 0 0 0 4px var(--ob-accent);
+}
+
+/* Steps */
+.ob-main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 24px 40px;
+}
+.ob-step {
+  width: 100%;
+  max-width: 640px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.ob-step.is-active {
+  display: flex;
+  animation: ob-rise 0.45s var(--ob-ease);
+}
+@keyframes ob-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ob-kicker {
+  margin: 12px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ob-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ob-accent-2);
+}
+.ob-kicker__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ob-accent);
+  box-shadow: 0 0 10px 2px var(--ob-accent-glow);
+}
+
+.ob-h1 {
+  margin: 0;
+  font-family: var(--ob-serif);
+  font-weight: 400;
+  font-size: clamp(38px, 6.5vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  color: var(--ob-text);
+}
+.ob-lede {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ob-text-2);
+  max-width: 56ch;
+}
+
+/* Cards */
+.ob-card {
+  width: 100%;
+  background: var(--ob-surface);
+  border: 1px solid var(--ob-border);
+  border-radius: 16px;
+  box-shadow: var(--ob-shadow);
+}
+
+/* Step 1 how-to */
+.ob-howcard { padding: 8px 20px; }
+.ob-howrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  color: var(--ob-text-1);
+}
+.ob-howrow + .ob-howrow { border-top: 1px solid var(--ob-border); }
+.ob-hownum {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ob-accent-soft);
+  border: 1px solid var(--ob-border-accent);
+  color: var(--ob-accent-2);
+  font-family: var(--ob-mono);
+  font-size: 12px;
+}
+
+.ob-note { margin: 0; font-size: 14px; color: var(--ob-text-3); }
+
+/* Step 2 mock */
+.ob-mock { overflow: hidden; }
+.ob-mock__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--ob-surface-2);
+  border-bottom: 1px solid var(--ob-border);
+}
+.ob-mock__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ob-border-2);
+}
+.ob-mock__file {
+  margin-left: 8px;
+  font-size: 11px;
+  color: var(--ob-text-3);
+  letter-spacing: 0.04em;
+}
+.ob-mock__pre {
+  margin: 0;
+  padding: 18px 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ob-text-2);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Step 3 facts */
+.ob-facts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.ob-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 16px;
+  background: var(--ob-surface);
+  border: 1px solid var(--ob-border);
+  border-radius: 12px;
+}
+.ob-fact__num {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ob-accent-2);
+  letter-spacing: -0.02em;
+}
+.ob-fact__label { font-size: 12px; color: var(--ob-text-3); }
+@media (max-width: 560px) {
+  .ob-facts { grid-template-columns: 1fr; }
+}
+
+/* CTA */
+.ob-cta {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 9px;
+  background: var(--ob-grad);
+  color: #fff;
+  font-family: var(--ob-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  box-shadow: var(--ob-shadow-accent);
+  transition: transform 0.15s var(--ob-ease), filter 0.15s var(--ob-ease);
+}
+.ob-cta:hover { filter: brightness(1.08); }
+.ob-cta:active { transform: translateY(1px); }
+.ob-cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ob-bg), 0 0 0 4px var(--ob-accent), var(--ob-shadow-accent);
+}
+.ob-cta--big { min-height: 52px; padding: 14px 36px; font-size: 16px; }
+
+.ob-prolink {
+  color: var(--ob-accent-2);
+  text-decoration: none;
+  font-family: var(--ob-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+}
+.ob-prolink:hover { text-decoration: underline; }
+.ob-prolink:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ob-bg), 0 0 0 4px var(--ob-accent);
+}
+
+/* Bottom nav: dots + counter */
+.ob-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 18px 24px 28px;
+}
+.ob-dots { display: flex; align-items: center; gap: 8px; }
+.ob-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--ob-border-2);
+  cursor: pointer;
+  transition: width 0.3s var(--ob-ease), background 0.3s var(--ob-ease);
+}
+.ob-dot.is-active { width: 22px; background: var(--ob-accent-2); }
+.ob-dot.is-done { background: var(--ob-accent); }
+.ob-dot:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ob-bg), 0 0 0 4px var(--ob-accent);
+}
+.ob-counter {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ob-text-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ob-step.is-active { animation: none; }
+  .ob-dot, .ob-cta, .ob-skip { transition: none; }
+}

@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — பக்கத்தை Markdown ஆக நகலெடு",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "பக்கம் அல்லது தேர்வை ஒரே கிளிக்கில் சுத்தமான Markdown ஆக நகலெடுங்கள்; ChatGPT, Claude-க்கு ஏற்ற AI ஒட்டும் பயன்முறையும் உண்டு.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: இந்தப் பக்கத்தை Markdown ஆக நகலெடு",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "பக்கத்தை Markdown ஆக நகலெடு",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "தேர்வை Markdown ஆக நகலெடு",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI-இல் ஒட்ட பக்கத்தை நகலெடு",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ சொற்கள் Markdown ஆக நகலெடுக்கப்பட்டன",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "இந்தப் பக்கத்தில் படிக்கக்கூடிய உள்ளடக்கம் கிடைக்கவில்லை. முதலில் உரையைத் தேர்ந்தெடுத்துப் பாருங்கள்.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "எதுவும் தேர்ந்தெடுக்கப்படவில்லை. உரையைத் தேர்ந்தெடுத்து, மீண்டும் முயலுங்கள்.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "கிளிப்போர்டுக்கு நகலெடுக்க முடியவில்லை. பக்கத்தில் எங்காவது கிளிக் செய்து, மீண்டும் முயலுங்கள்.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "இன்றைய 15 இலவச முழுப்பக்கப் பிடிப்புகள் முடிந்துவிட்டன. தேர்வு நகல்கள் வரம்பின்றித் தொடரும்.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "பக்கத்தை Markdown ஆக நகலெடு",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI-க்காக நகலெடு",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude-க்காக தலைப்பு + மூலத் தலைக்குறிப்பைச் சேர்க்கிறது",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md பதிவிறக்கு",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "இன்று $CAP$ இலவசப் பக்கப் பிடிப்புகளில் $COUNT$",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "இன்றைய 15 இலவசப் பக்கப் பிடிப்புகளையும் பயன்படுத்திவிட்டீர்கள். Pro வரம்பை நீக்கும்.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro பெறுங்கள் · $$99 வாழ்நாள் முழுவதும்",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "என்றென்றும் இலவசம் · கணக்கு இல்லை · கண்காணிப்பு இல்லை",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "இந்தப் பக்கத்தில் Chrome நீட்டிப்புகளை அனுமதிக்காது. வேறு ஏதேனும் இணையதளத்தைத் திறந்து மீண்டும் முயலுங்கள்.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "அமைப்புகள்",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "இந்தப் பக்கத்தைப் பிடிக்க முடியவில்லை. தாவலை மீண்டும் ஏற்றி முயலுங்கள்.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "அமைப்புகள்",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "அமைப்புகள்",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI தலைக்குறிப்பு வார்ப்புரு",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI-க்காக நகலெடு பயன்முறையில் முன்னால் சேர்க்கப்படும். டோக்கன்கள்: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nமூலம்: {url}\nபிடிக்கப்பட்டது: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "படக் கையாளுதல்",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "படங்களைத் தவிர்",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "உள்ளிணைந்த Markdown படங்கள்",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "முழுமையான பட URL-கள்",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "பக்கப் பிடிப்புகளில் தலைப்பு, மூலம், தேதி அடங்கிய front-matter தொகுதியைச் சேர்க்கிறது.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro அமைப்பு. உரிமக் குறியீட்டால் திறக்கவும்.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "சேமிக்கப்பட்டது",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "உரிமம்",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "உரிமக் குறியீடு",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "செயல்படுத்து",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "சரிபார்க்கிறது...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "உரிமம் செயல்படுத்தப்பட்டது. Pro அம்சங்கள் திறக்கப்பட்டுள்ளன.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "அந்தக் குறியீட்டைச் சரிபார்க்க முடியவில்லை. அதைச் சரிபார்த்து மீண்டும் முயலுங்கள்.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro செயலில் உள்ளது. MarkGrab-ஐ ஆதரிப்பதற்கு நன்றி.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "வரம்பற்ற முழுப்பக்கப் பிடிப்புகள்",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "விருப்ப AI தலைக்குறிப்பு வார்ப்புரு மற்றும் YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "படக் கையாளுதல் பயன்முறைகள் மற்றும் .md கோப்புப்பெயர் வார்ப்புருக்கள்",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 வாழ்நாள் முழுவதும். ஒரே கட்டணம், சந்தா இல்லை.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14-நாள் பணம் திரும்பப் பெறும் உத்தரவாதம்.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one-இல் Pro-ஐப் பாருங்கள்",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "பற்றி",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "பதிப்பு",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "தனியுரிமைக் கொள்கை",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "தவிர்",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "அடுத்து",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "படி $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "படி ஒன்று",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "படி இரண்டு",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "படி மூன்று",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "எந்தப் பக்கத்தையும் சுத்தமான Markdown ஆக நகலெடுங்கள்",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "கருவிப்பட்டையில் உள்ள MarkGrab ஐகானைக் கிளிக் செய்யுங்கள்; படிக்கக்கூடிய பக்கம் GitHub-பாணி Markdown ஆக உங்கள் கிளிப்போர்டில் வந்து சேரும். தலைப்புகள், பட்டியல்கள், குறியீட்டுத் தொகுதிகள், அட்டவணைகள், இணைப்புகள் அனைத்தும் அப்படியே இருக்கும்.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "எந்தக் கட்டுரையையும் அல்லது ஆவணப் பக்கத்தையும் திறங்கள்",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "கருவிப்பட்டையில் MarkGrab ஐகானைக் கிளிக் செய்யுங்கள்",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "சுத்தமான Markdown-ஐ எங்கும் ஒட்டுங்கள்",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "குறிப்பு: புதிர்த்துண்டு மெனுவிலிருந்து MarkGrab-ஐப் பொருத்தி வையுங்கள்; எப்போதும் ஒரே கிளிக்கில் கிடைக்கும்.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI உரையாடல்களுக்காக உருவாக்கப்பட்டது",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI-க்காக நகலெடு கட்டுரைக்கு முன் தலைப்பையும் மூலத் தலைக்குறிப்பையும் சேர்க்கிறது; அதனால் ChatGPT அல்லது Claude தான் படிப்பது என்ன, அது எங்கிருந்து வந்தது என்பதைத் துல்லியமாக அறியும்.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# டிரான்ஸ்ஃபார்மர்களைப் புரிந்துகொள்ளுதல்\n\nமூலம்: https://arxiv.org/abs/1706.03762\nபிடிக்கப்பட்டது: 2026-07-27\n\n---\n\nமுன்னணி வரிசை மாற்ற மாதிரிகள் சிக்கலான மீள்நிகழ் அல்லது\nகான்வல்யூஷனல் நரம்பியல் வலையமைப்புகளை அடிப்படையாகக் கொண்டவை...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "என்றென்றும் இலவசம்",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "நாளொன்றுக்கு 15 முழுப்பக்கப் பிடிப்புகள், இலவசம். தேர்வுப் பிடிப்புகளுக்கு வரம்பே இல்லை. கணக்கு இல்லை, கண்காணிப்பு இல்லை, அனைத்தும் உங்கள் கணினியிலேயே இயங்கும்.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "பக்கப் பிடிப்புகள் / நாள், இலவசம்",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "வரம்பற்றவை",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "தேர்வுப் பிடிப்புகள்",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "கணக்குகள் அல்லது டிராக்கர்கள்",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro-ஐப் பாருங்கள்",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "நகலெடுக்கத் தொடங்குங்கள்",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

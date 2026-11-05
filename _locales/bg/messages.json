@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Копирай страница като Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Копирайте всяка страница или селекция като чист GitHub Markdown с един клик, с AI режим за поставяне в ChatGPT и Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: копирай тази страница като Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Копирай страницата като Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Копирай селекцията като Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Копирай страницата за поставяне в AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Копирани $COUNT$ думи като Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Не е намерено четимо съдържание на тази страница. Опитайте първо да маркирате текст.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Нищо не е избрано. Маркирайте текст и опитайте отново.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Копирането в клипборда не успя. Кликнете някъде на страницата и опитайте отново.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Достигнат е дневният лимит от 15 безплатни копирания на страници. Копирането на селекции остава неограничено.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Копирай страницата като Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Копирай за AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Добавя заглавие + източник за ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Изтегли .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ от $CAP$ безплатни копирания на страници днес",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Използвахте всичките 15 безплатни копирания за днес. Pro премахва лимита.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Вземете Pro · $$99 завинаги",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Безплатно завинаги · Без акаунт · Без проследяване",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome не позволява разширения на тази страница. Отворете друг сайт и опитайте отново.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Настройки",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Страницата не можа да бъде копирана. Презаредете раздела и опитайте отново.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Настройки",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Настройки",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Шаблон за AI заглавка",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Добавя се в началото в режим „Копирай за AI“. Токени: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nИзточник: {url}\nЗаписано: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Обработка на изображения",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Пропускай изображенията",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Вградени Markdown изображения",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Абсолютни URL адреси на изображения",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Добавя блок front-matter със заглавие, източник и дата към копираните страници.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro настройка. Отключете с лицензен ключ.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Запазено",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Лиценз",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Лицензен ключ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Активирай",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Проверка...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Лицензът е активиран. Pro функциите са отключени.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Ключът не се потвърди. Проверете го и опитайте отново.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro е активен. Благодарим, че подкрепяте MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Неограничени копирания на цели страници",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Персонализиран шаблон за AI заглавка и YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Режими за изображения и шаблони за имена на .md файлове",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 завинаги. Едно плащане, без абонамент.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14-дневна гаранция за връщане на парите.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Вижте Pro на zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Относно",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Версия",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Политика за поверителност",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Пропусни",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Напред",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Стъпка $NUM$ от 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Стъпка едно",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Стъпка две",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Стъпка три",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Копирайте всяка страница като чист Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Кликнете иконата на MarkGrab в лентата с инструменти и четимата част от страницата се озовава в клипборда като GitHub Markdown. Заглавия, списъци, кодови блокове, таблици и връзки се запазват.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Отворете статия или страница с документация",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Кликнете иконата на MarkGrab в лентата",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Поставете чист Markdown навсякъде",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Съвет: закачете MarkGrab от менюто с пъзела, за да е винаги на един клик разстояние.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Създаден за AI чатове",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "„Копирай за AI“ добавя заглавие и източник преди статията, така че ChatGPT или Claude знае точно какво чете и откъде идва.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Разбиране на трансформърите\n\nИзточник: https://arxiv.org/abs/1706.03762\nЗаписано: 2026-07-27\n\n---\n\nДоминиращите модели за преобразуване на последователности се основават на сложни\nрекурентни или конволюционни невронни мрежи...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Безплатно завинаги",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 копирания на цели страници на ден, безплатно. Копиранията на селекции са неограничени. Без акаунт, без проследяване, всичко работи на вашата машина.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "копирания на страници / ден, безплатно",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Неограничени",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "копирания на селекции",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "акаунти или тракери",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Виж Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Започнете",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — ಪುಟವನ್ನು Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "ಯಾವುದೇ ಪುಟ ಅಥವಾ ಆಯ್ಕೆಯನ್ನು ಒಂದೇ ಕ್ಲಿಕ್‌ನಲ್ಲಿ ಸ್ವಚ್ಛ GitHub ಶೈಲಿಯ Markdown ಆಗಿ ನಕಲಿಸಿ; ChatGPT/Claude ಗಾಗಿ AI ಪೇಸ್ಟ್ ಮೋಡ್ ಸಹ ಇದೆ.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: ಈ ಪುಟವನ್ನು Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "ಪುಟವನ್ನು Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "ಆಯ್ಕೆಯನ್ನು Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI ಪೇಸ್ಟ್‌ಗಾಗಿ ಪುಟವನ್ನು ನಕಲಿಸಿ",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ ಪದಗಳನ್ನು Markdown ಆಗಿ ನಕಲಿಸಲಾಗಿದೆ",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "ಈ ಪುಟದಲ್ಲಿ ಓದಬಹುದಾದ ವಿಷಯ ಸಿಗಲಿಲ್ಲ. ಮೊದಲು ಪಠ್ಯವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ ನೋಡಿ.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "ಏನೂ ಆಯ್ಕೆಯಾಗಿಲ್ಲ. ಸ್ವಲ್ಪ ಪಠ್ಯವನ್ನು ಹೈಲೈಟ್ ಮಾಡಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲು ವಿಫಲವಾಗಿದೆ. ಪುಟದಲ್ಲಿ ಎಲ್ಲಿಯಾದರೂ ಕ್ಲಿಕ್ ಮಾಡಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "ದಿನದ 15 ಉಚಿತ ಪುಟ ಕ್ಯಾಪ್ಚರ್ ಮಿತಿ ತಲುಪಿದೆ. ಆಯ್ಕೆ ನಕಲುಗಳು ಅಮಿತವಾಗಿಯೇ ಇರುತ್ತವೆ.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "ಪುಟವನ್ನು Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI ಗಾಗಿ ನಕಲಿಸಿ",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude ಗಾಗಿ ಶೀರ್ಷಿಕೆ + ಮೂಲ ಹೆಡರ್ ಸೇರಿಸುತ್ತದೆ",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "ಇಂದು $CAP$ ರಲ್ಲಿ $COUNT$ ಉಚಿತ ಪುಟ ಕ್ಯಾಪ್ಚರ್",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "ಇಂದಿನ ಎಲ್ಲಾ 15 ಉಚಿತ ಪುಟ ಕ್ಯಾಪ್ಚರ್‌ಗಳನ್ನು ಬಳಸಿದ್ದೀರಿ. Pro ಈ ಮಿತಿಯನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro ಪಡೆಯಿರಿ · $$99 ಜೀವಿತಾವಧಿ",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "ಸದಾ ಉಚಿತ · ಖಾತೆ ಇಲ್ಲ · ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "ಈ ಪುಟದಲ್ಲಿ ವಿಸ್ತರಣೆಗಳಿಗೆ Chrome ಅನುಮತಿ ನೀಡುವುದಿಲ್ಲ. ಯಾವುದೇ ವೆಬ್‌ಸೈಟ್ ತೆರೆದು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "ಈ ಪುಟವನ್ನು ಕ್ಯಾಪ್ಚರ್ ಮಾಡಲಾಗಲಿಲ್ಲ. ಟ್ಯಾಬ್ ಅನ್ನು ರೀಲೋಡ್ ಮಾಡಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI ಹೆಡರ್ ಟೆಂಪ್ಲೇಟ್",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI ಗಾಗಿ ನಕಲಿಸಿ ಮೋಡ್‌ನಲ್ಲಿ ಮೊದಲಿಗೆ ಸೇರಿಸಲಾಗುತ್ತದೆ. ಟೋಕನ್‌ಗಳು: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} ಮೂಲ: {url}\nಕ್ಯಾಪ್ಚರ್: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "ಚಿತ್ರ ನಿರ್ವಹಣೆ",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "ಚಿತ್ರಗಳನ್ನು ಬಿಟ್ಟುಬಿಡಿ",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "ಇನ್‌ಲೈನ್ Markdown ಚಿತ್ರಗಳು",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "ಸಂಪೂರ್ಣ ಚಿತ್ರ URL ಗಳು",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML ಫ್ರಂಟ್-ಮ್ಯಾಟರ್",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "ಪುಟ ಕ್ಯಾಪ್ಚರ್‌ಗಳಿಗೆ ಶೀರ್ಷಿಕೆ, ಮೂಲ ಮತ್ತು ದಿನಾಂಕದ ಫ್ರಂಟ್-ಮ್ಯಾಟರ್ ಬ್ಲಾಕ್ ಸೇರಿಸುತ್ತದೆ.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro ಸೆಟ್ಟಿಂಗ್. ಪರವಾನಗಿ ಕೀ ಮೂಲಕ ಅನ್‌ಲಾಕ್ ಮಾಡಿ.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "ಪರವಾನಗಿ",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "ಪರವಾನಗಿ ಕೀ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "ಪರವಾನಗಿ ಸಕ್ರಿಯವಾಗಿದೆ. Pro ವೈಶಿಷ್ಟ್ಯಗಳು ಅನ್‌ಲಾಕ್ ಆಗಿವೆ.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "ಆ ಕೀ ದೃಢೀಕರಣವಾಗಲಿಲ್ಲ. ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro ಸಕ್ರಿಯವಾಗಿದೆ. MarkGrab ಅನ್ನು ಬೆಂಬಲಿಸಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "ಅಮಿತ ಪೂರ್ಣ-ಪುಟ ಕ್ಯಾಪ್ಚರ್‌ಗಳು",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "ಕಸ್ಟಮ್ AI ಹೆಡರ್ ಟೆಂಪ್ಲೇಟ್ ಮತ್ತು YAML ಫ್ರಂಟ್-ಮ್ಯಾಟರ್",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "ಚಿತ್ರ ನಿರ್ವಹಣಾ ಮೋಡ್‌ಗಳು ಮತ್ತು .md ಫೈಲ್ ಹೆಸರಿನ ಟೆಂಪ್ಲೇಟ್‌ಗಳು",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 ಜೀವಿತಾವಧಿ. ಒಂದೇ ಪಾವತಿ, ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 ದಿನಗಳ ಹಣ ಹಿಂಪಾವತಿ ಖಾತರಿ.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one ನಲ್ಲಿ Pro ನೋಡಿ",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "ಕುರಿತು",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "ಆವೃತ್ತಿ",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "ಗೌಪ್ಯತಾ ನೀತಿ",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "ಬಿಟ್ಟುಬಿಡಿ",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "ಮುಂದೆ",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "ಹಂತ $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "ಹಂತ ಒಂದು",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "ಹಂತ ಎರಡು",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "ಹಂತ ಮೂರು",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "ಯಾವುದೇ ಪುಟವನ್ನು ಸ್ವಚ್ಛ Markdown ಆಗಿ ನಕಲಿಸಿ",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "ಟೂಲ್‌ಬಾರ್‌ನಲ್ಲಿ MarkGrab ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡಿ; ಓದಬಹುದಾದ ಪುಟ GitHub ಶೈಲಿಯ Markdown ಆಗಿ ನಿಮ್ಮ ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ಬರುತ್ತದೆ. ಶೀರ್ಷಿಕೆಗಳು, ಪಟ್ಟಿಗಳು, ಕೋಡ್ ಬ್ಲಾಕ್‌ಗಳು, ಕೋಷ್ಟಕಗಳು ಮತ್ತು ಲಿಂಕ್‌ಗಳು ಎಲ್ಲವೂ ಹಾಗೇ ಉಳಿಯುತ್ತವೆ.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "ಯಾವುದೇ ಲೇಖನ ಅಥವಾ ಡಾಕ್ಸ್ ಪುಟ ತೆರೆಯಿರಿ",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "ಟೂಲ್‌ಬಾರ್‌ನಲ್ಲಿ MarkGrab ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡಿ",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "ಎಲ್ಲಿ ಬೇಕಾದರೂ ಸ್ವಚ್ಛ Markdown ಪೇಸ್ಟ್ ಮಾಡಿ",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "ಸಲಹೆ: ಪಜಲ್ ಮೆನುವಿನಿಂದ MarkGrab ಅನ್ನು ಪಿನ್ ಮಾಡಿ, ಅದು ಯಾವಾಗಲೂ ಒಂದೇ ಕ್ಲಿಕ್ ದೂರದಲ್ಲಿರುತ್ತದೆ.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI ಚಾಟ್‌ಗಳಿಗಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI ಗಾಗಿ ನಕಲಿಸಿ ಲೇಖನದ ಮೊದಲು ಶೀರ್ಷಿಕೆ ಮತ್ತು ಮೂಲ ಹೆಡರ್ ಸೇರಿಸುತ್ತದೆ; ಹೀಗಾಗಿ ChatGPT ಅಥವಾ Claude ಗೆ ತಾನು ಏನನ್ನು ಓದುತ್ತಿದೆ ಮತ್ತು ಅದು ಎಲ್ಲಿಂದ ಬಂತು ಎಂಬುದು ನಿಖರವಾಗಿ ತಿಳಿಯುತ್ತದೆ.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers ಮೂಲ: https://arxiv.org/abs/1706.03762\nಕ್ಯಾಪ್ಚರ್: 2026-07-27 --- ಪ್ರಮುಖ ಸೀಕ್ವೆನ್ಸ್ ಟ್ರಾನ್ಸ್‌ಡಕ್ಷನ್ ಮಾದರಿಗಳು ಸಂಕೀರ್ಣ ರಿಕರೆಂಟ್\nಅಥವಾ ಕನ್ವಲ್ಯೂಷನಲ್ ನ್ಯೂರಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗಳ ಮೇಲೆ ಆಧಾರಿತವಾಗಿವೆ...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "ಸದಾ ಉಚಿತ",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "ದಿನಕ್ಕೆ 15 ಪೂರ್ಣ-ಪುಟ ಕ್ಯಾಪ್ಚರ್, ಉಚಿತ. ಆಯ್ಕೆ ಕ್ಯಾಪ್ಚರ್‌ಗಳು ಅಮಿತ. ಖಾತೆ ಇಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಎಲ್ಲವೂ ನಿಮ್ಮ ಯಂತ್ರದಲ್ಲೇ ನಡೆಯುತ್ತದೆ.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "ಪುಟ ಕ್ಯಾಪ್ಚರ್ / ದಿನ, ಉಚಿತ",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "ಅಮಿತ",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "ಆಯ್ಕೆ ಕ್ಯಾಪ್ಚರ್‌ಗಳು",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "ಖಾತೆಗಳು ಅಥವಾ ಟ್ರ್ಯಾಕರ್‌ಗಳು",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro ನೋಡಿ",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "ಕ್ಯಾಪ್ಚರ್ ಆರಂಭಿಸಿ",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

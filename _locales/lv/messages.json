@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — kopēt lapu kā Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopējiet jebkuru lapu vai atlasi kā tīru GitHub stila Markdown ar vienu klikšķi, ar AI ielīmēšanas režīmu ChatGPT un Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopēt šo lapu kā Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopēt lapu kā Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopēt atlasi kā Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopēt lapu ielīmēšanai AI čatā",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Nokopēti $COUNT$ vārdi kā Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Šajā lapā neizdevās atrast lasāmu saturu. Vispirms mēģiniet atlasīt tekstu.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nekas nav atlasīts. Iezīmējiet tekstu un mēģiniet vēlreiz.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopēšana starpliktuvē neizdevās. Noklikšķiniet jebkur lapā un mēģiniet vēlreiz.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Sasniegts dienas limits: 15 bezmaksas lapu tveršanas. Atlases kopēšana joprojām ir neierobežota.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopēt lapu kā Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopēt AI vajadzībām",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Pievieno virsrakstu un avota galveni ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Lejupielādēt .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ no $CAP$ bezmaksas lapu tveršanām šodien",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Šodien izmantotas visas 15 bezmaksas lapu tveršanas. Pro noņem šo limitu.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Iegūt Pro · $$99 uz mūžu",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Bezmaksas uz visiem laikiem · Bez konta · Bez izsekošanas",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome neatļauj paplašinājumus šajā lapā. Atveriet jebkuru vietni un mēģiniet vēlreiz.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Iestatījumi",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Neizdevās tvert šo lapu. Pārlādējiet cilni un mēģiniet vēlreiz.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Iestatījumi",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Iestatījumi",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI galvenes veidne",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Tiek pievienots sākumā režīmā Kopēt AI vajadzībām. Marķieri: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} Avots: {url}\nTverts: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Attēlu apstrāde",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Izlaist attēlus",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Iekļautie Markdown attēli",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absolūtie attēlu URL",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Lapu tveršanām pievieno front matter bloku ar virsrakstu, avotu un datumu.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro iestatījums. Atbloķējiet ar licences atslēgu.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Saglabāts",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licence",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licences atslēga",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktivizēt",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Pārbauda...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licence aktivizēta. Pro funkcijas ir atbloķētas.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Šo atslēgu neizdevās verificēt. Pārbaudiet to un mēģiniet vēlreiz.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro ir aktīvs. Paldies, ka atbalstāt MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Neierobežotas visas lapas tveršanas",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Pielāgojama AI galvenes veidne un YAML front matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Attēlu apstrādes režīmi un .md failu nosaukumu veidnes",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 uz mūžu. Viens maksājums, bez abonementa.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 dienu naudas atmaksas garantija.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Skatīt Pro vietnē zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Par",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versija",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Privātuma politika",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Izlaist",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Tālāk",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "$NUM$. solis no 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Pirmais solis",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Otrais solis",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Trešais solis",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopējiet jebkuru lapu kā tīru Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Noklikšķiniet uz MarkGrab ikonas rīkjoslā, un lapas lasāmais saturs nonāk starpliktuvē kā GitHub stila Markdown. Virsraksti, saraksti, koda bloki, tabulas un saites saglabājas.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Atveriet jebkuru rakstu vai dokumentācijas lapu",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Noklikšķiniet uz MarkGrab ikonas rīkjoslā",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Ielīmējiet tīru Markdown jebkur",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Padoms: piespraudiet MarkGrab no puzles gabaliņa izvēlnes, lai tas vienmēr būtu viena klikšķa attālumā.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Radīts AI čatiem",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopēt AI vajadzībām pievieno virsrakstu un avota galveni pirms raksta, lai ChatGPT vai Claude precīzi zinātu, ko lasa un no kurienes tas nācis.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers Avots: https://arxiv.org/abs/1706.03762\nTverts: 2026-07-27 --- Vadošie secību transdukcijas modeļi balstās uz sarežģītiem\nrekurentiem vai konvolūciju neironu tīkliem...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Bezmaksas uz visiem laikiem",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 visas lapas tveršanas dienā, bez maksas. Atlases tveršanas ir neierobežotas. Bez konta, bez izsekošanas, viss darbojas jūsu datorā.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "lapu tveršanas dienā, bez maksas",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Neierobežoti",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "atlases tveršanas",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "kontu vai izsekotāju",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Skatīt Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Sākt tveršanu",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

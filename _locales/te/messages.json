@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — పేజీని Markdown గా కాపీ చేయండి",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "ఏ పేజీనైనా లేదా ఎంపికనైనా ఒక్క క్లిక్‌తో శుభ్రమైన Markdown గా కాపీ చేయండి; ChatGPT, Claude కోసం AI పేస్ట్ మోడ్ కూడా ఉంది.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: ఈ పేజీని Markdown గా కాపీ చేయండి",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "పేజీని Markdown గా కాపీ చేయి",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "ఎంపికను Markdown గా కాపీ చేయి",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI లో పేస్ట్ చేయడానికి పేజీని కాపీ చేయి",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ పదాలు Markdown గా కాపీ అయ్యాయి",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "ఈ పేజీలో చదవగలిగే కంటెంట్ కనబడలేదు. ముందుగా టెక్స్ట్‌ను ఎంచుకుని చూడండి.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "ఏదీ ఎంచుకోలేదు. కొంత టెక్స్ట్‌ను హైలైట్ చేసి, మళ్లీ ప్రయత్నించండి.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "క్లిప్‌బోర్డ్‌కు కాపీ చేయడం విఫలమైంది. పేజీలో ఎక్కడైనా క్లిక్ చేసి, మళ్లీ ప్రయత్నించండి.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "రోజుకు 15 ఉచిత పేజీ క్యాప్చర్ల పరిమితి ముగిసింది. ఎంపిక కాపీలకు పరిమితి లేదు.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "పేజీని Markdown గా కాపీ చేయి",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI కోసం కాపీ చేయి",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude కోసం శీర్షిక + మూలం హెడర్‌ను జోడిస్తుంది",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md డౌన్‌లోడ్ చేయి",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "ఈరోజు $CAP$ ఉచిత పేజీ క్యాప్చర్లలో $COUNT$",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "ఈరోజు 15 ఉచిత పేజీ క్యాప్చర్లన్నీ వాడేశారు. Pro ఈ పరిమితిని తొలగిస్తుంది.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro పొందండి · $$99 జీవితకాలం",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "ఎప్పటికీ ఉచితం · ఖాతా అవసరం లేదు · ట్రాకింగ్ లేదు",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "ఈ పేజీలో Chrome పొడిగింపులను అనుమతించదు. ఏదైనా వెబ్‌సైట్ తెరిచి మళ్లీ ప్రయత్నించండి.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "ఈ పేజీని క్యాప్చర్ చేయలేకపోయాం. ట్యాబ్‌ను రీలోడ్ చేసి మళ్లీ ప్రయత్నించండి.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI హెడర్ టెంప్లేట్",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI కోసం కాపీ మోడ్‌లో ముందుగా జోడించబడుతుంది. టోకెన్లు: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nమూలం: {url}\nక్యాప్చర్ చేసినది: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "చిత్రాల నిర్వహణ",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "చిత్రాలను దాటవేయి",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "ఇన్‌లైన్ Markdown చిత్రాలు",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "చిత్రాల సంపూర్ణ URL-లు",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "పేజీ క్యాప్చర్లకు శీర్షిక, మూలం, తేదీతో కూడిన front-matter బ్లాక్‌ను జోడిస్తుంది.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro సెట్టింగ్. లైసెన్స్ కీతో అన్‌లాక్ చేయండి.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "సేవ్ అయింది",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "లైసెన్స్",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "లైసెన్స్ కీ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "యాక్టివేట్ చేయి",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "తనిఖీ చేస్తోంది...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "లైసెన్స్ యాక్టివేట్ అయింది. Pro ఫీచర్లు అన్‌లాక్ అయ్యాయి.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "ఆ కీ ధృవీకరణ కాలేదు. దాన్ని సరిచూసి మళ్లీ ప్రయత్నించండి.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro యాక్టివ్‌గా ఉంది. MarkGrab కు మద్దతిచ్చినందుకు ధన్యవాదాలు.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "అపరిమిత పూర్తి-పేజీ క్యాప్చర్లు",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "అనుకూల AI హెడర్ టెంప్లేట్ మరియు YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "చిత్రాల నిర్వహణ మోడ్‌లు మరియు .md ఫైల్ పేరు టెంప్లేట్లు",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 జీవితకాలం. ఒకే చెల్లింపు, సబ్‌స్క్రిప్షన్ లేదు.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14-రోజుల డబ్బు వాపసు హామీ.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one లో Pro చూడండి",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "గురించి",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "వెర్షన్",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "గోప్యతా విధానం",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "దాటవేయి",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "తర్వాత",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "దశ $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "మొదటి దశ",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "రెండవ దశ",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "మూడవ దశ",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "ఏ పేజీనైనా శుభ్రమైన Markdown గా కాపీ చేయండి",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "టూల్‌బార్‌లోని MarkGrab ఐకాన్‌పై క్లిక్ చేయండి; చదవగలిగే పేజీ GitHub-శైలి Markdown గా మీ క్లిప్‌బోర్డ్‌కు చేరుతుంది. శీర్షికలు, జాబితాలు, కోడ్ బ్లాక్‌లు, పట్టికలు, లింక్‌లు అన్నీ అలాగే ఉంటాయి.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "ఏదైనా వ్యాసం లేదా డాక్యుమెంటేషన్ పేజీ తెరవండి",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "టూల్‌బార్‌లో MarkGrab ఐకాన్‌పై క్లిక్ చేయండి",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "శుభ్రమైన Markdown ను ఎక్కడైనా పేస్ట్ చేయండి",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "చిట్కా: పజిల్-ముక్క మెనూ నుండి MarkGrab ను పిన్ చేయండి, ఎప్పుడూ ఒక్క క్లిక్ దూరంలో ఉంటుంది.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI చాట్‌ల కోసం రూపొందించబడింది",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI కోసం కాపీ వ్యాసానికి ముందు శీర్షికను, మూలం హెడర్‌ను జోడిస్తుంది; దాంతో ChatGPT లేదా Claude తాను చదువుతున్నది ఏమిటో, అది ఎక్కడి నుంచి వచ్చిందో కచ్చితంగా తెలుసుకుంటుంది.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# ట్రాన్స్‌ఫార్మర్లను అర్థం చేసుకోవడం\n\nమూలం: https://arxiv.org/abs/1706.03762\nక్యాప్చర్ చేసినది: 2026-07-27\n\n---\n\nప్రధాన సీక్వెన్స్ ట్రాన్స్‌డక్షన్ మోడల్స్ సంక్లిష్టమైన రికరెంట్ లేదా\nకాన్వల్యూషనల్ న్యూరల్ నెట్‌వర్క్‌లపై ఆధారపడి ఉంటాయి...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "ఎప్పటికీ ఉచితం",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "రోజుకు 15 పూర్తి-పేజీ క్యాప్చర్లు, ఉచితం. ఎంపిక క్యాప్చర్లకు పరిమితి లేదు. ఖాతా లేదు, ట్రాకింగ్ లేదు, అంతా మీ కంప్యూటర్‌లోనే నడుస్తుంది.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "పేజీ క్యాప్చర్లు / రోజు, ఉచితం",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "అపరిమితం",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "ఎంపిక క్యాప్చర్లు",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "ఖాతాలు లేదా ట్రాకర్లు",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro చూడండి",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "క్యాప్చర్ మొదలుపెట్టండి",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

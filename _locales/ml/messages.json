@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — പേജ് Markdown ആയി പകർത്തുക",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "ഏത് പേജും തിരഞ്ഞെടുപ്പും ഒറ്റ ക്ലിക്കിൽ വൃത്തിയുള്ള GitHub ശൈലി Markdown ആയി പകർത്തുക; ChatGPT/Claude-നു AI പേസ്റ്റ് മോഡും.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: ഈ പേജ് Markdown ആയി പകർത്തുക",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "പേജ് Markdown ആയി പകർത്തുക",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "തിരഞ്ഞെടുത്തത് Markdown ആയി പകർത്തുക",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI പേസ്റ്റിനായി പേജ് പകർത്തുക",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ വാക്കുകൾ Markdown ആയി പകർത്തി",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "ഈ പേജിൽ വായിക്കാവുന്ന ഉള്ളടക്കം കണ്ടെത്താനായില്ല. ആദ്യം ടെക്സ്റ്റ് തിരഞ്ഞെടുത്ത് നോക്കൂ.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല. കുറച്ച് ടെക്സ്റ്റ് ഹൈലൈറ്റ് ചെയ്ത ശേഷം വീണ്ടും ശ്രമിക്കുക.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്താനായില്ല. പേജിൽ എവിടെയെങ്കിലും ക്ലിക്ക് ചെയ്ത ശേഷം വീണ്ടും ശ്രമിക്കുക.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "ദിവസേനയുള്ള 15 സൗജന്യ പേജ് ക്യാപ്ചർ പരിധി എത്തി. തിരഞ്ഞെടുപ്പ് പകർപ്പുകൾ പരിധിയില്ലാതെ തുടരും.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "പേജ് Markdown ആയി പകർത്തുക",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI-യ്ക്കായി പകർത്തുക",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude-നായി തലക്കെട്ടും ഉറവിട ഹെഡറും ചേർക്കുന്നു",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md ഡൗൺലോഡ് ചെയ്യുക",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "ഇന്ന് $CAP$-ൽ $COUNT$ സൗജന്യ പേജ് ക്യാപ്ചർ",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "ഇന്നത്തെ 15 സൗജന്യ പേജ് ക്യാപ്ചറുകളും ഉപയോഗിച്ചു കഴിഞ്ഞു. Pro ഈ പരിധി നീക്കുന്നു.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro നേടൂ · $$99 ആജീവനാന്തം",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "എന്നും സൗജന്യം · അക്കൗണ്ട് വേണ്ട · ട്രാക്കിംഗ് ഇല്ല",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "ഈ പേജിൽ എക്സ്റ്റൻഷനുകൾ Chrome അനുവദിക്കുന്നില്ല. ഏതെങ്കിലും വെബ്സൈറ്റ് തുറന്ന് വീണ്ടും ശ്രമിക്കുക.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "ക്രമീകരണങ്ങൾ",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "ഈ പേജ് ക്യാപ്ചർ ചെയ്യാനായില്ല. ടാബ് റീലോഡ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "ക്രമീകരണങ്ങൾ",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "ക്രമീകരണങ്ങൾ",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI ഹെഡർ ടെംപ്ലേറ്റ്",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI-യ്ക്കായി പകർത്തുക മോഡിൽ തുടക്കത്തിൽ ചേർക്കുന്നു. ടോക്കണുകൾ: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} ഉറവിടം: {url}\nക്യാപ്ചർ: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "ചിത്ര കൈകാര്യം",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "ചിത്രങ്ങൾ ഒഴിവാക്കുക",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "ഇൻലൈൻ Markdown ചിത്രങ്ങൾ",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "ചിത്രങ്ങളുടെ പൂർണ്ണ URL-കൾ",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML ഫ്രണ്ട്-മാറ്റർ",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "പേജ് ക്യാപ്ചറുകളിൽ തലക്കെട്ട്, ഉറവിടം, തീയതി എന്നിവയുള്ള ഫ്രണ്ട്-മാറ്റർ ബ്ലോക്ക് ചേർക്കുന്നു.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro ക്രമീകരണം. ലൈസൻസ് കീ ഉപയോഗിച്ച് അൺലോക്ക് ചെയ്യുക.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "സേവ് ചെയ്തു",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "ലൈസൻസ്",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "ലൈസൻസ് കീ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "സജീവമാക്കുക",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "പരിശോധിക്കുന്നു...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "ലൈസൻസ് സജീവമാക്കി. Pro ഫീച്ചറുകൾ അൺലോക്ക് ആയി.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "ആ കീ പരിശോധനയിൽ പരാജയപ്പെട്ടു. അത് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro സജീവമാണ്. MarkGrab-നെ പിന്തുണച്ചതിന് നന്ദി.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "പരിധിയില്ലാത്ത മുഴുവൻ-പേജ് ക്യാപ്ചറുകൾ",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "ഇഷ്ടാനുസൃത AI ഹെഡർ ടെംപ്ലേറ്റും YAML ഫ്രണ്ട്-മാറ്ററും",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "ചിത്ര കൈകാര്യ മോഡുകളും .md ഫയൽനാമ ടെംപ്ലേറ്റുകളും",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 ആജീവനാന്തം. ഒറ്റ പേയ്മെന്റ്, സബ്സ്ക്രിപ്ഷൻ ഇല്ല.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 ദിവസത്തെ പണം തിരികെ ഗ്യാരണ്ടി.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one-ൽ Pro കാണുക",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "വിവരം",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "പതിപ്പ്",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "സ്വകാര്യതാ നയം",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "ഒഴിവാക്കുക",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "അടുത്തത്",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "ഘട്ടം $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "ഘട്ടം ഒന്ന്",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "ഘട്ടം രണ്ട്",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "ഘട്ടം മൂന്ന്",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "ഏത് പേജും വൃത്തിയുള്ള Markdown ആയി പകർത്തുക",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "ടൂൾബാറിലെ MarkGrab ഐക്കണിൽ ക്ലിക്ക് ചെയ്യുക; വായിക്കാവുന്ന പേജ് GitHub ശൈലി Markdown ആയി ക്ലിപ്പ്ബോർഡിൽ എത്തും. തലക്കെട്ടുകൾ, ലിസ്റ്റുകൾ, കോഡ് ബ്ലോക്കുകൾ, ടേബിളുകൾ, ലിങ്കുകൾ എല്ലാം അതേപടി നിലനിൽക്കും.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "ഏതെങ്കിലും ലേഖനമോ ഡോക്സ് പേജോ തുറക്കുക",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "ടൂൾബാറിലെ MarkGrab ഐക്കണിൽ ക്ലിക്ക് ചെയ്യുക",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "വൃത്തിയുള്ള Markdown എവിടെയും പേസ്റ്റ് ചെയ്യുക",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "നുറുങ്ങ്: പസിൽ മെനുവിൽ നിന്ന് MarkGrab പിൻ ചെയ്യുക; അപ്പോൾ അത് എപ്പോഴും ഒറ്റ ക്ലിക്ക് അകലെയായിരിക്കും.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI ചാറ്റുകൾക്കായി നിർമ്മിച്ചത്",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI-യ്ക്കായി പകർത്തുക ലേഖനത്തിന് മുമ്പ് തലക്കെട്ടും ഉറവിട ഹെഡറും ചേർക്കുന്നു; അതിനാൽ ChatGPT-യോ Claude-ഓ എന്ത് വായിക്കുന്നു, അത് എവിടെ നിന്ന് വന്നു എന്ന് കൃത്യമായി അറിയുന്നു.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers ഉറവിടം: https://arxiv.org/abs/1706.03762\nക്യാപ്ചർ: 2026-07-27 --- മുൻനിര സീക്വൻസ് ട്രാൻസ്ഡക്ഷൻ മോഡലുകൾ സങ്കീർണ്ണമായ റിക്കറന്റ്\nഅല്ലെങ്കിൽ കൺവല്യൂഷണൽ ന്യൂറൽ നെറ്റ്‌വർക്കുകളിൽ അധിഷ്ഠിതമാണ്...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "എന്നും സൗജന്യം",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "ദിവസം 15 മുഴുവൻ-പേജ് ക്യാപ്ചറുകൾ, സൗജന്യം. തിരഞ്ഞെടുപ്പ് ക്യാപ്ചറുകൾ പരിധിയില്ല. അക്കൗണ്ട് ഇല്ല, ട്രാക്കിംഗ് ഇല്ല, എല്ലാം നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ തന്നെ പ്രവർത്തിക്കുന്നു.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "പേജ് ക്യാപ്ചർ / ദിവസം, സൗജന്യം",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "പരിധിയില്ല",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "തിരഞ്ഞെടുപ്പ് ക്യാപ്ചറുകൾ",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "അക്കൗണ്ടുകളോ ട്രാക്കറുകളോ",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro കാണുക",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "പകർത്തിത്തുടങ്ങുക",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

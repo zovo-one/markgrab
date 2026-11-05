@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Sao chép trang thành Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Sao chép trang hoặc vùng chọn thành Markdown sạch kiểu GitHub trong một cú nhấp, kèm chế độ dán sẵn sàng cho ChatGPT và Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: sao chép trang này thành Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Sao chép trang thành Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Sao chép vùng chọn thành Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Sao chép trang để dán vào AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Đã sao chép $COUNT$ từ dưới dạng Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Không tìm thấy nội dung đọc được trên trang này. Hãy thử chọn văn bản trước.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Chưa chọn gì cả. Hãy bôi đen một đoạn văn bản rồi thử lại.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Sao chép vào clipboard thất bại. Nhấp vào bất kỳ đâu trên trang rồi thử lại.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Đã đạt giới hạn 15 lượt chụp trang miễn phí mỗi ngày. Sao chép vùng chọn vẫn không giới hạn.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Sao chép trang thành Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Sao chép cho AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Thêm tiêu đề + phần đầu nguồn cho ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Tải xuống .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ / $CAP$ lượt chụp trang miễn phí hôm nay",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Bạn đã dùng hết 15 lượt chụp trang miễn phí hôm nay. Pro gỡ bỏ giới hạn này.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Mua Pro · $$99 trọn đời",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Miễn phí mãi mãi · Không cần tài khoản · Không theo dõi",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome không cho phép tiện ích mở rộng trên trang này. Hãy mở một trang web bất kỳ rồi thử lại.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Cài đặt",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Không thể chụp trang này. Hãy tải lại thẻ rồi thử lại.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Cài đặt",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Cài đặt",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Mẫu phần đầu AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Được chèn lên đầu trong chế độ Sao chép cho AI. Token: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nNguồn: {url}\nChụp lúc: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Xử lý hình ảnh",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Bỏ qua hình ảnh",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Hình ảnh Markdown nội tuyến",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "URL hình ảnh tuyệt đối",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "Front-matter YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Thêm khối front-matter gồm tiêu đề, nguồn và ngày vào các lượt chụp trang.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Cài đặt Pro. Mở khóa bằng khóa bản quyền.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Đã lưu",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Bản quyền",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Khóa bản quyền",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Kích hoạt",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Đang kiểm tra...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Đã kích hoạt bản quyền. Các tính năng Pro đã được mở khóa.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Không xác minh được khóa này. Hãy kiểm tra lại rồi thử lại.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro đang hoạt động. Cảm ơn bạn đã ủng hộ MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Chụp toàn trang không giới hạn",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Mẫu phần đầu AI tùy chỉnh và front-matter YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Các chế độ xử lý hình ảnh và mẫu tên tệp .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 trọn đời. Thanh toán một lần, không thuê bao.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Đảm bảo hoàn tiền trong 14 ngày.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Xem Pro tại zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Giới thiệu",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Phiên bản",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Chính sách quyền riêng tư",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Bỏ qua",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Tiếp theo",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Bước $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Bước một",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Bước hai",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Bước ba",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Sao chép mọi trang thành Markdown sạch",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Nhấp vào biểu tượng MarkGrab trên thanh công cụ, phần nội dung đọc được của trang sẽ nằm gọn trong clipboard dưới dạng Markdown kiểu GitHub. Tiêu đề, danh sách, khối mã, bảng và liên kết đều được giữ nguyên.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Mở một bài viết hoặc trang tài liệu bất kỳ",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Nhấp vào biểu tượng MarkGrab trên thanh công cụ",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Dán Markdown sạch vào bất kỳ đâu",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Mẹo: ghim MarkGrab từ menu hình mảnh ghép để luôn chỉ cách một cú nhấp.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Sinh ra cho các cuộc trò chuyện AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Sao chép cho AI thêm tiêu đề và phần đầu nguồn trước bài viết, để ChatGPT hay Claude biết chính xác mình đang đọc gì và nội dung đến từ đâu.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Tìm hiểu về Transformer\n\nNguồn: https://arxiv.org/abs/1706.03762\nChụp lúc: 2026-07-27\n\n---\n\nCác mô hình chuyển đổi chuỗi phổ biến hiện nay dựa trên các mạng nơ-ron\nhồi quy hoặc tích chập phức tạp...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Miễn phí mãi mãi",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 lượt chụp toàn trang mỗi ngày, miễn phí. Chụp vùng chọn không giới hạn. Không tài khoản, không theo dõi, mọi thứ chạy ngay trên máy của bạn.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "lượt chụp trang / ngày, miễn phí",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Không giới hạn",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "lượt chụp vùng chọn",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "tài khoản hay trình theo dõi",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Xem Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Bắt đầu chụp",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

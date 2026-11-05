@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — ページを Markdown でコピー",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "任意のページや選択範囲をワンクリックできれいな GitHub 風 Markdown としてコピー。ChatGPT や Claude 向けの AI 貼り付けモード付き。",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: このページを Markdown でコピー",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "ページを Markdown としてコピー",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "選択範囲を Markdown としてコピー",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI 貼り付け用にページをコピー",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ 語を Markdown としてコピーしました",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "このページに読み取れる本文が見つかりませんでした。まずテキストを選択してみてください。",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "何も選択されていません。テキストを選択してからもう一度お試しください。",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "クリップボードへのコピーに失敗しました。ページ内をクリックしてからもう一度お試しください。",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "無料のページ取得は1日15回までです。選択範囲のコピーは無制限のままです。",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "ページを Markdown としてコピー",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI 用にコピー",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude 向けにタイトルと出典ヘッダーを追加",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md をダウンロード",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "本日の無料ページ取得 $COUNT$ / $CAP$ 回",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "本日の無料ページ取得15回をすべて使いました。Pro なら上限がなくなります。",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro を入手 · $$99 買い切り",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "ずっと無料 · アカウント不要 · トラッキングなし",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome はこのページでの拡張機能を許可していません。他のウェブサイトを開いてお試しください。",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "設定",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "このページを取得できませんでした。タブを再読み込みしてお試しください。",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "設定",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "設定",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI ヘッダーテンプレート",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI 用コピー時に先頭へ追加されます。トークン: {title}, {url}, {date}",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\n出典: {url}\n取得日: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "画像の扱い",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "画像をスキップ",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Markdown 画像をインライン",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "画像 URL を絶対パスに",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "ページ取得時にタイトル・出典・日付の front-matter ブロックを追加します。",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro 設定です。ライセンスキーで解除できます。",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "保存しました",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "ライセンス",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "ライセンスキー",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "有効化",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "確認中...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "ライセンスを有効化しました。Pro 機能が使えます。",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "このキーを確認できませんでした。見直してからもう一度お試しください。",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro 有効。MarkGrab を応援いただきありがとうございます。",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "ページ全体の取得が無制限",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "AI ヘッダーテンプレートと YAML front-matter のカスタマイズ",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "画像の扱いモードと .md ファイル名テンプレート",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 買い切り。1回の支払いのみ、サブスクなし。",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14日間の返金保証。",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one で Pro を見る",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "情報",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "バージョン",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "プライバシーポリシー",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "スキップ",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "次へ",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "ステップ $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "ステップ 1",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "ステップ 2",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "ステップ 3",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "どんなページもきれいな Markdown でコピー",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "ツールバーの MarkGrab アイコンをクリックすると、ページの本文が GitHub 風 Markdown としてクリップボードに入ります。見出し、リスト、コードブロック、表、リンクもそのまま残ります。",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "記事やドキュメントのページを開く",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "ツールバーの MarkGrab アイコンをクリック",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "どこにでもきれいな Markdown を貼り付け",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "ヒント: パズルピースのメニューから MarkGrab をピン留めすると、いつでもワンクリックで使えます。",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI チャットのために",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI 用コピーは記事の前にタイトルと出典ヘッダーを追加します。ChatGPT や Claude が何をどこから読んでいるかを正確に把握できます。",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\n出典: https://arxiv.org/abs/1706.03762\n取得日: 2026-07-27\n\n---\n\n主要な系列変換モデルは、複雑な\n再帰型または畳み込みニューラルネットワークに基づいています...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "ずっと無料",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "ページ全体の取得は1日15回まで無料。選択範囲の取得は無制限。アカウント不要、トラッキングなし、すべて手元のマシンで動きます。",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "回/日 無料ページ取得",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "無制限",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "選択範囲の取得",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "アカウント・トラッカー",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro を見る",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "使い始める",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

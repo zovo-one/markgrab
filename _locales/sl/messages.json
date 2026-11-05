@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Kopiraj stran kot Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Z enim klikom kopirajte stran ali izbor kot čist Markdown v slogu GitHub, z načinom lepljenja za ChatGPT in Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopiraj to stran kot Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopiraj stran kot Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopiraj izbor kot Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopiraj stran za lepljenje v AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Kopiranih $COUNT$ besed kot Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Na tej strani ni bilo mogoče najti berljive vsebine. Najprej poskusite izbrati besedilo.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nič ni izbrano. Označite besedilo in poskusite znova.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopiranje v odložišče ni uspelo. Kliknite kamor koli na strani in poskusite znova.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Dosežena je dnevna omejitev 15 brezplačnih zajemov strani. Kopiranje izborov ostaja neomejeno.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopiraj stran kot Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopiraj za AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Doda naslov + glavo z virom za ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Prenesi .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ od $CAP$ brezplačnih zajemov strani danes",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Danes ste porabili vseh 15 brezplačnih zajemov strani. Pro odstrani omejitev.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Kupite Pro · $$99 doživljenjsko",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Za vedno brezplačno · Brez računa · Brez sledenja",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome na tej strani ne dovoli razširitev. Odprite katero koli spletno mesto in poskusite znova.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Nastavitve",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Te strani ni bilo mogoče zajeti. Znova naložite zavihek in poskusite znova.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Nastavitve",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Nastavitve",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Predloga glave AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Dodano na začetek v načinu Kopiraj za AI. Žetoni: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nVir: {url}\nZajeto: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Ravnanje s slikami",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Preskoči slike",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Vgrajene Markdown slike",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absolutni URL-ji slik",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Zajemom strani doda front-matter blok z naslovom, virom in datumom.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Nastavitev Pro. Odklenite z licenčnim ključem.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Shranjeno",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licenca",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licenčni ključ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktiviraj",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Preverjanje...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licenca je aktivirana. Funkcije Pro so odklenjene.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Tega ključa ni bilo mogoče preveriti. Preverite ga in poskusite znova.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro je aktiven. Hvala, ker podpirate MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Neomejeni zajemi celih strani",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Predloga glave AI po meri in YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Načini ravnanja s slikami in predloge imen datotek .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 doživljenjsko. Eno plačilo, brez naročnine.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14-dnevna garancija vračila denarja.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Oglejte si Pro na zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "O razširitvi",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Različica",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Pravilnik o zasebnosti",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Preskoči",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Naprej",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Korak $NUM$ od 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Prvi korak",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Drugi korak",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Tretji korak",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopirajte katero koli stran kot čist Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Kliknite ikono MarkGrab v orodni vrstici in berljiva stran pristane v odložišču kot Markdown v slogu GitHub. Naslovi, seznami, bloki kode, tabele in povezave preživijo celotno pot.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Odprite kateri koli članek ali stran z dokumentacijo",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Kliknite ikono MarkGrab v orodni vrstici",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Prilepite čist Markdown kamor koli",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Nasvet: pripnite MarkGrab iz menija s sestavljanko, da bo vedno na en klik.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Ustvarjen za pogovore z AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopiraj za AI pred članek doda naslov in glavo z virom, tako da ChatGPT ali Claude natančno ve, kaj bere in od kod prihaja.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Razumevanje transformerjev\n\nVir: https://arxiv.org/abs/1706.03762\nZajeto: 2026-07-27\n\n---\n\nPrevladujoči modeli transdukcije zaporedij temeljijo na zapletenih\nrekurentnih ali konvolucijskih nevronskih mrežah...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Za vedno brezplačno",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 zajemov celih strani na dan, brezplačno. Zajemi izborov so neomejeni. Brez računa, brez sledenja, vse teče na vaši napravi.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "zajemov strani / dan, brezplačno",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Neomejeno",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "zajemi izborov",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "računov ali sledilnikov",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Oglejte si Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Začni zajemati",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

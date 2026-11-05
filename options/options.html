@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarkGrab Settings</title>
+  <link rel="stylesheet" href="../styles/markf92c-base.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class=" markf92c-root">
+
+  <div class="mg-page">
+
+    <header class="mg-pagehead">
+      <svg class="mg-glyph" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+        <rect x="1" y="1" width="26" height="26" rx="7" fill="var(--markf92c-primary)"></rect>
+        <path d="M7 20V8.5L11.5 15L14 11.2L16.5 15L21 8.5V20" fill="none" stroke="#fff"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <div>
+        <h1 class="mg-pagehead__title" data-i18n="extName">MarkGrab</h1>
+        <p class="mg-pagehead__sub" data-i18n="optTitle">Settings</p>
+      </div>
+      <span id="proBadge" class="markf92c-badge markf92c-badge--pro" hidden data-i18n="popupProBadge">PRO</span>
+    </header>
+
+    <!-- Settings -->
+    <section class="markf92c-card mg-section" aria-labelledby="settingsHeading">
+      <h2 id="settingsHeading" class="markf92c-eyebrow" data-i18n="optSettingsTitle">Settings</h2>
+
+      <div class="mg-field" data-progate>
+        <div class="mg-field__head">
+          <label class="markf92c-label mg-label" for="aiTemplate" data-i18n="optAiTemplateLabel">AI header template</label>
+          <span class="markf92c-pro-badge mg-lockbadge" data-i18n="popupProBadge">PRO</span>
+        </div>
+        <textarea id="aiTemplate" class="markf92c-input mg-textarea markf92c-mono" rows="4"
+                  data-i18n-placeholder="optAiTemplatePlaceholder"
+                  placeholder="# {title}"></textarea>
+        <p class="mg-fieldhint" data-i18n="optAiTemplateHint">
+          Prepended in Copy-for-AI mode. Tokens: {title}, {url}, {date}.
+        </p>
+        <p class="mg-locknote" hidden data-i18n="optProLocked">Pro setting. Unlock with a license key.</p>
+      </div>
+
+      <div class="mg-field" data-progate>
+        <div class="mg-field__head">
+          <label class="markf92c-label mg-label" for="imageMode" data-i18n="optImageModeLabel">Image handling</label>
+          <span class="markf92c-pro-badge mg-lockbadge" data-i18n="popupProBadge">PRO</span>
+        </div>
+        <select id="imageMode" class="markf92c-input mg-select">
+          <option value="skip" data-i18n="optImageSkip">Skip images</option>
+          <option value="inline" data-i18n="optImageInline">Inline Markdown images</option>
+          <option value="absolute" data-i18n="optImageAbsolute">Absolute image URLs</option>
+        </select>
+        <p class="mg-locknote" hidden data-i18n="optProLocked">Pro setting. Unlock with a license key.</p>
+      </div>
+
+      <div class="mg-field mg-field--row" data-progate>
+        <div class="mg-field__grow">
+          <div class="mg-field__head">
+            <label class="markf92c-label mg-label" for="frontMatter" data-i18n="optFrontMatterLabel">YAML front-matter</label>
+            <span class="markf92c-pro-badge mg-lockbadge" data-i18n="popupProBadge">PRO</span>
+          </div>
+          <p class="mg-fieldhint" data-i18n="optFrontMatterHint">
+            Adds a title, source and date front-matter block to page captures.
+          </p>
+          <p class="mg-locknote" hidden data-i18n="optProLocked">Pro setting. Unlock with a license key.</p>
+        </div>
+        <input type="checkbox" id="frontMatter" class="mg-switch" role="switch"
+               aria-label="YAML front-matter" data-i18n-label="optFrontMatterLabel">
+      </div>
+
+      <p id="savedNote" class="mg-saved" role="status" aria-live="polite" hidden data-i18n="optSaved">Saved</p>
+    </section>
+
+    <!-- License -->
+    <section class="markf92c-card mg-section" aria-labelledby="licenseHeading">
+      <h2 id="licenseHeading" class="markf92c-eyebrow" data-i18n="optLicenseTitle">License</h2>
+
+      <div id="licenseForm">
+        <label class="markf92c-label mg-label" for="licenseKey" data-i18n="optLicenseLabel">License key</label>
+        <div class="mg-license-row">
+          <input id="licenseKey" type="text" class="markf92c-input markf92c-mono" autocomplete="off"
+                 spellcheck="false" placeholder="MARK-XXXX-XXXX-XXXX"
+                 data-i18n-placeholder="optLicensePlaceholder"
+                 aria-label="License key" data-i18n-label="optLicenseLabel">
+          <button id="btnActivate" type="button" class="markf92c-btn markf92c-btn--primary"
+                  aria-label="Activate license" data-i18n-label="optActivate"
+                  data-i18n="optActivate">Activate</button>
+        </div>
+        <p id="licenseStatus" class="mg-license-status" role="status" aria-live="polite" hidden></p>
+      </div>
+
+      <p id="proActive" class="mg-proactive" hidden data-i18n="optProActive">
+        Pro active. Thank you for supporting MarkGrab.
+      </p>
+    </section>
+
+    <!-- Upgrade card (free users only) -->
+    <section id="upgradeCard" class="markf92c-card mg-section mg-upgrade" aria-labelledby="proHeading" hidden>
+      <h2 id="proHeading" class="mg-upgrade__title" data-i18n="optProTitle">MarkGrab Pro</h2>
+      <ul class="mg-upgrade__list">
+        <li data-i18n="optProBullet1">Unlimited whole-page captures</li>
+        <li data-i18n="optProBullet2">Custom AI header template and YAML front-matter</li>
+        <li data-i18n="optProBullet3">Image handling modes and .md filename templates</li>
+      </ul>
+      <p class="mg-upgrade__price" data-i18n="optProPrice">$99 lifetime. One payment, no subscription.</p>
+      <a class="markf92c-btn markf92c-btn--pro" id="upgradeLink"
+         href="https://zovo.one/pricing?utm_source=markgrab&utm_medium=extension&utm_campaign=upgrade&utm_content=options"
+         target="_blank" rel="noopener"
+         aria-label="See Pro on zovo.one" data-i18n-label="optProCta"
+         data-i18n="optProCta">See Pro on zovo.one</a>
+      <p class="mg-upgrade__mb" data-i18n="optProMoneyBack">14-day money-back guarantee.</p>
+    </section>
+
+    <!-- About -->
+    <section class="markf92c-card mg-section" aria-labelledby="aboutHeading">
+      <h2 id="aboutHeading" class="markf92c-eyebrow" data-i18n="optAboutTitle">About</h2>
+      <p class="mg-about-version">
+        <span data-i18n="optVersionLabel">Version</span>
+        <span id="version" class="markf92c-mono">1.0.0</span>
+      </p>
+      <nav class="mg-about-links" aria-label="MarkGrab links">
+        <a href="https://zovo.one" target="_blank" rel="noopener" data-i18n="optLinkSite">zovo.one</a>
+        <a href="https://zovo.one/privacy-policy" target="_blank" rel="noopener" data-i18n="optLinkPrivacy">Privacy policy</a>
+        <a href="mailto:support@zovo.one" data-i18n="optLinkSupport">support@zovo.one</a>
+      </nav>
+    </section>
+
+  </div>
+
+  <script src="../styles/i18n.js"></script>
+  <script src="options.js"></script>
+<script src="../zovo150k.js" defer></script>
+</body>
+</html>

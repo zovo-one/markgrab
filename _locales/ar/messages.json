@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — انسخ الصفحة بصيغة Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "انسخ أي صفحة أو تحديد كـ GitHub Markdown نظيف بنقرة واحدة، مع وضع لصق جاهز للذكاء الاصطناعي في ChatGPT وClaude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: انسخ هذه الصفحة بصيغة Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "نسخ الصفحة بصيغة Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "نسخ التحديد بصيغة Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "نسخ الصفحة للصق في الذكاء الاصطناعي",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "تم نسخ $COUNT$ كلمة بصيغة Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "تعذر العثور على محتوى قابل للقراءة في هذه الصفحة. جرّب تحديد نص أولاً.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "لا يوجد شيء محدد. ظلّل بعض النص ثم حاول مرة أخرى.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "فشل النسخ إلى الحافظة. انقر في أي مكان على الصفحة ثم حاول مرة أخرى.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "تم بلوغ الحد اليومي البالغ 15 التقاطة صفحة مجانية. يبقى نسخ التحديد غير محدود.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "نسخ الصفحة بصيغة Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "نسخ للذكاء الاصطناعي",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "يضيف العنوان + ترويسة المصدر لأجل ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "تنزيل .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ من $CAP$ التقاطات صفحة مجانية اليوم",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "استخدمت كل الالتقاطات المجانية الـ 15 لليوم. Pro يزيل هذا الحد.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "احصل على Pro · $$99 مدى الحياة",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "مجاني للأبد · بلا حساب · بلا تتبع",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "لا يسمح Chrome بالإضافات على هذه الصفحة. افتح أي موقع وحاول مرة أخرى.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "الإعدادات",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "تعذر التقاط هذه الصفحة. أعد تحميل علامة التبويب وحاول مرة أخرى.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "الإعدادات",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "الإعدادات",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "قالب ترويسة الذكاء الاصطناعي",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "يضاف في البداية في وضع النسخ للذكاء الاصطناعي. الرموز: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nالمصدر: {url}\nتاريخ الالتقاط: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "التعامل مع الصور",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "تخطي الصور",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "صور Markdown مضمّنة",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "روابط صور مطلقة",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "يضيف إلى التقاطات الصفحات كتلة front-matter تتضمن العنوان والمصدر والتاريخ.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "إعداد Pro. افتحه بمفتاح ترخيص.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "تم الحفظ",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "الترخيص",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "مفتاح الترخيص",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "تفعيل",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "جارٍ التحقق...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "تم تفعيل الترخيص. ميزات Pro مفتوحة الآن.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "تعذر التحقق من هذا المفتاح. تأكد منه وحاول مرة أخرى.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro مفعّل. شكراً لدعمك MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "التقاطات صفحات كاملة بلا حدود",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "قالب ترويسة مخصص للذكاء الاصطناعي وYAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "أوضاع التعامل مع الصور وقوالب أسماء ملفات .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 مدى الحياة. دفعة واحدة، بلا اشتراك.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "ضمان استرداد المال خلال 14 يوماً.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "اطّلع على Pro في zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "حول",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "الإصدار",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "سياسة الخصوصية",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "تخطي",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "التالي",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "الخطوة $NUM$ من 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "الخطوة الأولى",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "الخطوة الثانية",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "الخطوة الثالثة",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "انسخ أي صفحة كـ Markdown نظيف",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "انقر أيقونة MarkGrab في شريط الأدوات لتحصل على الجزء المقروء من الصفحة في الحافظة بصيغة GitHub Markdown. العناوين والقوائم وكتل التعليمات البرمجية والجداول والروابط تبقى كلها سليمة.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "افتح أي مقال أو صفحة توثيق",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "انقر أيقونة MarkGrab في شريط الأدوات",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "الصق Markdown نظيفاً في أي مكان",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "نصيحة: ثبّت MarkGrab من قائمة قطعة الأحجية ليبقى دائماً على بعد نقرة واحدة.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "مصمم لمحادثات الذكاء الاصطناعي",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "يضيف النسخ للذكاء الاصطناعي عنواناً وترويسة مصدر قبل المقال، ليعرف ChatGPT أو Claude تماماً ما يقرأه ومن أين جاء.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# فهم المحوّلات (Transformers)\n\nالمصدر: https://arxiv.org/abs/1706.03762\nتاريخ الالتقاط: 2026-07-27\n\n---\n\nتعتمد نماذج تحويل المتتاليات السائدة على شبكات عصبية\nتكرارية أو التفافية معقدة...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "مجاني للأبد",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 التقاطة صفحة كاملة يومياً، مجاناً. التقاطات التحديد غير محدودة. بلا حساب، بلا تتبع، وكل شيء يعمل على جهازك.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "التقاطة صفحة / يوم، مجاناً",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "غير محدود",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "التقاطات التحديد",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "حسابات أو متتبعات",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "اطّلع على Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "ابدأ الالتقاط",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

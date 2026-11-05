@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — পেজ Markdown হিসেবে কপি করুন",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "এক ক্লিকে যেকোনো পেজ বা নির্বাচিত অংশ পরিষ্কার GitHub Markdown হিসেবে কপি করুন, ChatGPT ও Claude-এর জন্য AI পেস্ট মোডসহ।",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: এই পেজটি Markdown হিসেবে কপি করুন",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "পেজটি Markdown হিসেবে কপি করুন",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "নির্বাচিত অংশ Markdown হিসেবে কপি করুন",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI-তে পেস্ট করার জন্য পেজ কপি করুন",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$টি শব্দ Markdown হিসেবে কপি হয়েছে",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "এই পেজে পড়ার মতো কোনো কনটেন্ট পাওয়া যায়নি। আগে টেক্সট নির্বাচন করে দেখুন।",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "কিছুই নির্বাচন করা হয়নি। কিছু টেক্সট হাইলাইট করে আবার চেষ্টা করুন।",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "ক্লিপবোর্ডে কপি করা যায়নি। পেজের যেকোনো জায়গায় ক্লিক করে আবার চেষ্টা করুন।",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "দৈনিক 15টি বিনামূল্যের পেজ-ক্যাপচারের সীমা পূর্ণ হয়েছে। নির্বাচিত অংশ কপি করা সীমাহীনই থাকছে।",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "পেজটি Markdown হিসেবে কপি করুন",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI-এর জন্য কপি করুন",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude-এর জন্য শিরোনাম + সোর্স হেডার যোগ করে",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md ডাউনলোড করুন",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "আজ $CAP$টির মধ্যে $COUNT$টি বিনামূল্যের পেজ-ক্যাপচার",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "আজকের 15টি বিনামূল্যের পেজ-ক্যাপচার শেষ। Pro এই সীমা তুলে দেয়।",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro নিন · $$99 লাইফটাইম",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "চিরকাল ফ্রি · অ্যাকাউন্ট লাগে না · ট্র্যাকিং নেই",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome এই পেজে এক্সটেনশন চালাতে দেয় না। যেকোনো ওয়েবসাইট খুলে আবার চেষ্টা করুন।",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "সেটিংস",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "পেজটি ক্যাপচার করা যায়নি। ট্যাবটি রিলোড করে আবার চেষ্টা করুন।",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "সেটিংস",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "সেটিংস",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI হেডার টেমপ্লেট",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI-এর জন্য কপি মোডে শুরুতে যোগ হয়। টোকেন: {title}, {url}, {date}।",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nসোর্স: {url}\nক্যাপচার: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "ছবি ব্যবস্থাপনা",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "ছবি বাদ দিন",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "ইনলাইন Markdown ছবি",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "ছবির অ্যাবসোলিউট URL",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "পেজ-ক্যাপচারে শিরোনাম, সোর্স ও তারিখসহ একটি front-matter ব্লক যোগ করে।",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro সেটিং। লাইসেন্স কি দিয়ে আনলক করুন।",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "সংরক্ষিত",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "লাইসেন্স",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "লাইসেন্স কি",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "চালু করুন",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "যাচাই চলছে...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "লাইসেন্স চালু হয়েছে। Pro ফিচারগুলো আনলক হয়েছে।",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "এই কি যাচাই করা যায়নি। কি-টি দেখে আবার চেষ্টা করুন।",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro চালু আছে। MarkGrab-কে সাপোর্ট করার জন্য ধন্যবাদ।",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "সীমাহীন সম্পূর্ণ-পেজ ক্যাপচার",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "কাস্টম AI হেডার টেমপ্লেট ও YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "ছবি ব্যবস্থাপনার মোড ও .md ফাইলনাম টেমপ্লেট",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 লাইফটাইম। এককালীন পেমেন্ট, কোনো সাবস্ক্রিপশন নেই।",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 দিনের মানি-ব্যাক গ্যারান্টি।",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one-এ Pro দেখুন",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "সম্পর্কে",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "ভার্সন",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "প্রাইভেসি পলিসি",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "এড়িয়ে যান",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "পরবর্তী",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "ধাপ $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "প্রথম ধাপ",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "দ্বিতীয় ধাপ",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "তৃতীয় ধাপ",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "যেকোনো পেজ পরিষ্কার Markdown হিসেবে কপি করুন",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "টুলবারে MarkGrab আইকনে ক্লিক করুন, পেজের পড়ার মতো অংশ GitHub Markdown হিসেবে ক্লিপবোর্ডে চলে আসবে। হেডিং, লিস্ট, কোড ব্লক, টেবিল ও লিংক সবই অক্ষত থাকে।",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "যেকোনো আর্টিকেল বা ডকুমেন্টেশন পেজ খুলুন",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "টুলবারে MarkGrab আইকনে ক্লিক করুন",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "পরিষ্কার Markdown যেকোনো জায়গায় পেস্ট করুন",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "টিপ: পাজল-পিস মেনু থেকে MarkGrab পিন করে রাখুন, যাতে সবসময় এক ক্লিকেই পাওয়া যায়।",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI চ্যাটের জন্য তৈরি",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI-এর জন্য কপি আর্টিকেলের আগে শিরোনাম ও সোর্স হেডার যোগ করে, ফলে ChatGPT বা Claude ঠিক জানে কী পড়ছে এবং সেটা কোথা থেকে এসেছে।",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# ট্রান্সফরমার বোঝা\n\nসোর্স: https://arxiv.org/abs/1706.03762\nক্যাপচার: 2026-07-27\n\n---\n\nপ্রচলিত সিকোয়েন্স ট্রান্সডাকশন মডেলগুলো জটিল রিকারেন্ট\nবা কনভলিউশনাল নিউরাল নেটওয়ার্কের উপর ভিত্তি করে তৈরি...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "চিরকাল ফ্রি",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "দিনে 15টি সম্পূর্ণ-পেজ ক্যাপচার, ফ্রি। নির্বাচিত অংশের ক্যাপচার সীমাহীন। কোনো অ্যাকাউন্ট নেই, ট্র্যাকিং নেই, সবকিছু আপনার মেশিনেই চলে।",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "পেজ-ক্যাপচার / দিন, ফ্রি",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "সীমাহীন",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "নির্বাচিত অংশের ক্যাপচার",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "অ্যাকাউন্ট বা ট্র্যাকার",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro দেখুন",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "শুরু করুন",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

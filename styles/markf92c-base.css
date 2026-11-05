@@ -1,0 +1,373 @@
+/* ============================================================================
+ * markf92c-base.css — Zovo brand design system
+ * ----------------------------------------------------------------------------
+ * The single shared stylesheet every Zovo Chrome extension imports. It defines
+ * the full brand as CSS custom properties (colors, type scale, radii, shadows,
+ * transitions) plus the base component classes used across popup, options,
+ * onboarding, and the paywall modal.
+ *
+ * Source of truth: BUILD-RULES.md § ZOVO BRAND SYSTEM.
+ * Import first, before any per-extension stylesheet, so tokens cascade down:
+ *     <link rel="stylesheet" href="markf92c-base.css">
+ *     <link rel="stylesheet" href="popup.css">
+ * ========================================================================== */
+
+/* ---- Design tokens (light) ------------------------------------------------ */
+:root {
+  /* Brand */
+  --markf92c-primary:        #5B4BD6;   /* Zovo purple — buttons, links, active   */
+  --markf92c-primary-dark:   #4A3BC0;   /* hover                                  */
+  --markf92c-primary-light:  #7C6CF6;   /* subtle accents / backgrounds           */
+  --markf92c-primary-50:     #fdf4ef;   /* tint fill (accent-bg)                  */
+  --markf92c-accent:         #d300a8;   /* teal — secondary actions, highlights   */
+
+  /* Surfaces & text */
+  --markf92c-bg:             #FFFFFF;
+  --markf92c-surface:        #faf8f9;   /* cards, input backgrounds               */
+  --markf92c-surface-2:      #f4f1f1;   /* nested / hover surface                 */
+  --markf92c-text:           #2e1e1a;   /* text primary                           */
+  --markf92c-text-secondary: #a89a9c;
+  --markf92c-border:         #ebe5e6;
+
+  /* Status */
+  --markf92c-success:        #a310b9;
+  --markf92c-warning:        #0bf5cd;
+  --markf92c-error:          #44ef66;
+  --markf92c-pro:            #0bf5cd;   /* gold — PRO badges + upgrade CTAs        */
+  --markf92c-pro-dark:       #06d9a1;
+  --markf92c-on-pro:         #FFFFFF;
+
+  /* Typography */
+  --markf92c-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --markf92c-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  --markf92c-fs-caption:    12px;
+  --markf92c-fs-body:       14px;
+  --markf92c-fs-subheading: 16px;
+  --markf92c-fs-heading:    20px;
+  --markf92c-fs-title:      24px;
+  --markf92c-fs-hero:       44px;   /* the one big number per screen */
+  --markf92c-fw-body:       400;
+  --markf92c-fw-medium:     500;
+  --markf92c-fw-heading:    600;
+  --markf92c-lh:            1.5;
+
+  /* Radii — slightly rounder than 8/6/4 reads friendlier/premium */
+  --markf92c-radius-card:   12px;
+  --markf92c-radius-btn:    8px;
+  --markf92c-radius-input:  8px;
+  --markf92c-radius-pill:   9999px;
+
+  /* Shadows — soft, low, single-direction (premium ≠ hard drop shadow) */
+  --markf92c-shadow-sm: 0 1px 2px rgba(16,24,40,0.05);
+  --markf92c-shadow: 0 1px 3px rgba(16,24,40,0.06), 0 6px 16px -6px rgba(16,24,40,0.10);
+  --markf92c-shadow-lg: 0 24px 48px -12px rgba(16,24,40,0.28);
+
+  /* Motion */
+  --markf92c-transition: 150ms ease-in-out;
+
+  /* Layout */
+  --markf92c-popup-w:      360px;
+  --markf92c-popup-w-wide: 400px;
+  --markf92c-popup-maxh:   560px;
+  --markf92c-space-1: 4px;  --markf92c-space-2: 8px;  --markf92c-space-3: 12px;
+  --markf92c-space-4: 16px; --markf92c-space-5: 20px; --markf92c-space-6: 24px;
+  --markf92c-space-7: 32px; --markf92c-space-8: 40px;
+}
+
+/* ---- Dark mode ------------------------------------------------------------ */
+/* Follows the system preference by default; a manual [data-theme] on <html>
+ * (set from General → Theme) always wins in both directions. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --markf92c-primary-50:     #452c1f;
+    --markf92c-bg:             #1a110f;
+    --markf92c-surface:        #2e1e1a;
+    --markf92c-surface-2:      #382723;
+    --markf92c-text:           #faf6f5;
+    --markf92c-text-secondary: #A1A1AA;
+    --markf92c-border:         #45332e;
+    --markf92c-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.3);
+    --markf92c-shadow-lg: 0 20px 40px -8px rgba(0,0,0,0.6), 0 8px 16px -8px rgba(0,0,0,0.4);
+  }
+}
+:root[data-theme='dark'] {
+  --markf92c-primary-50:     #452c1f;
+  --markf92c-bg:             #1a110f;
+  --markf92c-surface:        #2e1e1a;
+  --markf92c-surface-2:      #382723;
+  --markf92c-text:           #faf6f5;
+  --markf92c-text-secondary: #A1A1AA;
+  --markf92c-border:         #45332e;
+  --markf92c-shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.3);
+  --markf92c-shadow-lg: 0 20px 40px -8px rgba(0,0,0,0.6), 0 8px 16px -8px rgba(0,0,0,0.4);
+}
+
+/* ---- Base ----------------------------------------------------------------- */
+.markf92c-root,
+body.markf92c {
+  margin: 0;
+  font-family: var(--markf92c-font);
+  font-size: var(--markf92c-fs-body);
+  line-height: var(--markf92c-lh);
+  color: var(--markf92c-text);
+  background: var(--markf92c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+.markf92c-root *, .markf92c-root *::before, .markf92c-root *::after { box-sizing: border-box; }
+
+/* Popup sizing helper */
+.markf92c-popup {
+  width: var(--markf92c-popup-w);
+  max-height: var(--markf92c-popup-maxh);
+  overflow-y: auto;
+}
+.markf92c-popup--wide { width: var(--markf92c-popup-w-wide); }
+
+/* ---- Header --------------------------------------------------------------- */
+.markf92c-header {
+  display: flex;
+  align-items: center;
+  gap: var(--markf92c-space-3);
+  padding: var(--markf92c-space-4) var(--markf92c-space-5);
+  border-bottom: 1px solid var(--markf92c-border);
+}
+.markf92c-header__icon { width: 28px; height: 28px; border-radius: var(--markf92c-radius-input); }
+.markf92c-header__title {
+  flex: 1; min-width: 0;
+  font-size: var(--markf92c-fs-subheading);
+  font-weight: var(--markf92c-fw-heading);
+  letter-spacing: -0.01em;
+}
+
+/* ---- Card ----------------------------------------------------------------- */
+.markf92c-card {
+  background: var(--markf92c-bg);
+  border: 1px solid var(--markf92c-border);
+  border-radius: var(--markf92c-radius-card);
+  padding: var(--markf92c-space-5);
+  box-shadow: var(--markf92c-shadow);
+}
+.markf92c-card--flush { box-shadow: none; background: var(--markf92c-surface); }
+
+/* ---- Buttons -------------------------------------------------------------- */
+.markf92c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--markf92c-space-2);
+  min-height: 40px;                /* comfortable premium tap target */
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: var(--markf92c-fs-body);
+  font-weight: var(--markf92c-fw-medium);
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: var(--markf92c-radius-btn);
+  cursor: pointer;
+  transition: background var(--markf92c-transition), border-color var(--markf92c-transition),
+              color var(--markf92c-transition), transform var(--markf92c-transition);
+}
+.markf92c-btn:active { transform: translateY(1px); }
+.markf92c-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--markf92c-bg), 0 0 0 4px var(--markf92c-primary);
+}
+.markf92c-btn[disabled] { opacity: 0.55; cursor: not-allowed; }
+
+.markf92c-btn--primary { background: var(--markf92c-primary); color: #fff; }
+.markf92c-btn--primary:hover:not([disabled]) { background: var(--markf92c-primary-dark); }
+
+.markf92c-btn--secondary {
+  background: var(--markf92c-surface);
+  color: var(--markf92c-text);
+  border-color: var(--markf92c-border);
+}
+.markf92c-btn--secondary:hover:not([disabled]) { background: var(--markf92c-surface-2); }
+
+.markf92c-btn--ghost { background: transparent; color: var(--markf92c-primary); }
+.markf92c-btn--ghost:hover:not([disabled]) { background: var(--markf92c-primary-50); }
+
+/* Gold upgrade CTA — the only button that uses the PRO color. */
+.markf92c-btn--pro {
+  background: var(--markf92c-pro);
+  color: var(--markf92c-on-pro);
+  font-weight: var(--markf92c-fw-heading);
+}
+.markf92c-btn--pro:hover:not([disabled]) { background: var(--markf92c-pro-dark); }
+
+.markf92c-btn--block { width: 100%; }
+
+/* ---- Inputs --------------------------------------------------------------- */
+.markf92c-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: var(--markf92c-fs-body);
+  color: var(--markf92c-text);
+  background: var(--markf92c-surface);
+  border: 1px solid var(--markf92c-border);
+  border-radius: var(--markf92c-radius-input);
+  transition: border-color var(--markf92c-transition), box-shadow var(--markf92c-transition);
+}
+.markf92c-input:focus-visible {
+  outline: none;
+  border-color: var(--markf92c-primary);
+  box-shadow: 0 0 0 3px var(--markf92c-primary-50);
+}
+.markf92c-label {
+  display: block;
+  font-size: var(--markf92c-fs-caption);
+  font-weight: var(--markf92c-fw-medium);
+  color: var(--markf92c-text-secondary);
+  margin-bottom: var(--markf92c-space-1);
+}
+
+/* ---- PRO badge ------------------------------------------------------------ */
+.markf92c-pro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--markf92c-pro);
+  background: transparent;
+  border: 1px solid var(--markf92c-pro);
+  border-radius: var(--markf92c-radius-pill);
+  line-height: 1.4;
+}
+.markf92c-pro-badge--solid { color: var(--markf92c-on-pro); background: var(--markf92c-pro); border-color: var(--markf92c-pro); }
+.markf92c-pro-badge__lock { width: 10px; height: 10px; }
+
+/* ---- Footer --------------------------------------------------------------- */
+.markf92c-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--markf92c-space-3) var(--markf92c-space-5);
+  font-size: var(--markf92c-fs-caption);
+  color: var(--markf92c-text-secondary);
+  border-top: 1px solid var(--markf92c-border);
+}
+.markf92c-footer a { color: var(--markf92c-primary); text-decoration: none; }
+.markf92c-footer a:hover { text-decoration: underline; }
+
+/* ---- Utility -------------------------------------------------------------- */
+.markf92c-muted { color: var(--markf92c-text-secondary); }
+.markf92c-mono  { font-family: var(--markf92c-font-mono); }
+.markf92c-sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ===========================================================================
+ * PREMIUM COMPONENTS (v3) — the patterns that make a screen read premium.
+ * See DESIGN-SYSTEM.md for when/why to use each.
+ * ========================================================================= */
+
+/* Popup shell: sits on the neutral surface, comfortable padding, grid rhythm */
+.markf92c-popup { background: var(--markf92c-surface); }
+.markf92c-stack { display: flex; flex-direction: column; gap: var(--markf92c-space-4);
+  padding: var(--markf92c-space-5); }
+
+/* Section label — 11px uppercase tracked muted (AdBlock "NUMBER OF ITEMS…") */
+.markf92c-eyebrow {
+  margin: 0 0 var(--markf92c-space-2);
+  font-size: 11px; font-weight: var(--markf92c-fw-heading);
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--markf92c-text-secondary);
+}
+
+/* ---- Hero stat — the ONE thing the eye lands on first --------------------- */
+.markf92c-hero { text-align: center; padding: var(--markf92c-space-7) var(--markf92c-space-5); }
+.markf92c-hero__num {
+  font-size: var(--markf92c-fs-hero); font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.05; color: var(--markf92c-primary);
+}
+.markf92c-hero__num--pro { color: var(--markf92c-pro); }
+.markf92c-hero__label {
+  margin-top: var(--markf92c-space-2);
+  font-size: 11px; font-weight: var(--markf92c-fw-heading);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--markf92c-text-secondary);
+}
+.markf92c-hero__sub { margin-top: var(--markf92c-space-3); color: var(--markf92c-text); }
+/* gradient progress — thin, calm */
+.markf92c-progress { height: 6px; border-radius: 999px; background: var(--markf92c-surface-2); overflow: hidden; }
+.markf92c-progress__fill { height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, var(--markf92c-primary), var(--markf92c-accent)); }
+
+/* Inline stat row — "4 suspended · 45 total · 6 windows" */
+.markf92c-stats { display: flex; justify-content: center; gap: var(--markf92c-space-4);
+  font-size: var(--markf92c-fs-caption); color: var(--markf92c-text-secondary); }
+.markf92c-stats b { color: var(--markf92c-text); font-weight: var(--markf92c-fw-heading); }
+
+/* ---- Badges --------------------------------------------------------------- */
+.markf92c-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.4;
+  border-radius: var(--markf92c-radius-pill);
+}
+.markf92c-badge--pro  { color: var(--markf92c-on-pro); background: var(--markf92c-pro); }
+.markf92c-badge--free { color: var(--markf92c-text-secondary); background: var(--markf92c-surface-2); }
+.markf92c-badge--new  { color: #fff; background: #f63b5d; }
+
+/* ---- Loss-framing alert — the cost of NOT upgrading (use once, honestly) --- */
+.markf92c-alert {
+  display: flex; align-items: center; gap: var(--markf92c-space-2);
+  padding: 10px 12px; border-radius: var(--markf92c-radius-btn);
+  font-size: var(--markf92c-fs-body);
+}
+.markf92c-alert--warn {
+  color: var(--markf92c-error);
+  background: color-mix(in srgb, var(--markf92c-error) 8%, var(--markf92c-bg));
+  border: 1px solid color-mix(in srgb, var(--markf92c-error) 22%, transparent);
+}
+
+/* ---- Empty state — delight, never a blank box ----------------------------- */
+.markf92c-empty { text-align: center; padding: var(--markf92c-space-7) var(--markf92c-space-5); }
+.markf92c-empty__art { width: 96px; height: 96px; margin: 0 auto var(--markf92c-space-4); opacity: 0.9; }
+.markf92c-empty__title { font-size: var(--markf92c-fs-heading); font-weight: 700; letter-spacing: -0.01em; }
+.markf92c-empty__text { margin-top: var(--markf92c-space-2); color: var(--markf92c-text-secondary); }
+
+/* ---- Tip carousel — dismissible in-context hint --------------------------- */
+.markf92c-tip {
+  position: relative; border-radius: var(--markf92c-radius-card);
+  border: 1px solid var(--markf92c-border); background: var(--markf92c-bg);
+  border-left: 3px solid var(--markf92c-primary);
+  padding: var(--markf92c-space-4) var(--markf92c-space-5);
+}
+.markf92c-tip__foot { display: flex; justify-content: space-between; align-items: center;
+  margin-top: var(--markf92c-space-3); font-size: var(--markf92c-fs-caption); color: var(--markf92c-text-secondary); }
+.markf92c-tip__next { color: var(--markf92c-primary); font-weight: var(--markf92c-fw-medium); cursor: pointer; }
+
+/* ---- List row ------------------------------------------------------------- */
+.markf92c-row {
+  display: flex; align-items: center; gap: var(--markf92c-space-3);
+  min-height: 44px; padding: var(--markf92c-space-2) var(--markf92c-space-3);
+  border-radius: var(--markf92c-radius-btn); cursor: pointer;
+  transition: background var(--markf92c-transition);
+}
+.markf92c-row:hover { background: var(--markf92c-primary-50); }
+.markf92c-row__label { flex: 1; min-width: 0; }
+.markf92c-row__meta { color: var(--markf92c-text-secondary); font-family: var(--markf92c-font-mono);
+  font-size: var(--markf92c-fs-caption); }
+
+/* ---- Segmented control — Tab / Screen / Webcam --------------------------- */
+.markf92c-seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--markf92c-space-2); }
+.markf92c-seg__item {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: var(--markf92c-space-3); border: 1px solid var(--markf92c-border);
+  border-radius: var(--markf92c-radius-card); background: var(--markf92c-bg);
+  cursor: pointer; transition: border-color var(--markf92c-transition), background var(--markf92c-transition);
+}
+.markf92c-seg__item:hover { border-color: var(--markf92c-primary-light); }
+.markf92c-seg__item[aria-selected='true'] { border-color: var(--markf92c-primary); background: var(--markf92c-primary-50); }
+
+@media (prefers-reduced-motion: reduce) {
+  .markf92c-root *, .markf92c-root *::before, .markf92c-root *::after {
+    transition: none !important; animation: none !important;
+  }
+}

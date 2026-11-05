@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Αντιγραφή σελίδας σε Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Αντιγράψτε κάθε σελίδα ή επιλογή ως καθαρό GitHub Markdown με ένα κλικ, με λειτουργία επικόλλησης AI για ChatGPT και Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: αντιγραφή αυτής της σελίδας σε Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Αντιγραφή σελίδας σε Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Αντιγραφή επιλογής σε Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Αντιγραφή σελίδας για επικόλληση σε AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Αντιγράφηκαν $COUNT$ λέξεις ως Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Δεν βρέθηκε αναγνώσιμο περιεχόμενο σε αυτή τη σελίδα. Δοκιμάστε πρώτα να επιλέξετε κείμενο.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Δεν έχει επιλεγεί τίποτα. Επισημάνετε κείμενο και δοκιμάστε ξανά.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Η αντιγραφή στο πρόχειρο απέτυχε. Κάντε κλικ οπουδήποτε στη σελίδα και δοκιμάστε ξανά.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Συμπληρώθηκε το ημερήσιο όριο των 15 δωρεάν λήψεων σελίδας. Η αντιγραφή επιλογής παραμένει απεριόριστη.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Αντιγραφή σελίδας σε Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Αντιγραφή για AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Προσθέτει τίτλο + κεφαλίδα πηγής για ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Λήψη .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ από $CAP$ δωρεάν λήψεις σελίδας σήμερα",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Χρησιμοποιήσατε και τις 15 δωρεάν λήψεις για σήμερα. Το Pro αφαιρεί το όριο.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Αποκτήστε το Pro · $$99 εφ' όρου ζωής",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Δωρεάν για πάντα · Χωρίς λογαριασμό · Χωρίς παρακολούθηση",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Το Chrome δεν επιτρέπει επεκτάσεις σε αυτή τη σελίδα. Ανοίξτε οποιονδήποτε ιστότοπο και δοκιμάστε ξανά.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Ρυθμίσεις",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Δεν ήταν δυνατή η λήψη της σελίδας. Φορτώστε ξανά την καρτέλα και δοκιμάστε ξανά.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Ρυθμίσεις",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Ρυθμίσεις",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Πρότυπο κεφαλίδας AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Προστίθεται στην αρχή στη λειτουργία Αντιγραφή για AI. Σύμβολα: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nΠηγή: {url}\nΛήψη: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Διαχείριση εικόνων",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Παράλειψη εικόνων",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Ενσωματωμένες εικόνες Markdown",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Απόλυτα URL εικόνων",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Προσθέτει στις λήψεις σελίδας ένα μπλοκ front-matter με τίτλο, πηγή και ημερομηνία.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Ρύθμιση Pro. Ξεκλειδώστε τη με κλειδί άδειας.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Αποθηκεύτηκε",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Άδεια",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Κλειδί άδειας",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Ενεργοποίηση",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Έλεγχος...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Η άδεια ενεργοποιήθηκε. Οι λειτουργίες Pro ξεκλειδώθηκαν.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Το κλειδί δεν επαληθεύτηκε. Ελέγξτε το και δοκιμάστε ξανά.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Το Pro είναι ενεργό. Ευχαριστούμε που υποστηρίζετε το MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Απεριόριστες λήψεις ολόκληρης σελίδας",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Προσαρμοσμένο πρότυπο κεφαλίδας AI και YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Λειτουργίες διαχείρισης εικόνων και πρότυπα ονομάτων αρχείων .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 εφ' όρου ζωής. Μία πληρωμή, χωρίς συνδρομή.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Εγγύηση επιστροφής χρημάτων 14 ημερών.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Δείτε το Pro στο zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Σχετικά",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Έκδοση",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Πολιτική απορρήτου",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Παράλειψη",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Επόμενο",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Βήμα $NUM$ από 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Βήμα πρώτο",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Βήμα δεύτερο",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Βήμα τρίτο",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Αντιγράψτε κάθε σελίδα ως καθαρό Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Κάντε κλικ στο εικονίδιο MarkGrab στη γραμμή εργαλείων και το αναγνώσιμο μέρος της σελίδας φτάνει στο πρόχειρο ως GitHub Markdown. Επικεφαλίδες, λίστες, μπλοκ κώδικα, πίνακες και σύνδεσμοι διατηρούνται όλα.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Ανοίξτε οποιοδήποτε άρθρο ή σελίδα τεκμηρίωσης",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Κάντε κλικ στο εικονίδιο MarkGrab στη γραμμή εργαλείων",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Επικολλήστε καθαρό Markdown οπουδήποτε",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Συμβουλή: καρφιτσώστε το MarkGrab από το μενού με το παζλ, ώστε να είναι πάντα ένα κλικ μακριά.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Φτιαγμένο για συνομιλίες AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Η Αντιγραφή για AI προσθέτει τίτλο και κεφαλίδα πηγής πριν από το άρθρο, ώστε το ChatGPT ή το Claude να ξέρει ακριβώς τι διαβάζει και από πού προέρχεται.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Κατανοώντας τους transformers\n\nΠηγή: https://arxiv.org/abs/1706.03762\nΛήψη: 2026-07-27\n\n---\n\nΤα κυρίαρχα μοντέλα μετασχηματισμού ακολουθιών βασίζονται σε πολύπλοκα\nαναδρομικά ή συνελικτικά νευρωνικά δίκτυα...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Δωρεάν για πάντα",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 λήψεις ολόκληρης σελίδας την ημέρα, δωρεάν. Οι λήψεις επιλογής είναι απεριόριστες. Χωρίς λογαριασμό, χωρίς παρακολούθηση, όλα τρέχουν στον υπολογιστή σας.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "λήψεις σελίδας / ημέρα, δωρεάν",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Απεριόριστες",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "λήψεις επιλογής",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "λογαριασμοί ή trackers",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Δείτε το Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Ξεκινήστε",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

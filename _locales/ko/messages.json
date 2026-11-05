@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — 페이지를 Markdown으로 복사",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "어떤 페이지나 선택 영역이든 한 번의 클릭으로 깔끔한 GitHub 스타일 Markdown으로 복사. ChatGPT와 Claude용 AI 붙여넣기 모드 포함.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: 이 페이지를 Markdown으로 복사",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "페이지를 Markdown으로 복사",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "선택 영역을 Markdown으로 복사",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "AI 붙여넣기용으로 페이지 복사",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$개 단어를 Markdown으로 복사했습니다",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "이 페이지에서 읽을 수 있는 콘텐츠를 찾지 못했습니다. 먼저 텍스트를 선택해 보세요.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "선택된 내용이 없습니다. 텍스트를 선택한 뒤 다시 시도하세요.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "클립보드 복사에 실패했습니다. 페이지 아무 곳이나 클릭한 뒤 다시 시도하세요.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "무료 페이지 캡처 일일 한도 15회에 도달했습니다. 선택 영역 복사는 계속 무제한입니다.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "페이지를 Markdown으로 복사",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI용으로 복사",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude용 제목 + 출처 헤더 추가",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md 다운로드",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "오늘 무료 페이지 캡처 $COUNT$ / $CAP$회",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "오늘 무료 페이지 캡처 15회를 모두 사용했습니다. Pro는 한도를 없애줍니다.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro 구입 · $$99 평생",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "영원히 무료 · 계정 불필요 · 추적 없음",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome은 이 페이지에서 확장 프로그램을 허용하지 않습니다. 다른 웹사이트를 열고 다시 시도하세요.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "설정",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "이 페이지를 캡처하지 못했습니다. 탭을 새로고침한 뒤 다시 시도하세요.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "설정",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "설정",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI 헤더 템플릿",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI용 복사 모드에서 맨 앞에 추가됩니다. 토큰: {title}, {url}, {date}",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\n출처: {url}\n캡처: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "이미지 처리",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "이미지 건너뛰기",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Markdown 이미지 인라인",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "절대 이미지 URL",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "페이지 캡처에 제목, 출처, 날짜 front-matter 블록을 추가합니다.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro 설정입니다. 라이선스 키로 잠금 해제하세요.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "저장됨",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "라이선스",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "라이선스 키",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "활성화",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "확인 중...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "라이선스가 활성화되었습니다. Pro 기능이 잠금 해제되었습니다.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "해당 키를 확인할 수 없습니다. 다시 확인한 뒤 시도하세요.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro 활성. MarkGrab을 응원해 주셔서 감사합니다.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "전체 페이지 캡처 무제한",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "맞춤 AI 헤더 템플릿과 YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "이미지 처리 모드와 .md 파일 이름 템플릿",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 평생 이용. 1회 결제, 구독 없음.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14일 환불 보장.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one에서 Pro 보기",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "정보",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "버전",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "개인정보 처리방침",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "건너뛰기",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "다음",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "3단계 중 $NUM$단계",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "1단계",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "2단계",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "3단계",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "어떤 페이지든 깔끔한 Markdown으로 복사",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "툴바의 MarkGrab 아이콘을 클릭하면 페이지의 본문이 GitHub 스타일 Markdown으로 클립보드에 담깁니다. 제목, 목록, 코드 블록, 표, 링크가 모두 그대로 유지됩니다.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "아무 글이나 문서 페이지를 엽니다",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "툴바의 MarkGrab 아이콘을 클릭합니다",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "어디에나 깔끔한 Markdown을 붙여넣으세요",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "팁: 퍼즐 조각 메뉴에서 MarkGrab을 고정하면 언제나 클릭 한 번이면 됩니다.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI 채팅을 위해 만들어졌습니다",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI용 복사는 글 앞에 제목과 출처 헤더를 추가해, ChatGPT나 Claude가 무엇을 어디서 읽는지 정확히 알 수 있게 합니다.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\n출처: https://arxiv.org/abs/1706.03762\n캡처: 2026-07-27\n\n---\n\n지배적인 시퀀스 변환 모델은 복잡한\n순환 또는 합성곱 신경망에 기반합니다...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "영원히 무료",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "전체 페이지 캡처 하루 15회 무료. 선택 영역 캡처는 무제한. 계정 없음, 추적 없음, 모든 것이 내 컴퓨터에서 실행됩니다.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "회/일 무료 페이지 캡처",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "무제한",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "선택 영역 캡처",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "계정 및 추적기",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro 보기",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "시작하기",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — ገጽን እንደ Markdown ቅዳ",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "ማንኛውንም ገጽ ወይም ምርጫ በአንድ ጠቅታ እንደ ንጹህ GitHub Markdown ይቅዱ፤ ለChatGPT እና Claude የAI መለጠፊያ ሁነታ አለው።",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab፦ ይህን ገጽ እንደ Markdown ቅዳ",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "ገጹን እንደ Markdown ቅዳ",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "ምርጫውን እንደ Markdown ቅዳ",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "ገጹን ለAI መለጠፊያ ቅዳ",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ ቃላት እንደ Markdown ተቀድተዋል",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "በዚህ ገጽ ላይ ሊነበብ የሚችል ይዘት አልተገኘም። መጀመሪያ ጽሑፍ መርጠው ይሞክሩ።",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "ምንም አልተመረጠም። ጽሑፍ ምልክት አድርገው እንደገና ይሞክሩ።",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "ወደ ቅንጥብ ሰሌዳ መቅዳት አልተሳካም። በገጹ ላይ የትም ጠቅ አድርገው እንደገና ይሞክሩ።",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "የቀኑ የ15 ነፃ የገጽ ቀረጻዎች ገደብ ደርሷል። የምርጫ ቅጂዎች ያለ ገደብ ይቀጥላሉ።",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "ገጹን እንደ Markdown ቅዳ",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "ለAI ቅዳ",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ለChatGPT/Claude ርዕስ + የምንጭ ራስጌ ይጨምራል",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md አውርድ",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "ዛሬ ከ$CAP$ ነፃ የገጽ ቀረጻዎች $COUNT$",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "የዛሬውን 15 ነፃ የገጽ ቀረጻዎች ሁሉ ተጠቅመዋል። Pro ገደቡን ያስወግዳል።",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro ያግኙ · $$99 ለዘላለም",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "ለዘላለም ነፃ · መለያ አያስፈልግም · ክትትል የለም",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome በዚህ ገጽ ላይ ቅጥያዎችን አይፈቅድም። ማንኛውንም ድረ-ገጽ ከፍተው እንደገና ይሞክሩ።",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "ቅንብሮች",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "ይህን ገጽ መቅረጽ አልተቻለም። ትሩን ዳግም ጭነው እንደገና ይሞክሩ።",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "ቅንብሮች",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "ቅንብሮች",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "የAI ራስጌ አብነት",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "በ«ለAI ቅዳ» ሁነታ ከፊት ይታከላል። ምልክቶች፦ {title}, {url}, {date}።",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nምንጭ፦ {url}\nየተቀረጸበት፦ {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "የምስል አያያዝ",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "ምስሎችን ዝለል",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "የMarkdown ምስሎችን አካትት",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "ፍጹም የምስል URLዎች",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "ለገጽ ቀረጻዎች ርዕስ፣ ምንጭ እና ቀን ያለው front-matter ብሎክ ይጨምራል።",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "የPro ቅንብር። በፈቃድ ቁልፍ ይክፈቱ።",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "ተቀምጧል",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "ፈቃድ",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "የፈቃድ ቁልፍ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "አንቃ",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "በመፈተሽ ላይ...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "ፈቃዱ ነቅቷል። የPro ባህሪያት ተከፍተዋል።",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "ቁልፉ አልተረጋገጠም። አረጋግጠው እንደገና ይሞክሩ።",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro ገቢር ነው። MarkGrabን ስለደገፉ እናመሰግናለን።",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "ያልተገደቡ የሙሉ ገጽ ቀረጻዎች",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "ብጁ የAI ራስጌ አብነት እና YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "የምስል አያያዝ ሁነታዎች እና የ.md ፋይል ስም አብነቶች",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 ለዘላለም። አንድ ክፍያ፣ ምዝገባ የለም።",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "የ14 ቀን ገንዘብ ተመላሽ ዋስትና።",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Pro በzovo.one ላይ ይመልከቱ",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "ስለ",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "ስሪት",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "የግላዊነት መመሪያ",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "ዝለል",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "ቀጣይ",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "ደረጃ $NUM$ ከ3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "ደረጃ አንድ",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "ደረጃ ሁለት",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "ደረጃ ሦስት",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "ማንኛውንም ገጽ እንደ ንጹህ Markdown ይቅዱ",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "በመሣሪያ አሞሌው ላይ የMarkGrab አዶን ጠቅ ያድርጉ፤ የሚነበበው ገጽ እንደ GitHub Markdown ወደ ቅንጥብ ሰሌዳዎ ይገባል። ርዕሶች፣ ዝርዝሮች፣ የኮድ ብሎኮች፣ ሠንጠረዦች እና አገናኞች ሁሉ ይጠበቃሉ።",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "ማንኛውንም ጽሑፍ ወይም የሰነድ ገጽ ይክፈቱ",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "በመሣሪያ አሞሌው ላይ የMarkGrab አዶን ጠቅ ያድርጉ",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "ንጹህ Markdown የትም ይለጥፉ",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "ጠቃሚ ምክር፦ MarkGrab ሁልጊዜ በአንድ ጠቅታ እንዲገኝ ከእንቆቅልሽ ቁራጭ ምናሌ ይሰኩት።",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "ለAI ውይይቶች የተሠራ",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "«ለAI ቅዳ» ከጽሑፉ በፊት ርዕስ እና የምንጭ ራስጌ ይጨምራል፤ በዚህም ChatGPT ወይም Claude ምን እያነበበ እንደሆነ እና ከየት እንደመጣ በትክክል ያውቃል።",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# ትራንስፎርመሮችን መረዳት\n\nምንጭ፦ https://arxiv.org/abs/1706.03762\nየተቀረጸበት፦ 2026-07-27\n\n---\n\nዋነኞቹ የቅደም ተከተል ሽግግር ሞዴሎች በተወሳሰቡ\nተደጋጋሚ ወይም ኮንቮሉሽናል የነርቭ አውታረ መረቦች ላይ የተመሠረቱ ናቸው...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "ለዘላለም ነፃ",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "በቀን 15 የሙሉ ገጽ ቀረጻዎች፣ በነፃ። የምርጫ ቀረጻዎች ያለ ገደብ ናቸው። መለያ የለም፣ ክትትል የለም፣ ሁሉም በእርስዎ ማሽን ላይ ይሠራል።",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "የገጽ ቀረጻዎች / ቀን፣ በነፃ",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "ያልተገደበ",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "የምርጫ ቀረጻዎች",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "መለያዎች ወይም ተከታታዮች",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro ይመልከቱ",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "መቅዳት ይጀምሩ",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

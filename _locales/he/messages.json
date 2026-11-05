@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — העתקת דף כ-Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "העתיקו כל דף או קטע נבחר כ-Markdown נקי בסגנון GitHub בלחיצה אחת, עם מצב הדבקה מוכן ל-AI עבור ChatGPT ו-Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: העתקת הדף הזה כ-Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "העתקת הדף כ-Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "העתקת הקטע הנבחר כ-Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "העתקת הדף להדבקה ב-AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "הועתקו $COUNT$ מילים כ-Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "לא נמצא תוכן קריא בדף הזה. נסו לבחור טקסט קודם.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "לא נבחר דבר. סמנו טקסט ונסו שוב.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "ההעתקה ללוח נכשלה. לחצו במקום כלשהו בדף ונסו שוב.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "הגעתם למכסה היומית של 15 לכידות דף חינמיות. העתקת קטעים נבחרים נשארת ללא הגבלה.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "העתקת הדף כ-Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "העתקה ל-AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "מוסיף כותרת ושורת מקור עבור ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "הורדת .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ מתוך $CAP$ לכידות דף חינמיות היום",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "ניצלתם את כל 15 לכידות הדף החינמיות להיום. Pro מסיר את המגבלה.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "לרכישת Pro · $$99 לכל החיים",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "חינם לתמיד · בלי חשבון · בלי מעקב",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome אינו מאפשר תוספים בדף הזה. פתחו אתר כלשהו ונסו שוב.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "הגדרות",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "לא ניתן ללכוד את הדף הזה. טענו מחדש את הכרטיסייה ונסו שוב.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "הגדרות",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "הגדרות",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "תבנית כותרת AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "נוסף בתחילת ההעתקה במצב העתקה ל-AI. אסימונים: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} מקור: {url}\nנלכד: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "טיפול בתמונות",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "דילוג על תמונות",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "תמונות Markdown בתוך הטקסט",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "כתובות URL מוחלטות לתמונות",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "Front-matter של YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "מוסיף ללכידות דף בלוק front-matter עם כותרת, מקור ותאריך.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "הגדרת Pro. פתחו באמצעות מפתח רישיון.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "נשמר",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "רישיון",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "מפתח רישיון",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "הפעלה",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "בודק...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "הרישיון הופעל. תכונות Pro נפתחו.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "המפתח לא אומת. בדקו אותו ונסו שוב.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro פעיל. תודה שאתם תומכים ב-MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "לכידות דף שלם ללא הגבלה",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "תבנית כותרת AI מותאמת אישית ו-front-matter של YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "מצבי טיפול בתמונות ותבניות שמות קבצים .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 לכל החיים. תשלום אחד, בלי מינוי.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "אחריות החזר כספי ל-14 יום.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "לצפייה ב-Pro באתר zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "אודות",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "גרסה",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "מדיניות פרטיות",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "דילוג",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "הבא",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "שלב $NUM$ מתוך 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "שלב ראשון",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "שלב שני",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "שלב שלישי",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "העתיקו כל דף כ-Markdown נקי",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "לחצו על סמל MarkGrab בסרגל הכלים, והגרסה הקריאה של הדף תגיע ללוח כ-Markdown בסגנון GitHub. כותרות, רשימות, בלוקי קוד, טבלאות וקישורים, הכול נשמר.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "פתחו מאמר או דף תיעוד כלשהו",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "לחצו על סמל MarkGrab בסרגל הכלים",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "הדביקו Markdown נקי בכל מקום",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "טיפ: הצמידו את MarkGrab מתפריט חלקי הפאזל כדי שתמיד יהיה במרחק לחיצה אחת.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "נבנה עבור צ'אטים של AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "העתקה ל-AI מוסיפה כותרת ושורת מקור לפני המאמר, כך ש-ChatGPT או Claude יודעים בדיוק מה הם קוראים ומאיפה זה הגיע.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers מקור: https://arxiv.org/abs/1706.03762\nנלכד: 2026-07-27 --- מודלי טרנסדוקציית הרצפים המובילים מבוססים על רשתות נוירונים\nרקורנטיות או קונבולוציוניות מורכבות...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "חינם לתמיד",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 לכידות דף שלם ביום, בחינם. לכידות קטעים נבחרים ללא הגבלה. בלי חשבון, בלי מעקב, הכול רץ במחשב שלכם.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "לכידות דף ביום, בחינם",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "ללא הגבלה",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "לכידות קטעים נבחרים",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "חשבונות או רכיבי מעקב",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "לצפייה ב-Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "מתחילים ללכוד",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

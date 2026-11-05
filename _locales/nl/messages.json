@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Pagina kopiëren als Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopieer elke pagina of selectie met één klik als schone GFM-Markdown, met een AI-plakmodus voor ChatGPT en Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: deze pagina kopiëren als Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Pagina kopiëren als Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Selectie kopiëren als Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Pagina kopiëren voor AI-plakken",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ woorden gekopieerd als Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Geen leesbare inhoud gevonden op deze pagina. Selecteer eerst wat tekst.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Er is niets geselecteerd. Markeer tekst en probeer het opnieuw.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopiëren naar het klembord is mislukt. Klik ergens op de pagina en probeer het opnieuw.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Dagelijkse limiet van 15 gratis paginacaptures bereikt. Selectiekopieën blijven onbeperkt.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Pagina kopiëren als Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopiëren voor AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Voegt titel + bronheader toe voor ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md downloaden",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ van $CAP$ gratis paginacaptures vandaag",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Je hebt alle 15 gratis paginacaptures van vandaag gebruikt. Pro heft de limiet op.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Koop Pro · $$99 levenslang",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Voor altijd gratis · Geen account · Geen tracking",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome staat geen extensies toe op deze pagina. Open een willekeurige website en probeer het opnieuw.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Instellingen",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Kon deze pagina niet vastleggen. Herlaad het tabblad en probeer het opnieuw.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Instellingen",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Instellingen",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI-headersjabloon",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Wordt vooraan toegevoegd in de Kopiëren-voor-AI-modus. Tokens: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nBron: {url}\nVastgelegd: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Afbeeldingen",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Afbeeldingen overslaan",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Markdown-afbeeldingen inline",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absolute afbeeldings-URL's",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Voegt een front-matter-blok met titel, bron en datum toe aan paginacaptures.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro-instelling. Ontgrendel met een licentiesleutel.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Opgeslagen",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licentie",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licentiesleutel",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Activeren",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Controleren...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licentie geactiveerd. Pro-functies zijn ontgrendeld.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Die sleutel kon niet worden geverifieerd. Controleer hem en probeer opnieuw.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro actief. Bedankt dat je MarkGrab steunt.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Onbeperkte captures van hele pagina's",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Eigen AI-headersjabloon en YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Afbeeldingsmodi en .md-bestandsnaamsjablonen",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 levenslang. Eén betaling, geen abonnement.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 dagen niet-goed-geld-terug-garantie.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Bekijk Pro op zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Over",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versie",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Privacybeleid",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Overslaan",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Volgende",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Stap $NUM$ van 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Stap één",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Stap twee",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Stap drie",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopieer elke pagina als schone Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klik op het MarkGrab-pictogram in je werkbalk en de leesbare pagina belandt als GitHub-flavored Markdown op je klembord. Koppen, lijsten, codeblokken, tabellen en links overleven de reis.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Open een artikel of documentatiepagina",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klik op het MarkGrab-pictogram in de werkbalk",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Plak schone Markdown waar je maar wilt",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tip: zet MarkGrab vast via het puzzelstukmenu, dan is het altijd één klik verwijderd.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Gemaakt voor AI-chats",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopiëren voor AI zet een titel en bronheader vóór het artikel, zodat ChatGPT of Claude precies weet wat het leest en waar het vandaan komt.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\nBron: https://arxiv.org/abs/1706.03762\nVastgelegd: 2026-07-27\n\n---\n\nDe dominante sequentietransductiemodellen zijn gebaseerd op complexe\nrecurrente of convolutionele neurale netwerken...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Voor altijd gratis",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 captures van hele pagina's per dag, gratis. Selectiecaptures zijn onbeperkt. Geen account, geen tracking, alles draait op je eigen computer.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "paginacaptures / dag, gratis",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Onbeperkt",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "selectiecaptures",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "accounts of trackers",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Bekijk Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Aan de slag",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

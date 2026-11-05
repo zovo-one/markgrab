@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Sayfayı Markdown Olarak Kopyala",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Herhangi bir sayfayı veya seçimi tek tıkla temiz GFM Markdown olarak kopyalayın; ChatGPT ve Claude için AI yapıştırma modu dahil.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: bu sayfayı Markdown olarak kopyala",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Sayfayı Markdown olarak kopyala",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Seçimi Markdown olarak kopyala",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Sayfayı AI'ye yapıştırmak için kopyala",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ kelime Markdown olarak kopyalandı",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Bu sayfada okunabilir içerik bulunamadı. Önce metin seçmeyi deneyin.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Hiçbir şey seçili değil. Metin seçip tekrar deneyin.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Panoya kopyalama başarısız oldu. Sayfada herhangi bir yere tıklayıp tekrar deneyin.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Günlük 15 ücretsiz sayfa yakalama sınırına ulaşıldı. Seçim kopyaları sınırsız kalır.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Sayfayı Markdown olarak kopyala",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "AI için kopyala",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "ChatGPT/Claude için başlık + kaynak üstbilgisi ekler",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md indir",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "Bugün $COUNT$ / $CAP$ ücretsiz sayfa yakalama",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Bugünkü 15 ücretsiz sayfa yakalamanın tümünü kullandınız. Pro sınırı kaldırır.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro edin · $$99 ömür boyu",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Sonsuza dek ücretsiz · Hesap yok · İzleme yok",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome bu sayfada uzantılara izin vermiyor. Herhangi bir web sitesi açıp tekrar deneyin.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Ayarlar",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Bu sayfa yakalanamadı. Sekmeyi yenileyip tekrar deneyin.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Ayarlar",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Ayarlar",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI üstbilgi şablonu",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "AI için kopyala modunda başa eklenir. Belirteçler: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nKaynak: {url}\nYakalandı: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Görsel işleme",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Görselleri atla",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Satır içi Markdown görselleri",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Mutlak görsel URL'leri",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Sayfa yakalamalarına başlık, kaynak ve tarih içeren bir front-matter bloğu ekler.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro ayarı. Lisans anahtarıyla açın.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Kaydedildi",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Lisans",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Lisans anahtarı",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Etkinleştir",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Kontrol ediliyor...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Lisans etkinleştirildi. Pro özellikleri açıldı.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Bu anahtar doğrulanamadı. Kontrol edip tekrar deneyin.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro etkin. MarkGrab'i desteklediğiniz için teşekkürler.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Sınırsız tam sayfa yakalama",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Özel AI üstbilgi şablonu ve YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Görsel işleme modları ve .md dosya adı şablonları",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 ömür boyu. Tek ödeme, abonelik yok.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 gün para iade garantisi.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "zovo.one'da Pro'yu görün",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Hakkında",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Sürüm",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Gizlilik politikası",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Atla",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "İleri",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Adım $NUM$ / 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Birinci adım",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "İkinci adım",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Üçüncü adım",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Her sayfayı temiz Markdown olarak kopyalayın",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Araç çubuğundaki MarkGrab simgesine tıklayın; sayfanın okunabilir hali GitHub tarzı Markdown olarak panonuza gelir. Başlıklar, listeler, kod blokları, tablolar ve bağlantılar yolculuğu sağ salim atlatır.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Herhangi bir makale veya doküman sayfası açın",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Araç çubuğundaki MarkGrab simgesine tıklayın",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Temiz Markdown'ı istediğiniz yere yapıştırın",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "İpucu: MarkGrab'i yapboz menüsünden sabitleyin, her zaman tek tık uzağınızda olsun.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI sohbetleri için tasarlandı",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "AI için kopyala, makalenin önüne başlık ve kaynak üstbilgisi ekler; böylece ChatGPT veya Claude tam olarak ne okuduğunu ve nereden geldiğini bilir.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\nKaynak: https://arxiv.org/abs/1706.03762\nYakalandı: 2026-07-27\n\n---\n\nBaskın dizi dönüştürme modelleri, karmaşık yinelemeli veya\nevrişimli sinir ağlarına dayanır...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Sonsuza dek ücretsiz",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "Günde 15 tam sayfa yakalama, ücretsiz. Seçim yakalamaları sınırsız. Hesap yok, izleme yok, her şey kendi makinenizde çalışır.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "sayfa yakalama / gün, ücretsiz",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Sınırsız",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "seçim yakalama",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "hesap veya izleyici",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro'yu gör",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Başlayın",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

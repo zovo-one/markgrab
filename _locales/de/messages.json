@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Seite als Markdown kopieren",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopiert jede Seite oder Auswahl mit einem Klick als sauberes GFM-Markdown, mit KI-Einfügemodus für ChatGPT und Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: diese Seite als Markdown kopieren",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Seite als Markdown kopieren",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Auswahl als Markdown kopieren",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Seite für KI-Einfügen kopieren",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ Wörter als Markdown kopiert",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Kein lesbarer Inhalt auf dieser Seite gefunden. Markiere zuerst etwas Text und versuch es erneut.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nichts markiert. Markiere Text und versuch es erneut.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopieren in die Zwischenablage fehlgeschlagen. Klicke irgendwo auf die Seite und versuch es erneut.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Tageslimit von 15 kostenlosen Seiten-Captures erreicht. Auswahl-Kopien bleiben unbegrenzt.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Seite als Markdown kopieren",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Für KI kopieren",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Fügt Titel + Quell-Header für ChatGPT/Claude hinzu",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md herunterladen",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ von $CAP$ kostenlosen Seiten-Captures heute",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Du hast heute alle 15 kostenlosen Seiten-Captures genutzt. Pro hebt das Limit auf.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro holen · $$99 lebenslang",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Für immer kostenlos · Kein Konto · Kein Tracking",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome erlaubt auf dieser Seite keine Erweiterungen. Öffne eine beliebige Website und versuch es erneut.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Einstellungen",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Diese Seite konnte nicht erfasst werden. Lade den Tab neu und versuch es erneut.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Einstellungen",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Einstellungen",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "KI-Header-Vorlage",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Wird im Für-KI-kopieren-Modus vorangestellt. Tokens: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nQuelle: {url}\nErfasst: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Bildbehandlung",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Bilder überspringen",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Markdown-Bilder inline",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absolute Bild-URLs",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Fügt Seiten-Captures einen Front-matter-Block mit Titel, Quelle und Datum hinzu.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro-Einstellung. Mit einem Lizenzschlüssel freischalten.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Gespeichert",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Lizenz",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Lizenzschlüssel",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktivieren",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Wird geprüft...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Lizenz aktiviert. Pro-Funktionen sind freigeschaltet.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Dieser Schlüssel ließ sich nicht verifizieren. Prüfe ihn und versuch es erneut.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro aktiv. Danke, dass du MarkGrab unterstützt.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Unbegrenzte Ganzseiten-Captures",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Eigene KI-Header-Vorlage und YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Bildmodi und .md-Dateinamen-Vorlagen",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 lebenslang. Eine Zahlung, kein Abo.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 Tage Geld-zurück-Garantie.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Pro auf zovo.one ansehen",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Über",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Version",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Datenschutzerklärung",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Überspringen",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Weiter",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Schritt $NUM$ von 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Schritt eins",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Schritt zwei",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Schritt drei",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Jede Seite als sauberes Markdown kopieren",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klicke auf das MarkGrab-Symbol in der Symbolleiste, und die lesbare Seite landet als GitHub-flavored Markdown in deiner Zwischenablage. Überschriften, Listen, Codeblöcke, Tabellen und Links überstehen die Reise.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Öffne einen Artikel oder eine Doku-Seite",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klicke auf das MarkGrab-Symbol in der Symbolleiste",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Füge sauberes Markdown überall ein",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tipp: Pinne MarkGrab über das Puzzle-Menü an, damit es immer nur einen Klick entfernt ist.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Gemacht für KI-Chats",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Für KI kopieren stellt dem Artikel Titel und Quell-Header voran, damit ChatGPT oder Claude genau weiß, was es liest und woher es stammt.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\nQuelle: https://arxiv.org/abs/1706.03762\nErfasst: 2026-07-27\n\n---\n\nDie dominierenden Sequenztransduktionsmodelle basieren auf komplexen\nrekurrenten oder konvolutionalen neuronalen Netzen...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Für immer kostenlos",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 Ganzseiten-Captures pro Tag, kostenlos. Auswahl-Captures sind unbegrenzt. Kein Konto, kein Tracking, alles läuft auf deinem Rechner.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "Seiten-Captures / Tag, gratis",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Unbegrenzt",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "Auswahl-Captures",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "Konten oder Tracker",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro ansehen",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Loslegen",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

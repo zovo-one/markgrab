@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — کپی صفحه به Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "هر صفحه یا متن انتخاب‌شده را با یک کلیک به Markdown تمیز به سبک GitHub کپی کنید؛ با حالت چسباندن آماده AI برای ChatGPT و Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: کپی این صفحه به Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "کپی صفحه به Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "کپی متن انتخاب‌شده به Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "کپی صفحه برای چسباندن در AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ واژه به Markdown کپی شد",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "محتوای خواندنی در این صفحه پیدا نشد. ابتدا متنی را انتخاب کنید.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "چیزی انتخاب نشده است. متنی را هایلایت کنید و دوباره امتحان کنید.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "کپی در کلیپ‌بورد ناموفق بود. جایی از صفحه کلیک کنید و دوباره امتحان کنید.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "به سقف روزانه 15 ثبت رایگان صفحه رسیدید. کپی متن انتخاب‌شده همچنان نامحدود است.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "کپی صفحه به Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "کپی برای AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "عنوان و سربرگ منبع را برای ChatGPT/Claude اضافه می‌کند",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "دانلود .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ از $CAP$ ثبت رایگان صفحه امروز",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "هر 15 ثبت رایگان صفحه امروز را استفاده کرده‌اید. Pro این سقف را برمی‌دارد.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "خرید Pro · $$99 مادام‌العمر",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "همیشه رایگان · بدون حساب · بدون ردیابی",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome اجازه اجرای افزونه‌ها را در این صفحه نمی‌دهد. وب‌سایت دیگری باز کنید و دوباره امتحان کنید.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "تنظیمات",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "ثبت این صفحه ممکن نشد. برگه را دوباره بارگذاری کنید و دوباره امتحان کنید.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "تنظیمات",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "تنظیمات",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "قالب سربرگ AI",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "در حالت کپی برای AI به ابتدای متن افزوده می‌شود. توکن‌ها: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} منبع: {url}\nثبت: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "مدیریت تصاویر",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "رد کردن تصاویر",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "تصاویر Markdown درون متن",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "نشانی‌های مطلق تصاویر",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "فرانت‌متر YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "بلوک فرانت‌متر شامل عنوان، منبع و تاریخ را به ثبت‌های صفحه اضافه می‌کند.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "تنظیم Pro. با کلید لایسنس باز کنید.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "ذخیره شد",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "لایسنس",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "کلید لایسنس",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "فعال‌سازی",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "در حال بررسی...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "لایسنس فعال شد. امکانات Pro باز شدند.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "این کلید تأیید نشد. آن را بررسی کنید و دوباره امتحان کنید.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro فعال است. از حمایت شما از MarkGrab سپاسگزاریم.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "ثبت نامحدود کل صفحه",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "قالب سفارشی سربرگ AI و فرانت‌متر YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "حالت‌های مدیریت تصویر و قالب نام فایل .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 مادام‌العمر. یک پرداخت، بدون اشتراک.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "ضمانت بازگشت وجه 14روزه.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "مشاهده Pro در zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "درباره",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "نسخه",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "سیاست حریم خصوصی",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "رد شدن",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "بعدی",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "مرحله $NUM$ از 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "مرحله یک",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "مرحله دو",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "مرحله سه",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "هر صفحه‌ای را به Markdown تمیز کپی کنید",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "روی آیکون MarkGrab در نوار ابزار کلیک کنید تا محتوای خواندنی صفحه به‌صورت Markdown به سبک GitHub در کلیپ‌بورد شما قرار گیرد. سرفصل‌ها، فهرست‌ها، بلوک‌های کد، جدول‌ها و پیوندها همگی حفظ می‌شوند.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "هر مقاله یا صفحه مستنداتی را باز کنید",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "روی آیکون MarkGrab در نوار ابزار کلیک کنید",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Markdown تمیز را هر جا خواستید بچسبانید",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "نکته: MarkGrab را از منوی قطعه پازل سنجاق کنید تا همیشه با یک کلیک در دسترس باشد.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "ساخته‌شده برای گفتگوهای AI",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "کپی برای AI پیش از مقاله، عنوان و سربرگ منبع اضافه می‌کند تا ChatGPT یا Claude دقیقاً بداند چه می‌خواند و از کجا آمده است.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers منبع: https://arxiv.org/abs/1706.03762\nثبت: 2026-07-27 --- مدل‌های غالب تبدیل توالی بر شبکه‌های عصبی بازگشتی یا\nکانولوشنی پیچیده استوار هستند...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "همیشه رایگان",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "روزی 15 ثبت کامل صفحه، رایگان. ثبت متن‌های انتخاب‌شده نامحدود است. بدون حساب، بدون ردیابی، همه‌چیز روی دستگاه خودتان اجرا می‌شود.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "ثبت صفحه در روز، رایگان",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "نامحدود",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "ثبت متن انتخاب‌شده",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "حساب یا ردیاب",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "مشاهده Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "شروع کپی",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

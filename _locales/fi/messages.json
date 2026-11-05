@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Kopioi sivu Markdown-muodossa",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopioi sivu tai valinta siistinä GitHub Markdown -muodossa yhdellä klikkauksella, mukana AI-liitostila ChatGPT:lle ja Claudelle.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopioi tämä sivu Markdown-muodossa",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopioi sivu Markdown-muodossa",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopioi valinta Markdown-muodossa",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopioi sivu AI-liitosta varten",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Kopioitiin $COUNT$ sanaa Markdown-muodossa",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Sivulta ei löytynyt luettavaa sisältöä. Kokeile valita tekstiä ensin.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Mitään ei ole valittuna. Maalaa tekstiä ja yritä uudelleen.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Kopiointi leikepöydälle epäonnistui. Klikkaa jotakin kohtaa sivulla ja yritä uudelleen.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Päivittäinen 15 ilmaisen sivukaappauksen raja on täynnä. Valintojen kopiointi on yhä rajatonta.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopioi sivu Markdown-muodossa",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopioi AI:ta varten",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Lisää otsikon + lähdetiedot ChatGPT:tä/Claudea varten",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Lataa .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$/$CAP$ ilmaista sivukaappausta tänään",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Olet käyttänyt kaikki 15 ilmaista sivukaappausta tänään. Pro poistaa rajan.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Hanki Pro · $$99 loppuiäksi",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Ikuisesti ilmainen · Ei tiliä · Ei seurantaa",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome ei salli laajennuksia tällä sivulla. Avaa jokin verkkosivusto ja yritä uudelleen.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Asetukset",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Sivun kaappaus ei onnistunut. Lataa välilehti uudelleen ja yritä uudestaan.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Asetukset",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Asetukset",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI-otsakkeen malli",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Lisätään alkuun Kopioi AI:ta varten -tilassa. Muuttujat: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nLähde: {url}\nKaapattu: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Kuvien käsittely",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Ohita kuvat",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Upota Markdown-kuvat",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absoluuttiset kuva-URL-osoitteet",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Lisää sivukaappauksiin front-matter-lohkon, jossa on otsikko, lähde ja päivämäärä.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro-asetus. Avaa lisenssiavaimella.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Tallennettu",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Lisenssi",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Lisenssiavain",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktivoi",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Tarkistetaan...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Lisenssi aktivoitu. Pro-ominaisuudet ovat käytössä.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Avainta ei voitu vahvistaa. Tarkista se ja yritä uudelleen.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro on käytössä. Kiitos, että tuet MarkGrabia.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Rajattomasti koko sivun kaappauksia",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Muokattava AI-otsakemalli ja YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Kuvien käsittelytilat ja .md-tiedostonimien mallit",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 loppuiäksi. Yksi maksu, ei tilausta.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 päivän rahat takaisin -takuu.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Katso Pro osoitteessa zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Tietoja",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versio",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Tietosuojakäytäntö",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Ohita",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Seuraava",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Vaihe $NUM$/3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Ensimmäinen vaihe",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Toinen vaihe",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Kolmas vaihe",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopioi mikä tahansa sivu siistinä Markdown-tekstinä",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klikkaa MarkGrab-kuvaketta työkalupalkissa, niin sivun luettava sisältö siirtyy leikepöydälle GitHub Markdown -muodossa. Otsikot, listat, koodilohkot, taulukot ja linkit säilyvät kaikki.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Avaa mikä tahansa artikkeli tai dokumentaatiosivu",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klikkaa MarkGrab-kuvaketta työkalupalkissa",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Liitä siisti Markdown minne tahansa",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Vinkki: kiinnitä MarkGrab palapelikuvakkeen valikosta, niin se on aina yhden klikkauksen päässä.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Tehty AI-keskusteluja varten",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopioi AI:ta varten lisää artikkelin eteen otsikon ja lähdetiedot, joten ChatGPT tai Claude tietää tarkalleen, mitä se lukee ja mistä se on peräisin.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Transformerien ymmärtäminen\n\nLähde: https://arxiv.org/abs/1706.03762\nKaapattu: 2026-07-27\n\n---\n\nVallitsevat sekvenssien muunnosmallit perustuvat monimutkaisiin\nrekursiivisiin tai konvoluutioneuroverkkoihin...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Ikuisesti ilmainen",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 koko sivun kaappausta päivässä, ilmaiseksi. Valintakaappaukset ovat rajattomia. Ei tiliä, ei seurantaa, kaikki toimii omalla koneellasi.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "sivukaappausta / päivä, ilmaiseksi",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Rajattomasti",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "valintakaappauksia",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "tiliä tai seuraimia",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Katso Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Aloita",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

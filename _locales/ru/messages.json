@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — копировать страницу в Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Копируйте страницу или выделение как чистый GFM Markdown в один клик, с режимом вставки для ChatGPT и Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: скопировать эту страницу в Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Скопировать страницу как Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Скопировать выделенное как Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Скопировать страницу для вставки в ИИ",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Скопировано $COUNT$ слов в формате Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "На этой странице не найден читаемый контент. Попробуйте сначала выделить текст.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Ничего не выделено. Выделите текст и попробуйте снова.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Не удалось скопировать в буфер обмена. Кликните в любом месте страницы и попробуйте снова.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Достигнут дневной лимит: 15 бесплатных захватов страниц. Копирование выделенного — без ограничений.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Скопировать страницу как Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Скопировать для ИИ",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Добавляет заголовок и источник для ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Скачать .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ из $CAP$ бесплатных захватов страниц сегодня",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Вы использовали все 15 бесплатных захватов страниц за сегодня. Pro снимает лимит.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Купить Pro · $$99 навсегда",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Бесплатно навсегда · Без аккаунта · Без трекинга",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome не разрешает расширения на этой странице. Откройте любой сайт и попробуйте снова.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Настройки",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Не удалось захватить эту страницу. Перезагрузите вкладку и попробуйте снова.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Настройки",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Настройки",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Шаблон ИИ-заголовка",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Добавляется в начало в режиме «Скопировать для ИИ». Токены: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nИсточник: {url}\nЗахвачено: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Обработка изображений",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Пропускать изображения",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Встроенные Markdown-изображения",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Абсолютные URL изображений",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Добавляет блок front-matter с заголовком, источником и датой к захватам страниц.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Настройка Pro. Разблокируйте лицензионным ключом.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Сохранено",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Лицензия",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Лицензионный ключ",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Активировать",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Проверка...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Лицензия активирована. Функции Pro разблокированы.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Ключ не прошёл проверку. Проверьте его и попробуйте снова.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro активен. Спасибо за поддержку MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Безлимитные захваты целых страниц",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Свой шаблон ИИ-заголовка и YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Режимы обработки изображений и шаблоны имён файлов .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 навсегда. Один платёж, без подписки.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Гарантия возврата денег 14 дней.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Подробнее о Pro на zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "О расширении",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Версия",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Политика конфиденциальности",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Пропустить",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Далее",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Шаг $NUM$ из 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Шаг первый",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Шаг второй",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Шаг третий",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Копируйте любую страницу как чистый Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Кликните значок MarkGrab на панели инструментов — и читаемая часть страницы окажется в буфере обмена как GitHub-flavored Markdown. Заголовки, списки, блоки кода, таблицы и ссылки переживают путешествие.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Откройте любую статью или документацию",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Кликните значок MarkGrab на панели инструментов",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Вставьте чистый Markdown куда угодно",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Совет: закрепите MarkGrab через меню-пазл, чтобы он всегда был в одном клике.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Создан для ИИ-чатов",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "«Скопировать для ИИ» добавляет заголовок и источник перед статьёй, чтобы ChatGPT или Claude точно знали, что они читают и откуда это взято.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\nИсточник: https://arxiv.org/abs/1706.03762\nЗахвачено: 2026-07-27\n\n---\n\nДоминирующие модели преобразования последовательностей основаны на сложных\nрекуррентных или свёрточных нейронных сетях...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Бесплатно навсегда",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 захватов целых страниц в день — бесплатно. Захваты выделенного не ограничены. Без аккаунта, без трекинга, всё работает на вашей машине.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "захватов страниц / день, бесплатно",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Без лимита",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "захваты выделенного",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "аккаунтов и трекеров",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Смотреть Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Начать",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

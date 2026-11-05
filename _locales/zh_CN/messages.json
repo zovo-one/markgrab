@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — 一键复制网页为 Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "一键将任意网页或选中内容复制为干净的 GitHub 风格 Markdown，并提供适合 ChatGPT 和 Claude 的 AI 粘贴模式。",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab：将此页面复制为 Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "将页面复制为 Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "将选中内容复制为 Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "复制页面供 AI 粘贴",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "已将 $COUNT$ 个词复制为 Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "未在此页面找到可读内容。请先选中文字再试。",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "尚未选中任何内容。请先选中文字，然后重试。",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "复制到剪贴板失败。请点击页面任意位置后重试。",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "已达到每日 15 次免费整页捕获上限。选中内容复制仍不限次数。",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "将页面复制为 Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "复制供 AI 使用",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "为 ChatGPT/Claude 添加标题和来源头部",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "下载 .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "今日已用 $COUNT$ / $CAP$ 次免费页面捕获",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "今天的 15 次免费页面捕获已用完。Pro 可解除上限。",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "获取 Pro · $$99 终身",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "永久免费 · 无需账号 · 无跟踪",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome 不允许在此页面运行扩展。请打开任意网站后重试。",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "设置",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "无法捕获此页面。请重新加载标签页后重试。",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "设置",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "设置",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI 头部模板",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "在“复制供 AI 使用”模式下添加到开头。可用标记：{title}、{url}、{date}。",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\n来源：{url}\n捕获时间：{date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "图片处理",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "跳过图片",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "内联 Markdown 图片",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "使用绝对图片 URL",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "为整页捕获添加包含标题、来源和日期的 front-matter 区块。",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro 设置。使用许可证密钥解锁。",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "已保存",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "许可证",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "许可证密钥",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "激活",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "正在验证...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "许可证已激活。Pro 功能已解锁。",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "该密钥未通过验证。请检查后重试。",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro 已激活。感谢你支持 MarkGrab。",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "不限次数的整页捕获",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "自定义 AI 头部模板和 YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "图片处理模式和 .md 文件名模板",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 终身使用。一次付费，无订阅。",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 天退款保证。",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "在 zovo.one 查看 Pro",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "关于",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "版本",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "隐私政策",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "跳过",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "下一步",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "第 $NUM$ 步，共 3 步",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "第一步",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "第二步",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "第三步",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "把任意页面复制为干净的 Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "点击工具栏中的 MarkGrab 图标，页面的可读内容就会以 GitHub 风格 Markdown 进入剪贴板。标题、列表、代码块、表格和链接全部完好保留。",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "打开任意文章或文档页面",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "点击工具栏中的 MarkGrab 图标",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "在任何地方粘贴干净的 Markdown",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "提示：在拼图菜单中固定 MarkGrab，随时一键可用。",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "为 AI 对话而生",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "“复制供 AI 使用”会在文章前添加标题和来源头部，让 ChatGPT 或 Claude 清楚知道自己在读什么、内容来自哪里。",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers\n\n来源：https://arxiv.org/abs/1706.03762\n捕获时间：2026-07-27\n\n---\n\n主流的序列转换模型基于复杂的\n循环或卷积神经网络...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "永久免费",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "每天 15 次整页捕获，完全免费。选中内容捕获不限次数。无需账号、无跟踪，一切都在本机运行。",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "次免费页面捕获 / 天",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "不限次数",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "选中内容捕获",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "账号或跟踪器",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "查看 Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "开始使用",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

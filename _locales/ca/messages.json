@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Copia pàgines com a Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Copia qualsevol pàgina o selecció com a Markdown net de GitHub amb un clic, amb mode de còpia per a IA per a ChatGPT i Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: copia aquesta pàgina com a Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Copia la pàgina com a Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Copia la selecció com a Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Copia la pàgina per enganxar en IA",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "S'han copiat $COUNT$ paraules com a Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "No s'ha trobat contingut llegible en aquesta pàgina. Prova de seleccionar text primer.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "No hi ha res seleccionat. Ressalta text i torna-ho a provar.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "No s'ha pogut copiar al porta-retalls. Fes clic en qualsevol lloc de la pàgina i torna-ho a provar.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "S'ha arribat al límit diari de 15 captures de pàgina gratuïtes. Les còpies de selecció continuen sent il·limitades.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Copia la pàgina com a Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Copia per a IA",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Afegeix títol + font per a ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Baixa .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ de $CAP$ captures de pàgina gratuïtes avui",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Has usat les 15 captures gratuïtes d'avui. Pro elimina el límit.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Obtén Pro · $$99 per sempre",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Gratuït per sempre · Sense compte · Sense seguiment",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome no permet extensions en aquesta pàgina. Obre qualsevol web i torna-ho a provar.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Configuració",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "No s'ha pogut capturar la pàgina. Recarrega la pestanya i torna-ho a provar.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Configuració",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Configuració",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Plantilla de capçalera per a IA",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "S'afegeix al davant en mode Copia per a IA. Tokens: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nFont: {url}\nCapturat: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Gestió d'imatges",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Omet les imatges",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Imatges Markdown en línia",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "URL absoluts de les imatges",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "Front-matter YAML",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Afegeix un bloc de front-matter amb títol, font i data a les captures de pàgina.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Opció Pro. Desbloqueja-la amb una clau de llicència.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Desat",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Llicència",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Clau de llicència",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Activa",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Comprovant...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Llicència activada. Les funcions Pro estan desbloquejades.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "La clau no s'ha pogut verificar. Revisa-la i torna-ho a provar.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro actiu. Gràcies per donar suport a MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Captures de pàgina sencera il·limitades",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Plantilla de capçalera per a IA personalitzada i front-matter YAML",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Modes de gestió d'imatges i plantilles de nom de fitxer .md",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 per sempre. Un sol pagament, sense subscripció.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "Garantia de devolució de 14 dies.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Mira Pro a zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Quant a",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versió",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Política de privadesa",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Omet",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Següent",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Pas $NUM$ de 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Pas u",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Pas dos",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Pas tres",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Copia qualsevol pàgina com a Markdown net",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Fes clic a la icona de MarkGrab a la barra d'eines i la part llegible de la pàgina arriba al porta-retalls com a Markdown de GitHub. Títols, llistes, blocs de codi, taules i enllaços sobreviuen el viatge.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Obre qualsevol article o pàgina de documentació",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Fes clic a la icona de MarkGrab a la barra d'eines",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Enganxa Markdown net a qualsevol lloc",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Consell: fixa MarkGrab des del menú del trencaclosques perquè sempre sigui a un clic.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Fet per a xats d'IA",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Copia per a IA afegeix un títol i una capçalera de font abans de l'article, perquè ChatGPT o Claude sàpiga exactament què llegeix i d'on ve.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Entendre els transformers\n\nFont: https://arxiv.org/abs/1706.03762\nCapturat: 2026-07-27\n\n---\n\nEls models dominants de transducció de seqüències es basen en xarxes neuronals\nrecurrents o convolucionals complexes...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Gratuït per sempre",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 captures de pàgina sencera al dia, gratis. Les captures de selecció són il·limitades. Sense compte, sense seguiment, tot s'executa al teu ordinador.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "captures de pàgina / dia, gratis",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Il·limitades",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "captures de selecció",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "comptes o rastrejadors",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Mira Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Comença a capturar",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

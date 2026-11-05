@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — kopijuoti puslapį kaip Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Vienu spustelėjimu kopijuokite puslapį ar pažymėjimą kaip švarų GitHub stiliaus Markdown, su AI įklijavimo režimu ChatGPT ir Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopijuoti šį puslapį kaip Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopijuoti puslapį kaip Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopijuoti pažymėjimą kaip Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopijuoti puslapį įklijavimui į AI",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Nukopijuota $COUNT$ žodžių kaip Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Šiame puslapyje nerasta skaitomo turinio. Pirmiausia pabandykite pažymėti tekstą.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nieko nepažymėta. Pažymėkite tekstą ir bandykite dar kartą.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Nepavyko nukopijuoti į iškarpinę. Spustelėkite bet kur puslapyje ir bandykite dar kartą.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Pasiekta dienos riba: 15 nemokamų puslapio fiksavimų. Pažymėjimų kopijavimas lieka neribotas.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopijuoti puslapį kaip Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopijuoti AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Prideda pavadinimą ir šaltinio antraštę ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Atsisiųsti .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ iš $CAP$ nemokamų puslapio fiksavimų šiandien",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Šiandien išnaudojote visus 15 nemokamų puslapio fiksavimų. Pro panaikina šią ribą.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Įsigyti Pro · $$99 visam laikui",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Nemokama visam laikui · Be paskyros · Be sekimo",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome neleidžia plėtinių šiame puslapyje. Atidarykite bet kurią svetainę ir bandykite dar kartą.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Nustatymai",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Nepavyko užfiksuoti šio puslapio. Perkraukite skirtuką ir bandykite dar kartą.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Nustatymai",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Nustatymai",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI antraštės šablonas",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Pridedamas pradžioje režimu Kopijuoti AI. Žymos: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} Šaltinis: {url}\nUžfiksuota: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Paveikslėlių tvarkymas",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Praleisti paveikslėlius",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Įterptieji Markdown paveikslėliai",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absoliutūs paveikslėlių URL",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Prie puslapio fiksavimų prideda front matter bloką su pavadinimu, šaltiniu ir data.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro nustatymas. Atrakinkite licencijos raktu.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Išsaugota",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licencija",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licencijos raktas",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktyvuoti",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Tikrinama...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licencija aktyvuota. Pro funkcijos atrakintos.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Šio rakto patvirtinti nepavyko. Patikrinkite jį ir bandykite dar kartą.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro aktyvus. Ačiū, kad palaikote MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Neriboti viso puslapio fiksavimai",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Individualus AI antraštės šablonas ir YAML front matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Paveikslėlių tvarkymo režimai ir .md failų pavadinimų šablonai",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 visam laikui. Vienas mokėjimas, jokios prenumeratos.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 dienų pinigų grąžinimo garantija.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Žiūrėti Pro svetainėje zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Apie",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Versija",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Privatumo politika",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Praleisti",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Toliau",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "$NUM$ žingsnis iš 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Pirmas žingsnis",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Antras žingsnis",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Trečias žingsnis",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopijuokite bet kurį puslapį kaip švarų Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Spustelėkite MarkGrab piktogramą įrankių juostoje, ir skaitomas puslapio turinys atsidurs iškarpinėje kaip GitHub stiliaus Markdown. Antraštės, sąrašai, kodo blokai, lentelės ir nuorodos išlieka.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Atidarykite bet kurį straipsnį ar dokumentacijos puslapį",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Spustelėkite MarkGrab piktogramą įrankių juostoje",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Įklijuokite švarų Markdown bet kur",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Patarimas: prisekite MarkGrab iš dėlionės detalės meniu, kad jis visada būtų per vieną spustelėjimą.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Sukurta AI pokalbiams",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopijuoti AI prieš straipsnį prideda pavadinimą ir šaltinio antraštę, todėl ChatGPT ar Claude tiksliai žino, ką skaito ir iš kur tai atkeliavo.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers Šaltinis: https://arxiv.org/abs/1706.03762\nUžfiksuota: 2026-07-27 --- Vyraujantys sekų transdukcijos modeliai remiasi sudėtingais\nrekurentiniais arba konvoliuciniais neuroniniais tinklais...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Nemokama visam laikui",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 viso puslapio fiksavimų per dieną, nemokamai. Pažymėjimų fiksavimai neriboti. Jokios paskyros, jokio sekimo, viskas veikia jūsų kompiuteryje.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "puslapio fiksavimų per dieną, nemokamai",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Neribota",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "pažymėjimų fiksavimai",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "paskyrų ar sekimo priemonių",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Žiūrėti Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Pradėti fiksuoti",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Oldal másolása Markdown formában",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Bármely oldal vagy kijelölés másolása tiszta GitHub-stílusú Markdownba egy kattintással, AI-móddal ChatGPT-hez és Claude-hoz.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: az oldal másolása Markdownként",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Oldal másolása Markdownként",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kijelölés másolása Markdownként",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Oldal másolása AI-beillesztéshez",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "$COUNT$ szó Markdownként másolva",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Nem található olvasható tartalom ezen az oldalon. Próbáljon előbb szöveget kijelölni.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Nincs kijelölés. Jelöljön ki szöveget, majd próbálja újra.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "A vágólapra másolás nem sikerült. Kattintson az oldalon bárhová, majd próbálja újra.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Elérte a napi 15 ingyenes oldalmentés korlátját. A kijelölések másolása továbbra is korlátlan.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Oldal másolása Markdownként",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Másolás AI-hoz",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Címet és forrásfejlécet ad hozzá ChatGPT/Claude számára",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": ".md letöltése",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ / $CAP$ ingyenes oldalmentés ma",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Mára elhasználta mind a 15 ingyenes oldalmentést. A Pro megszünteti a korlátot.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Pro megvásárlása · $$99 örökre",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Örökre ingyenes · Nincs fiók · Nincs követés",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "A Chrome nem engedélyez bővítményeket ezen az oldalon. Nyisson meg egy tetszőleges webhelyet, és próbálja újra.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Beállítások",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Nem sikerült rögzíteni az oldalt. Töltse újra a lapot, és próbálja újra.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Beállítások",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Beállítások",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "AI-fejlécsablon",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "A Másolás AI-hoz módban a szöveg elé kerül. Tokenek: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title} Forrás: {url}\nMentve: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Képkezelés",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Képek kihagyása",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Beágyazott Markdown-képek",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Abszolút kép-URL-ek",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Cím-, forrás- és dátumblokkot (front matter) ad az oldalmentésekhez.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro-beállítás. Licenckulccsal oldható fel.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Mentve",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licenc",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licenckulcs",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "MARK-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktiválás",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Ellenőrzés...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "A licenc aktiválva. A Pro funkciók feloldva.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "A kulcs ellenőrzése nem sikerült. Ellenőrizze, és próbálja újra.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "A Pro aktív. Köszönjük, hogy támogatja a MarkGrabet.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Korlátlan teljesoldal-mentés",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Egyéni AI-fejlécsablon és YAML front matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Képkezelési módok és .md fájlnévsablonok",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 örökre. Egyszeri fizetés, nincs előfizetés.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 napos pénzvisszafizetési garancia.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Pro megtekintése az zovo.one oldalon",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Névjegy",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Verzió",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Adatvédelmi irányelvek",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Kihagyás",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Tovább",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "$NUM$/3. lépés",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Első lépés",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Második lépés",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Harmadik lépés",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Bármely oldal másolása tiszta Markdownként",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Kattintson a MarkGrab ikonra az eszköztáron, és az oldal olvasható tartalma GitHub-stílusú Markdownként kerül a vágólapra. Címsorok, listák, kódblokkok, táblázatok és linkek, minden megmarad.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Nyisson meg egy cikket vagy dokumentációs oldalt",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Kattintson a MarkGrab ikonra az eszköztáron",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Illessze be a tiszta Markdownt bárhová",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tipp: rögzítse a MarkGrabet a kirakós ikon menüjéből, hogy mindig egy kattintásra legyen.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "AI-csevegésekhez készült",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "A Másolás AI-hoz címet és forrásfejlécet illeszt a cikk elé, így a ChatGPT vagy a Claude pontosan tudja, mit olvas és honnan származik.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Understanding Transformers Forrás: https://arxiv.org/abs/1706.03762\nMentve: 2026-07-27 --- A meghatározó szekvenciatranszdukciós modellek összetett\nrekurrens vagy konvolúciós neurális hálózatokra épülnek...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Örökre ingyenes",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "Napi 15 teljesoldal-mentés, ingyen. A kijelölések mentése korlátlan. Nincs fiók, nincs követés, minden a saját gépén fut.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "oldalmentés / nap, ingyen",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Korlátlan",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "kijelölésmentés",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "fiók vagy követő",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Pro megtekintése",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Kezdjen másolni",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}

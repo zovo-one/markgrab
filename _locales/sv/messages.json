@@ -1,0 +1,340 @@
+{
+  "extName": {
+    "message": "MarkGrab — Kopiera sidan som Markdown",
+    "description": "Extension name shown in the Chrome Web Store and browser. Max 45 characters."
+  },
+  "extDesc": {
+    "message": "Kopiera valfri sida eller markering som ren GitHub-anpassad Markdown med ett klick, med AI-läge för ChatGPT och Claude.",
+    "description": "Short store description. Max 132 characters."
+  },
+  "actionTitle": {
+    "message": "MarkGrab: kopiera den här sidan som Markdown",
+    "description": "Tooltip on the toolbar button."
+  },
+  "menuPage": {
+    "message": "Kopiera sidan som Markdown",
+    "description": "Context menu entry shown on any page."
+  },
+  "menuSelection": {
+    "message": "Kopiera markeringen som Markdown",
+    "description": "Context menu entry shown when text is selected."
+  },
+  "menuAi": {
+    "message": "Kopiera sidan för AI-inklistring",
+    "description": "Context menu entry: copies the page with a source header block for pasting into an AI chat."
+  },
+  "toastCopied": {
+    "message": "Kopierade $COUNT$ ord som Markdown",
+    "description": "Success toast after a copy. $COUNT$ is the number of words copied.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "374"
+      }
+    }
+  },
+  "toastEmpty": {
+    "message": "Hittade inget läsbart innehåll på den här sidan. Prova att markera text först.",
+    "description": "Toast when extraction finds no usable content."
+  },
+  "toastNoSelection": {
+    "message": "Inget är markerat. Markera lite text och försök igen.",
+    "description": "Toast when the selection copy is invoked with an empty selection."
+  },
+  "toastClipboard": {
+    "message": "Det gick inte att kopiera till urklipp. Klicka någonstans på sidan och försök igen.",
+    "description": "Toast when both clipboard write paths fail."
+  },
+  "toastCapReached": {
+    "message": "Dagens gräns på 15 gratis sidhämtningar är nådd. Kopiering av markeringar är fortfarande obegränsad.",
+    "description": "Toast when the free daily whole-page capture cap is hit."
+  },
+  "popupCopyPage": {
+    "message": "Kopiera sidan som Markdown",
+    "description": "Popup hero action"
+  },
+  "popupCopyAi": {
+    "message": "Kopiera för AI",
+    "description": "Popup secondary action: AI paste mode"
+  },
+  "popupAiHint": {
+    "message": "Lägger till titel + källrad för ChatGPT/Claude",
+    "description": "Sub-hint under the Copy for AI button"
+  },
+  "popupDownload": {
+    "message": "Ladda ner .md",
+    "description": "Popup secondary action: download markdown file"
+  },
+  "popupMeter": {
+    "message": "$COUNT$ av $CAP$ gratis sidhämtningar idag",
+    "description": "Daily free-capture meter in the popup",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      },
+      "cap": {
+        "content": "$2",
+        "example": "15"
+      }
+    }
+  },
+  "popupCapBanner": {
+    "message": "Du har använt alla 15 gratis sidhämtningar idag. Pro tar bort gränsen.",
+    "description": "Shown when the daily free cap is reached"
+  },
+  "popupGetPro": {
+    "message": "Skaffa Pro · $$99 livstid",
+    "description": "Single upgrade CTA in the cap banner"
+  },
+  "popupTrust": {
+    "message": "Gratis för alltid · Inget konto · Ingen spårning",
+    "description": "Popup footer trust line"
+  },
+  "popupRestricted": {
+    "message": "Chrome tillåter inte tillägg på den här sidan. Öppna valfri webbplats och försök igen.",
+    "description": "Shown on chrome://, edge://, about: and Web Store pages"
+  },
+  "popupSettings": {
+    "message": "Inställningar",
+    "description": "Aria label / tooltip for the settings gear"
+  },
+  "popupProBadge": {
+    "message": "PRO",
+    "description": "Pro badge text"
+  },
+  "popupError": {
+    "message": "Det gick inte att hämta den här sidan. Ladda om fliken och försök igen.",
+    "description": "Generic popup capture error"
+  },
+  "optTitle": {
+    "message": "Inställningar",
+    "description": "Options page subtitle"
+  },
+  "optSettingsTitle": {
+    "message": "Inställningar",
+    "description": "Options: settings section label"
+  },
+  "optAiTemplateLabel": {
+    "message": "Mall för AI-rubrik",
+    "description": "Options: AI header template field label"
+  },
+  "optAiTemplateHint": {
+    "message": "Läggs till först i läget Kopiera för AI. Variabler: {title}, {url}, {date}.",
+    "description": "Options: AI header template help text"
+  },
+  "optAiTemplatePlaceholder": {
+    "message": "# {title}\n\nKälla: {url}\nHämtad: {date}",
+    "description": "Options: AI header template placeholder"
+  },
+  "optImageModeLabel": {
+    "message": "Bildhantering",
+    "description": "Options: image mode field label"
+  },
+  "optImageSkip": {
+    "message": "Hoppa över bilder",
+    "description": "Image mode option: skip"
+  },
+  "optImageInline": {
+    "message": "Infogade Markdown-bilder",
+    "description": "Image mode option: inline"
+  },
+  "optImageAbsolute": {
+    "message": "Absoluta bild-URL:er",
+    "description": "Image mode option: absolute URLs"
+  },
+  "optFrontMatterLabel": {
+    "message": "YAML front-matter",
+    "description": "Options: front-matter toggle label"
+  },
+  "optFrontMatterHint": {
+    "message": "Lägger till ett front-matter-block med titel, källa och datum i sidhämtningar.",
+    "description": "Options: front-matter help text"
+  },
+  "optProLocked": {
+    "message": "Pro-inställning. Lås upp med en licensnyckel.",
+    "description": "Lock note on Pro-gated settings for free users"
+  },
+  "optSaved": {
+    "message": "Sparat",
+    "description": "Settings saved confirmation"
+  },
+  "optLicenseTitle": {
+    "message": "Licens",
+    "description": "Options: license section label"
+  },
+  "optLicenseLabel": {
+    "message": "Licensnyckel",
+    "description": "Options: license key input label"
+  },
+  "optLicensePlaceholder": {
+    "message": "ZOVO-XXXX-XXXX-XXXX",
+    "description": "Options: license key input placeholder"
+  },
+  "optActivate": {
+    "message": "Aktivera",
+    "description": "Options: activate license button"
+  },
+  "optActivating": {
+    "message": "Kontrollerar...",
+    "description": "Options: activate button label while verifying"
+  },
+  "optLicenseOk": {
+    "message": "Licensen är aktiverad. Pro-funktionerna är upplåsta.",
+    "description": "Options: license verified"
+  },
+  "optLicenseErr": {
+    "message": "Nyckeln kunde inte verifieras. Kontrollera den och försök igen.",
+    "description": "Options: license verification failed"
+  },
+  "optProActive": {
+    "message": "Pro är aktivt. Tack för att du stödjer MarkGrab.",
+    "description": "Options: shown in the license section when Pro"
+  },
+  "optProTitle": {
+    "message": "MarkGrab Pro",
+    "description": "Options: upgrade card title"
+  },
+  "optProBullet1": {
+    "message": "Obegränsade hämtningar av hela sidor",
+    "description": "Upgrade card bullet 1"
+  },
+  "optProBullet2": {
+    "message": "Egen mall för AI-rubrik och YAML front-matter",
+    "description": "Upgrade card bullet 2"
+  },
+  "optProBullet3": {
+    "message": "Bildhanteringslägen och mallar för .md-filnamn",
+    "description": "Upgrade card bullet 3"
+  },
+  "optProPrice": {
+    "message": "$$99 livstid. En betalning, ingen prenumeration.",
+    "description": "Upgrade card price line"
+  },
+  "optProMoneyBack": {
+    "message": "14 dagars pengarna-tillbaka-garanti.",
+    "description": "Upgrade card refund line"
+  },
+  "optProCta": {
+    "message": "Se Pro på zovo.one",
+    "description": "Upgrade card link text"
+  },
+  "optAboutTitle": {
+    "message": "Om",
+    "description": "Options: about section label"
+  },
+  "optVersionLabel": {
+    "message": "Version",
+    "description": "Options: version label"
+  },
+  "optLinkSite": {
+    "message": "zovo.one",
+    "description": "About link: site"
+  },
+  "optLinkPrivacy": {
+    "message": "Integritetspolicy",
+    "description": "About link: privacy policy"
+  },
+  "optLinkSupport": {
+    "message": "support@zovo.one",
+    "description": "About link: support email"
+  },
+  "obSkip": {
+    "message": "Hoppa över",
+    "description": "Onboarding: skip link"
+  },
+  "obNext": {
+    "message": "Nästa",
+    "description": "Onboarding: next step button"
+  },
+  "obStepOf": {
+    "message": "Steg $NUM$ av 3",
+    "description": "Onboarding: progress counter",
+    "placeholders": {
+      "num": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "obKicker1": {
+    "message": "Steg ett",
+    "description": "Onboarding: step 1 eyebrow"
+  },
+  "obKicker2": {
+    "message": "Steg två",
+    "description": "Onboarding: step 2 eyebrow"
+  },
+  "obKicker3": {
+    "message": "Steg tre",
+    "description": "Onboarding: step 3 eyebrow"
+  },
+  "obStep1Title": {
+    "message": "Kopiera valfri sida som ren Markdown",
+    "description": "Onboarding: step 1 headline"
+  },
+  "obStep1Body": {
+    "message": "Klicka på MarkGrab-ikonen i verktygsfältet så landar den läsbara sidan i urklipp som GitHub-anpassad Markdown. Rubriker, listor, kodblock, tabeller och länkar överlever alla resan.",
+    "description": "Onboarding: step 1 body"
+  },
+  "obHow1": {
+    "message": "Öppna valfri artikel eller dokumentationssida",
+    "description": "Onboarding: how-to row 1"
+  },
+  "obHow2": {
+    "message": "Klicka på MarkGrab-ikonen i verktygsfältet",
+    "description": "Onboarding: how-to row 2"
+  },
+  "obHow3": {
+    "message": "Klistra in ren Markdown var som helst",
+    "description": "Onboarding: how-to row 3"
+  },
+  "obStep1Pin": {
+    "message": "Tips: fäst MarkGrab via pusselbitsmenyn så är det alltid ett klick bort.",
+    "description": "Onboarding: pin tip"
+  },
+  "obStep2Title": {
+    "message": "Byggd för AI-chattar",
+    "description": "Onboarding: step 2 headline"
+  },
+  "obStep2Body": {
+    "message": "Kopiera för AI lägger till en titel och källrad före artikeln, så att ChatGPT eller Claude vet exakt vad den läser och varifrån det kommer.",
+    "description": "Onboarding: step 2 body"
+  },
+  "obMock": {
+    "message": "# Att förstå transformers\n\nKälla: https://arxiv.org/abs/1706.03762\nHämtad: 2026-07-27\n\n---\n\nDe dominerande sekvenstransduktionsmodellerna bygger på komplexa\nrekurrenta eller konvolutionella neuronnät...",
+    "description": "Onboarding: mock Copy-for-AI output block"
+  },
+  "obStep3Title": {
+    "message": "Gratis för alltid",
+    "description": "Onboarding: step 3 headline"
+  },
+  "obStep3Body": {
+    "message": "15 hämtningar av hela sidor per dag, gratis. Hämtningar av markeringar är obegränsade. Inget konto, ingen spårning, allt körs på din dator.",
+    "description": "Onboarding: step 3 body"
+  },
+  "obFactPages": {
+    "message": "sidhämtningar / dag, gratis",
+    "description": "Onboarding: fact tile label under the number 15"
+  },
+  "obFactUnlimited": {
+    "message": "Obegränsat",
+    "description": "Onboarding: fact tile value"
+  },
+  "obFactSelections": {
+    "message": "markeringshämtningar",
+    "description": "Onboarding: fact tile label"
+  },
+  "obFactTracking": {
+    "message": "konton eller spårare",
+    "description": "Onboarding: fact tile label under the number 0"
+  },
+  "obSeePro": {
+    "message": "Se Pro",
+    "description": "Onboarding: neutral Pro link"
+  },
+  "obStart": {
+    "message": "Börja kopiera",
+    "description": "Onboarding: final CTA, closes the tab"
+  }
+}
